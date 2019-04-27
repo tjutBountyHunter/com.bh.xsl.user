@@ -3,6 +3,124 @@
   <component name="ChangeListManager">
     <list default="true" id="2e8da8c3-2d35-40a2-9b5e-faad46c09dce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_common/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_common/target/xsl_user_common-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_dao/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_dao/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_dao/target/xsl_user_dao-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_domain/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_domain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_domain/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_domain/target/xsl_user_domain-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_export/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_export/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_export/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_export/target/xsl_user_export-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_service/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_service/target/xsl_user_service-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/mybatis/SqlMapConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/resource/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/resource/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/resource/resource.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/spring/applicationContext-jedis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/spring/applicationContext-mapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/spring/applicationContext-service.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/spring/applicationContext-trans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/spring/springmvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/tomcat/conf/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/tomcat/conf/tomcat-users.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/tomcat/conf/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/tomcat/logs/access_log.2019-04-27" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/index_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/index_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/mybatis/SqlMapConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/resource/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/resource/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/resource/resource.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/spring/applicationContext-jedis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/spring/applicationContext-mapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/spring/applicationContext-service.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/spring/applicationContext-trans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/spring/springmvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/activemq-all-5.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/activemq-amqp-5.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/activemq-broker-5.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/activemq-client-5.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/activemq-openwire-legacy-5.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/apiguardian-api-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/aspectjweaver-1.8.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/bcpkix-jdk15on-1.47.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/bcprov-jdk15on-1.47.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/commons-fileupload-1.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/commons-io-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/commons-lang3-3.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/commons-net-3.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/commons-pool2-2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/druid-1.0.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/dubbo-2.5.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/geronimo-jms_1.1_spec-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/hamcrest-core-1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/hawtbuf-1.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/jackson-annotations-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/jackson-core-2.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/jackson-databind-2.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/javassist-3.15.0-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/jedis-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/jline-0.9.94.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/joda-time-2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/junit-4.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/junit-jupiter-api-5.5.0-M1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/junit-platform-commons-1.5.0-M1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/log4j-1.2.16.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/mybatis-3.2.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/mybatis-paginator-1.2.15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/mybatis-spring-1.2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/mysql-connector-java-5.1.32.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/netty-3.2.5.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/netty-3.7.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/opentest4j-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/pagehelper-3.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/proton-0.3.0-fuse-2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/proton-api-0.3.0-fuse-2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/proton-jms-0.3.0-fuse-2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/slf4j-api-1.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/slf4j-log4j12-1.6.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-aop-4.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-aspects-4.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-beans-4.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-context-4.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-context-support-4.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-core-4.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-expression-4.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-jdbc-4.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-jms-4.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-messaging-4.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-test-4.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-tx-4.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-web-4.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-webmvc-4.1.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/xsl-weChat-common-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/xsl-weChat-dao-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/xsl-weChat-domain-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/xsl-weChat-export-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/xsl_user_service-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/zkclient-0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/zookeeper-3.4.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/index.jsp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -65,11 +183,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xsl_user_web/xsl_user_web.iml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/com.bh.xsl.user.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -260,7 +392,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556350312988</updated>
-      <workItem from="1556350317872" duration="2871000" />
+      <workItem from="1556350317872" duration="3582000" />
     </task>
     <task id="LOCAL-00001" summary="用户中心系统">
       <created>1556353191279</created>
@@ -269,11 +401,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556353191279</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="用户中心系统">
+      <created>1556353422461</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1556353422461</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2871000" />
+    <option name="totallyTimeSpent" value="3582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="23" width="1400" height="848" extended-state="0" />
@@ -284,7 +423,7 @@
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496318" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496318" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" />
       <window_info anchor="bottom" id="Terminal" />
@@ -295,7 +434,7 @@
       <window_info anchor="bottom" id="Version Control" weight="0.32936507" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32936507" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936507" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -432,7 +571,17 @@
     <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_web/xsl_user_web.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.bh.xsl.user.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
         </state>
       </provider>
     </entry>
