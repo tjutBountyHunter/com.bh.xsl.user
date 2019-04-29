@@ -116,10 +116,7 @@
 <!--            <scope>compile</scope>-->
 <!--        </dependency>-->
 <!--        &lt;!&ndash;阿里&ndash;&gt;-->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jsp-api</artifactId>
-        </dependency>
+
 
         <!-- Redis客户端 -->
         <dependency>

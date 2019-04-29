@@ -1,15 +1,9 @@
 package user.service;
-import pojo.XslResult;
-import pojo.XslUserRegister;
+import vo.XslResult;
+import vo.XslUserRegister;
 import vo.UserReqVo;
 public interface UserSerivice {
-    /**
-     * 注册
-     * @param xslUserRegister
-     * @return
-     * @throws Exception
-     */
-    XslResult createUser(XslUserRegister xslUserRegister);
+
 
     /**
      * 快速注册

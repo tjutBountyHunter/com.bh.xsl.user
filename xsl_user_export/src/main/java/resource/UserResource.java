@@ -3,15 +3,16 @@ package resource;
 
 import vo.UserReqVo;
 import vo.XslResult;
+import vo.XslUserRegister;
 
 public interface UserResource {
     /**
      * 快速注册
-     * @param userReqVo
+     * @param XslUserRegister
      * @return
      * @throws Exception
      */
-    XslResult quickCreateUser(UserReqVo userReqVo);
+    XslResult quickCreateUser(XslUserRegister xslUserRegister);
 
     /**
      * 登录

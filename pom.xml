@@ -49,6 +49,7 @@
     <dependencyManagement>
         <dependencies>
             <!-- 本系统依赖 -->
+
             <dependency>
                 <groupId>com.bh.xsl.user</groupId>
                 <artifactId>xsl_user_domain</artifactId>
@@ -74,6 +75,7 @@
                 <artifactId>xsl_user_service</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
+
 
 
 

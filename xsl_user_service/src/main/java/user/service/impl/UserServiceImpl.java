@@ -18,6 +18,7 @@ import util.*;
 import vo.XslResult;
 import vo.UserReqVo;
 import vo.UserResVo;
+import vo.XslUserRegister;
 import java.util.*;
 import user.service.UserSerivice;
 
@@ -56,47 +57,7 @@ public class UserServiceImpl implements UserSerivice {
 
     private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
-    //注册
-    @Override
 
-    public pojo.XslResult createUser(XslUserRegister xslUserRegister) {
-        try {
-
-//            all = new String(all.getBytes("iso-8859-1"), "utf-8");
-//            XslUserRegister xslUserRegister = JsonUtils.jsonToPojo(all, XslUserRegister.class);
-//            XslUserExample example = new XslUserExample();
-//            XslUserExample.Criteria criteria = example.createCriteria();
-//            criteria.andPhoneEqualTo(xslUserRegister.getPhone());
-//            List<XslUser> list = xslUserMapper.selectByExample(example);
-//            if(list.size()!=0&&!list.equals("")){
-//                return XslResult.build(400,"该手机号已经注册过");
-//            }
-
-            xslUserRegister.setUserId(UUID.randomUUID().toString());
-
-            //初始化学校信息
-            XslResult schoolId = createUserSchool(xslUserRegister);
-
-            //初始化用户表
-            XslResult xslResult = createUseruser(xslUserRegister, (String) schoolId.getData());
-
-            Map<String, Integer> map = hunMaster.insertPeople((Integer) xslResult.getData());
-            JedisClientUtil.setEx(REDIS_USER_SESSION_KEY + ":" + xslUserRegister.getPhone(), xslUserRegister.getToken(), Login_SESSION_EXPIRE);
-
-            map.put("id", (Integer) xslResult.getData());
-            System.out.println(map.get("id") + " 51651");
-            xslUserUpdateMapper.updateXslUser(map);
-            XslUserExample example1 = new XslUserExample();
-            XslUserExample.Criteria criteria1 = example1.createCriteria();
-            criteria1.andPhoneEqualTo(xslUserRegister.getPhone());
-            List<XslUser> list1 = xslUserMapper.selectByExample(example1);
-            XslUser xslUser = list1.get(0);
-            return pojo.XslResult.ok(xslUser);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return pojo.XslResult.build(500, "服务器异常");
-        }
-    }
 
     /**
      * 快速注册
@@ -104,13 +65,13 @@ public class UserServiceImpl implements UserSerivice {
      * @return
      */
     @Override
-    public pojo.XslResult quickCreateUser(XslUserRegister xslUserRegister){
+    public XslResult quickCreateUser(XslUserRegister xslUserRegister){
         XslUserExample example = new XslUserExample();
         XslUserExample.Criteria criteria = example.createCriteria();
         criteria.andPhoneEqualTo(xslUserRegister.getPhone());
         List<XslUser> list = xslUserMapper.selectByExample(example);
         if(list != null && list.size() > 0){
-            return pojo.XslResult.build(403,"该手机号已经注册过");
+            return XslResult.build(403,"该手机号已经注册过");
         }
 
         XslUser xslUser = new XslUser();
@@ -131,7 +92,7 @@ public class UserServiceImpl implements UserSerivice {
         userResVo.setHunterlevel(xslHunter.getLevel());
         userResVo.setTxUrl("http://47.93.200.190/images/default.png");
 
-        return pojo.XslResult.ok(userResVo);
+        return XslResult.ok(userResVo);
 
     }
 
@@ -170,6 +131,9 @@ public class UserServiceImpl implements UserSerivice {
         return xslSchoolinfo;
     }
 
+
+
+
     /**
      * 登录
      *
@@ -177,21 +141,21 @@ public class UserServiceImpl implements UserSerivice {
      * @return
      */
     @Override
-    public pojo.XslResult userLogin(UserReqVo userReqVo) {
+    public XslResult userLogin(UserReqVo userReqVo) {
         String phone = userReqVo.getPhone();
         String password = userReqVo.getPassword();
         String token = userReqVo.getToken();
 
         if(StringUtils.isEmpty(phone)){
-            return pojo.XslResult.build(403, "手机号码为空");
+            return XslResult.build(403, "手机号码为空");
         }
 
         if(StringUtils.isEmpty(password)){
-            return pojo.XslResult.build(403, "密码为空");
+            return XslResult.build(403, "密码为空");
         }
 
         if(StringUtils.isEmpty(token)){
-            return pojo.XslResult.build(403, "权限不足");
+            return XslResult.build(403, "权限不足");
         }
 
         //1.查询
@@ -202,7 +166,7 @@ public class UserServiceImpl implements UserSerivice {
 
         //2.判断用户是否存在
         if(list == null || list.size() < 1){
-            return pojo.XslResult.build(403, "用户名或密码错误");
+            return XslResult.build(403, "用户名或密码错误");
         }
         XslUser user = list.get(0);
 
@@ -213,7 +177,7 @@ public class UserServiceImpl implements UserSerivice {
         //3.校验密码
         if (!DigestUtils.md5DigestAsHex(password.getBytes()).equals(user.getPassword())) {
             logger.info("password error");
-            return pojo.XslResult.build(400, "用户名或密码错误");
+            return XslResult.build(400, "用户名或密码错误");
         }
 
         String userId = user.getUserid();
@@ -222,17 +186,17 @@ public class UserServiceImpl implements UserSerivice {
         Byte state = user.getState();
         if(state == -2){
             logger.info("login check status is {}", user.getState());
-            return pojo.XslResult.build(403, "审核未通过");
+            return XslResult.build(403, "审核未通过");
         }
 
         if(state == -1){
             logger.info("login check status is {}", user.getState());
-            return pojo.XslResult.build(403, "账户被冻结");
+            return XslResult.build(403, "账户被冻结");
         }
 
         if(state == -3){
             logger.info("login check status is {}", user.getState());
-            return pojo.XslResult.build(403, "账户已被删除");
+            return XslResult.build(403, "账户已被删除");
         }
 
         //5.查询图片信息
@@ -285,7 +249,7 @@ public class UserServiceImpl implements UserSerivice {
 
         logger.info("login return message is {}", JsonUtils.objectToJson(resVo));
 
-        return pojo.XslResult.ok(JsonUtils.objectToJson(resVo));
+        return XslResult.ok(JsonUtils.objectToJson(resVo));
     }
 
 
@@ -296,15 +260,15 @@ public class UserServiceImpl implements UserSerivice {
      * @return
      */
     @Override
-    public pojo.XslResult getUserByToken(String token, String phone) {
+    public XslResult getUserByToken(String token, String phone) {
         String result = jedisClient.get(REDIS_USER_SESSION_KEY + ":" + phone);
 
         //判断是否为空
         if (!token.equals(result)) {
-            return pojo.XslResult.build(400, "登陆时间已经过期。请重新登录");
+            return XslResult.build(400, "登陆时间已经过期。请重新登录");
         }
 
-        return pojo.XslResult.ok(jedisClient.get(REDIS_USER_SESSION_KEY + ":" + phone));
+        return XslResult.ok(jedisClient.get(REDIS_USER_SESSION_KEY + ":" + phone));
     }
 
     /**
@@ -315,18 +279,18 @@ public class UserServiceImpl implements UserSerivice {
      * @return
      */
     @Override
-    public pojo.XslResult Password(String phone, String password) {
+    public XslResult Password(String phone, String password) {
         XslUserExample example = new XslUserExample();
         XslUserExample.Criteria criteria = example.createCriteria();
         criteria.andPhoneEqualTo(phone);
         List<XslUser> list = xslUserMapper.selectByExample(example);
         if (list.size() == 0 && list.isEmpty()) {
-            return pojo.XslResult.build(400, "手机号没有注册，请注册!");
+            return XslResult.build(400, "手机号没有注册，请注册!");
         }
         XslUser xslUser = list.get(0);
         xslUser.setPassword(password);
         xslUserMapper.updateByExample(xslUser, example);
-        return pojo.XslResult.build(200, "修改成功！");
+        return XslResult.build(200, "修改成功！");
     }
 
     private void initUserInfo(XslUserRegister xslUserRegister, XslUser xslUser, XslHunter xslHunter, XslMaster xslMaster) {
