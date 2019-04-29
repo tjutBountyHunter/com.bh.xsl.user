@@ -1,6 +1,7 @@
 package util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import pojo.XslResult;
 
 public class XslResultOk extends XslResult {
     private boolean ok;

@@ -1,4 +1,4 @@
-package com.xsl.user.service.impl;
+package user.service.impl;
 
 import example.XslHunterExample;
 import example.XslMasterExample;
@@ -12,7 +12,7 @@ import pojo.XslHunter;
 import pojo.XslHunterLevel;
 import pojo.XslMaster;
 import pojo.XslMasterLevel;
-import com.xsl.user.service.HunMaster;
+import user.service.HunMaster;
 
 
 import java.util.Date;
@@ -34,7 +34,7 @@ public class HunMasterImpl implements HunMaster {
     @Autowired
     private XslMasterMapper xslMasterMapper;
 //    @Autowired
-//    private UserService userService;
+//    private UserResource userService;
     @Override
     public Map<String, Integer> insertPeople(Integer userId) {
         XslHunter xslHunter = new XslHunter();

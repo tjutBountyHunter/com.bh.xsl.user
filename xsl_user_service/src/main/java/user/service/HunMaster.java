@@ -1,4 +1,4 @@
-package com.xsl.user.service;
+package user.service;
 
 import java.util.Map;
 

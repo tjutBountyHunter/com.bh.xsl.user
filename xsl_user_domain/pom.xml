@@ -11,5 +11,11 @@
 
     <artifactId>xsl_user_domain</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.bh.xsl.user</groupId>
+            <artifactId>xsl_user_common</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

@@ -1,11 +1,8 @@
-package userSource;
-
-
+package user.service;
 import pojo.XslResult;
 import pojo.XslUserRegister;
 import vo.UserReqVo;
-
-public interface UserService {
+public interface UserSerivice {
     /**
      * 注册
      * @param xslUserRegister
@@ -43,4 +40,6 @@ public interface UserService {
      * @return
      */
     XslResult Password(String phone, String password);
+
+
 }

@@ -14,9 +14,7 @@
     <!-- 注册中心服务地址 -->
     <dubbo:registry protocol="zookeeper" address="47.93.230.61:2181"/>
 
-    <bean id="userService" class="userSourceImpl.UserServiceImpl"/>
+    <bean id="userService" class="resourceImpl.UserResourceImpl"/>
 
-
-
-    <dubbo:service interface="userSource.UserService" ref="userService" timeout="600000"/>
+    <dubbo:service interface="resource.UserResource" ref="userService" timeout="600000"/>
 </beans>

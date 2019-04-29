@@ -1,4 +1,4 @@
-package com.xsl.user.service.impl;
+package user.service.impl;
 
 import dao.JedisClient;
 import enums.UserStateEnum;
@@ -13,13 +13,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 import org.springframework.util.StringUtils;
 import pojo.*;
-import com.xsl.user.service.HunMaster;
+import user.service.HunMaster;
 import util.*;
-import util.XslResult;
+import vo.XslResult;
 import vo.UserReqVo;
 import vo.UserResVo;
 import java.util.*;
-import com.xsl.user.service.UserSerivice;
+import user.service.UserSerivice;
 
 
 

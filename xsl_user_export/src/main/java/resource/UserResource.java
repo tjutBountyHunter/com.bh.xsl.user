@@ -1,23 +1,17 @@
-package com.xsl.user.service;
-import pojo.XslResult;
-import pojo.XslUserRegister;
-import vo.UserReqVo;
-public interface UserSerivice {
-    /**
-     * 注册
-     * @param xslUserRegister
-     * @return
-     * @throws Exception
-     */
-    XslResult createUser(XslUserRegister xslUserRegister);
+package resource;
 
+
+import vo.UserReqVo;
+import vo.XslResult;
+
+public interface UserResource {
     /**
      * 快速注册
-     * @param xslUserRegister
+     * @param userReqVo
      * @return
      * @throws Exception
      */
-    XslResult quickCreateUser(XslUserRegister xslUserRegister);
+    XslResult quickCreateUser(UserReqVo userReqVo);
 
     /**
      * 登录
@@ -40,6 +34,4 @@ public interface UserSerivice {
      * @return
      */
     XslResult Password(String phone, String password);
-
-
 }

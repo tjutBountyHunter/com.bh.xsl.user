@@ -12,16 +12,6 @@
     <artifactId>xsl_user_common</artifactId>
 
     <dependencies>
-<!--         httpclient-->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.httpcomponents</groupId>-->
-<!--            <artifactId>httpclient</artifactId>-->
-<!--        </dependency>-->
-<!--        &lt;!&ndash; 单元测试 &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>junit</groupId>-->
-<!--            <artifactId>junit</artifactId>-->
-<!--        </dependency>-->
         <!-- JSP相关 -->
         <dependency>
             <groupId>jstl</groupId>
@@ -35,11 +25,13 @@
             <groupId>javax.servlet</groupId>
             <artifactId>jsp-api</artifactId>
         </dependency>
+
         <!-- 时间操作组件 -->
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
         </dependency>
+
         <!-- Apache工具组件 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -53,12 +45,26 @@
             <groupId>commons-net</groupId>
             <artifactId>commons-net</artifactId>
         </dependency>
+
         <!-- Jackson Json处理工具包 -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
         </dependency>
+
         <!-- Spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jms</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -79,21 +85,34 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-aspects</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jms</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+
         <!--极光推送-->
 <!--        <dependency>-->
 <!--            <groupId>cn.jpush.api</groupId>-->
 <!--            <artifactId>jpush-client</artifactId>-->
 <!--        </dependency>-->
+
+        <!--阿里云-->
         <dependency>
             <groupId>com.aliyun</groupId>
             <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
-            <version>1.1.0</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-core</artifactId>
         </dependency>
 <!--        <dependency>-->
 <!--            <groupId>com.aliyun</groupId>-->
 <!--            <artifactId>aliyun-java-sdk-core</artifactId>-->
-<!--            <version>4.0.9</version>-->
 <!--            <scope>compile</scope>-->
 <!--        </dependency>-->
 <!--        &lt;!&ndash;阿里&ndash;&gt;-->
@@ -101,57 +120,8 @@
             <groupId>javax.servlet</groupId>
             <artifactId>jsp-api</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.aliyun</groupId>
-            <artifactId>aliyun-java-sdk-core</artifactId>
-            <version>3.7.1</version>
-        </dependency>
-        <!--二维码生成组件-->
-        <!--<dependency>-->
-        <!--<groupId>or.core.qr</groupId>-->
-        <!--<artifactId>qrcode</artifactId>-->
-        <!--<version>3.3.0</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>icbc.api.sdk.cop</groupId>-->
-        <!--<artifactId>sdkcop</artifactId>-->
-        <!--<version>3.3.0</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>icbc.api.sdk.cop.io</groupId>-->
-        <!--<artifactId>sdkcopio</artifactId>-->
-        <!--<version>3.3.0</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>icbc.api.sdk.cop.sources</groupId>-->
-        <!--<artifactId>sdkcopsources</artifactId>-->
-        <!--<version>3.3.0</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>icbc.api.sdk.jar</groupId>-->
-        <!--<artifactId>sdkcopjar</artifactId>-->
-        <!--<version>3.3.0</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>icbc.ca</groupId>-->
-        <!--<artifactId>cajar</artifactId>-->
-        <!--<version>3.3.0</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>javaicbc.sdk</groupId>-->
-        <!--<artifactId>javaicbc</artifactId>-->
-        <!--<version>3.3.0</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>javase.sdk</groupId>-->
-        <!--<artifactId>javase</artifactId>-->
-        <!--<version>3.3.0</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>Zxing.code</groupId>-->
-        <!--<artifactId>ZXing</artifactId>-->
-        <!--<version>3.3.1</version>-->
-        <!--</dependency>-->
+
+        <!-- Redis客户端 -->
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
