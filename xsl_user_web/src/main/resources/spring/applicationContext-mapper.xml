@@ -25,6 +25,6 @@
     <!--配置扫描包-->
     <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer" >
         <!--扫描所有dao接口的实现，加入到ioc容器中-->
-        <property name="basePackage" value="com.xsl.weChat.mapper" />
+        <property name="basePackage" value="mapper" />
     </bean>
 </beans>

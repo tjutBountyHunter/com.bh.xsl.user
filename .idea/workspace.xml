@@ -1,126 +1,352 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="xsl_user_web:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2e8da8c3-2d35-40a2-9b5e-faad46c09dce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/enums/UserStateEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/pojo/XslResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/CookieUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/FtpUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/IbmResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/IdUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/ImageFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/JedisClientUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/JsonUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/Md5Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/PageBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/PageDataResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/StringTransitionInt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/TimeDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/UuidTaskId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/XslResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/XslResultOk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/byte2hex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/util/timeDate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/vo/SchoolReqVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/vo/SchoolResVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/vo/UserReqVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_common/src/main/java/vo/UserResVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/IbmCommercialExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/IbmUserExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslCodeExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslCollecthExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslCollecttExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslCollegeExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslDatetimeExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslFileExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslGroupRuleExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslHistoryhExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslHunterExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslHunterLevelExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslHunterLevelExperience.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslHunterLevelExperienceExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslHunterLevelRuleExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslHunterTagExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslHunterTaskExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslInputBillExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslLogExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslMajorExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslManagerExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslManagerRoleExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslMasterExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslMasterLevelExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslMasterLevelExperience.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslMasterLevelExperienceExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslMasterLevelRuleExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslMasterTagExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslMatchExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslMatchRankExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslMatchRewardExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslNetworkExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslOrderExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslOrientedExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslOutputBillExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslPrivilegeRuleExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslRewardExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslRewardRankExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslRoleExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslRoleRuleExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslRuleExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslSchoolExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslSchoolinfoExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslScoreExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslTagExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslTaskExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslTaskTagExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslThrowinglogExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslTokenExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslUserExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/example/XslUserFileExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/IbmUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/IbmUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/ViewTaskStateMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslCodeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslCodeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslCodePhone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslCodePhone.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslCollecthMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslCollecthMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslCollecttMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslCollecttMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslCollegeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslCollegeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslCollegeMessageMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslCollegeMessageMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslDateTaskMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslDateTaskMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslDatetimeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslDatetimeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslDoneTaskMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslDoneTaskMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslDoneTaskMasterMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslDoneTaskMasterMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslFileMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslFileMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslFileUrlMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslFileUrlMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslFindCollectTaskMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslFindCollectTaskMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslFindcollectMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslFindcollectMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslGroupRuleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslGroupRuleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHistoryHunterMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHistoryHunterMap.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHistoryhMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHistoryhMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterLevelExperienceMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterLevelExperienceMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterLevelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterLevelMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterLevelPrivilegeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterLevelPrivilegeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterLevelRuleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterLevelRuleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterShopMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterShopMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterTagMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterTagMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterTaskMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterTaskMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHuntershowMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHuntershowMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslInputBillMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslInputBillMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslLogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslLogMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMainPageFindMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMainPageFindMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMajorMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMajorMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMajorMessageMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMajorMessageMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslManagerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslManagerMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslManagerRoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslManagerRoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMasterLevelExperienceMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMasterLevelExperienceMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMasterLevelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMasterLevelMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMasterLevelPrivilegeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMasterLevelPrivilegeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMasterLevelRuleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMasterLevelRuleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMasterMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMasterMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMasterTagMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMasterTagMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMatchMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMatchMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMatchRankMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMatchRankMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMatchRewardMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslMatchRewardMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslNetworkMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslNetworkMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslOrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslOrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslOrientedMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslOrientedMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslOutputBillMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslOutputBillMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslPrivilegeRuleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslPrivilegeRuleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslRewardMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslRewardMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslRewardRankMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslRewardRankMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslRoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslRoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslRoleRuleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslRoleRuleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslRuleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslRuleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslSchoolMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslSchoolMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslSchoolMessageMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslSchoolMessageMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslSchoolinfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslSchoolinfoMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslScoreMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslScoreMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTagClassMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTagClassMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTagMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTagMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTaskCategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTaskCategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTaskClassMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTaskClassMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTaskMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTaskMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTaskNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTaskNumber.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTaskTagMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTaskTagMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTaskTagShopMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTaskTagShopMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTaskUpdate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTaskUpdate.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTaskshowMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTaskshowMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslThrowinglogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslThrowinglogMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTokenFindMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTokenFindMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTokenMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslTokenMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslUpdateTagMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslUserFileMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslUserFileMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslUserUpdateMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslUserUpdateMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslWaitHunterTaskMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslWaitHunterTaskMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslWaitTaskMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslWaitTaskMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XsloldTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XsloldTime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/AlipayExtendParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/AlipayExternalUserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/AlipayPayInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/AlipayReturn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/CartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/HunterTransfer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/IbmUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/ItemInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/ItemTransfer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/RecommendHunter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/RecommendTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/SearchResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslAccectHunter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslAllHistoryHunter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslCollecth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslCollectt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslCollege.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslDateTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslDatetime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslFileUrl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslFindCollectTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslGroupRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslHistoryHunter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslHistoryh.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslHotHisory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslHunter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslHunterLevel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslHunterLevelPrivilege.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslHunterLevelPrivilegeExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslHunterLevelRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslHunterLevelRuleExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslHunterShop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslHunterTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslHunterTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslHunterhistoryDefault.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslInputBill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslMainPageMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslMajor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslManagerRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslMaster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslMasterLevel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslMasterLevelPrivilege.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslMasterLevelPrivilegeExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslMasterLevelRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslMasterLevelRuleExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslMasterTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslMatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslMatchRank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslMatchReward.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslNetwork.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslOneHunter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslOriented.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslOutputBill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslPrivilegeRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslReward.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslRewardRank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslRoleRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslSchool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslSchoolinfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslScore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslTaskCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslTaskCategoryExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslTaskPosh.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslTaskTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslThrowinglog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslUserFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslUserRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslWaitTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslcollectTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslnextStep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/Xsltaskmainpage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_export/src/main/java/userSource/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_service/src/main/java/com/xsl/user/service/HunMaster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_service/src/main/java/com/xsl/user/service/UserSerivice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_service/src/main/java/com/xsl/user/service/impl/HunMasterImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_service/src/main/java/com/xsl/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_service/src/main/java/dao/JedisClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_service/src/main/java/dao/impl/JedisClientSingle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_web/src/main/java/userSourceImpl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_web/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-duubo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_common/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_common/target/xsl_user_common-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_dao/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_dao/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_dao/target/xsl_user_dao-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_domain/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_domain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_domain/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_domain/target/xsl_user_domain-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_export/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_export/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_export/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_export/target/xsl_user_export-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_service/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_service/target/xsl_user_service-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/mybatis/SqlMapConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/resource/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/resource/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/resource/resource.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/spring/applicationContext-jedis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/spring/applicationContext-mapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/spring/applicationContext-service.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/spring/applicationContext-trans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/classes/spring/springmvc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/tomcat/conf/logging.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/tomcat/conf/tomcat-users.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/tomcat/conf/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/tomcat/logs/access_log.2019-04-27" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/index_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/index_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/mybatis/SqlMapConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/resource/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/resource/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/resource/resource.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/spring/applicationContext-jedis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/spring/applicationContext-mapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/spring/applicationContext-service.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/spring/applicationContext-trans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/classes/spring/springmvc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/activemq-all-5.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/activemq-amqp-5.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/activemq-broker-5.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/activemq-client-5.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/activemq-openwire-legacy-5.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/apiguardian-api-1.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/aspectjweaver-1.8.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/bcpkix-jdk15on-1.47.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/bcprov-jdk15on-1.47.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/commons-fileupload-1.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/commons-io-2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/commons-lang3-3.3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/commons-net-3.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/commons-pool2-2.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/druid-1.0.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/dubbo-2.5.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/geronimo-jms_1.1_spec-1.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/hamcrest-core-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/hawtbuf-1.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/jackson-annotations-2.4.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/jackson-core-2.4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/jackson-databind-2.4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/javassist-3.15.0-GA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/jedis-2.7.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/jline-0.9.94.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/joda-time-2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/junit-4.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/junit-jupiter-api-5.5.0-M1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/junit-platform-commons-1.5.0-M1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/log4j-1.2.16.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/mybatis-3.2.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/mybatis-paginator-1.2.15.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/mybatis-spring-1.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/mysql-connector-java-5.1.32.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/netty-3.2.5.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/netty-3.7.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/opentest4j-1.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/pagehelper-3.4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/proton-0.3.0-fuse-2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/proton-api-0.3.0-fuse-2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/proton-jms-0.3.0-fuse-2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/slf4j-api-1.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/slf4j-log4j12-1.6.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-aop-4.1.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-aspects-4.1.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-beans-4.1.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-context-4.1.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-context-support-4.1.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-core-4.1.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-expression-4.1.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-jdbc-4.1.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-jms-4.1.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-messaging-4.1.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-test-4.1.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-tx-4.1.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-web-4.1.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/spring-webmvc-4.1.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/xsl-weChat-common-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/xsl-weChat-dao-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/xsl-weChat-domain-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/xsl-weChat-export-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/xsl_user_service-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/zkclient-0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/lib/zookeeper-3.4.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xsl_user_web/target/xsl-user-web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xsl_user_common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xsl_user_dao/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_export/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xsl_user_export/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xsl_user_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xsl_user_web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/src/main/resources/resource/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/xsl_user_web/src/main/resources/resource/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/src/main/resources/resource/resource.properties" beforeDir="false" afterPath="$PROJECT_DIR$/xsl_user_web/src/main/resources/resource/resource.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-jedis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-jedis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-service.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/springmvc.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -151,80 +377,93 @@
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-trans.xml">
+        <entry file="file://$PROJECT_DIR$/xsl_user_service/src/main/java/com/xsl/user/service/UserSerivice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+            <state relative-caret-position="-349">
+              <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/webapp/WEB-INF/web.xml">
+        <entry file="file://$PROJECT_DIR$/xsl_user_export/src/main/java/userSource/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+            <state relative-caret-position="-302">
+              <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xsl_user_web/pom.xml">
+        <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/java/userSourceImpl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+            <state relative-caret-position="150">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#424#425#0" expanded="true" />
+                <element signature="e#488#489#0" expanded="true" />
+                <element signature="e#711#712#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
+                <element signature="e#848#849#0" expanded="true" />
+                <element signature="e#882#883#0" expanded="true" />
+                <element signature="e#688#689#0" expanded="true" />
+                <element signature="e#715#716#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/webapp/index.jsp">
+        <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-service.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="135">
+              <caret line="9" column="59" lean-forward="true" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xsl_user_web/xsl_user_web.iml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/xsl_user_service/src/main/java/com/xsl/user/service/impl/HunMasterImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/com.bh.xsl.user.iml">
+        <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-duubo.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xsl_user_domain/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+            <state relative-caret-position="121">
+              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -232,27 +471,92 @@
       <find>we</find>
       <find>spring</find>
       <find>wec</find>
-      <find>wechat</find>
       <find>max</find>
+      <find>JedisClientUtil</find>
+      <find>userServiceResource</find>
+      <find>UserServiceImpl</find>
+      <find>user</find>
+      <find>impiUserService</find>
+      <find>implement</find>
+      <find>xslUserMapper</find>
+      <find>xslUser</find>
+      <find>jpush</find>
+      <find>jedis</find>
+      <find>verif</find>
+      <find>http</find>
+      <find>servlet</find>
+      <find>servlet-mapp</find>
+      <find>life</find>
+      <find>annotation</find>
+      <find>tomca</find>
+      <find>JedisClient</find>
+      <find>scope</find>
+      <find>userService</find>
+      <find>wechat</find>
+      <find>properties</find>
+      <find>service</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/xsl_user_web/pom.xml" />
-        <option value="$PROJECT_DIR$/xsl_user_service/pom.xml" />
         <option value="$PROJECT_DIR$/xsl_user_web/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/xsl_user_web/src/main/resources/resource/resource.properties" />
         <option value="$PROJECT_DIR$/xsl_user_web/src/main/resources/resource/db.properties" />
-        <option value="$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-service.xml" />
         <option value="$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-trans.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/xsl_user_web/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/xsl_user_common/src/main/java/pojo/XslResult.java" />
+        <option value="$PROJECT_DIR$/xsl_user_web/src/main/java/com/xsl/user/userServiceImpl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/xsl_user_domain/src/main/java/pojo/XslUserRegister.java" />
+        <option value="$PROJECT_DIR$/xsl_user_export/src/main/java/com/xsl/user/userServiceResource/UserService.java" />
+        <option value="$PROJECT_DIR$/xsl_user_service/src/main/java/service/Collect.java" />
+        <option value="$PROJECT_DIR$/xsl_user_common/src/main/java/enums/UserStateEnum.java" />
+        <option value="$PROJECT_DIR$/xsl_user_service/src/main/java/service/UserService.java" />
+        <option value="$PROJECT_DIR$/xsl_user_service/src/main/java/service/impl/UserviceImpl.java" />
+        <option value="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslUserMapper.xml" />
+        <option value="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslUserMapper.java" />
+        <option value="$PROJECT_DIR$/xsl_user_dao/pom.xml" />
+        <option value="$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterShopMapper.java" />
+        <option value="$PROJECT_DIR$/xsl_user_service/pom.xml" />
+        <option value="$PROJECT_DIR$/xsl_user_service/src/main/java/service/impl/TaskTopushImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/xsl_user_common/pom.xml" />
+        <option value="$PROJECT_DIR$/xsl_user_service/src/main/java/service/createQrcode.java" />
+        <option value="$PROJECT_DIR$/xsl_user_service/src/main/java/service/impl/HunterRecommendImpl.java" />
+        <option value="$PROJECT_DIR$/xsl_user_service/src/main/java/service/HunMaster.java" />
+        <option value="$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/springmvc.xml" />
+        <option value="$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-mapper.xml" />
+        <option value="$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-jedis.xml" />
+        <option value="$PROJECT_DIR$/xsl_user_service/src/main/java/service/impl/HunMasterImpl.java" />
+        <option value="$PROJECT_DIR$/xsl_user_web/pom.xml" />
+        <option value="$PROJECT_DIR$/xsl_user_web/src/main/resources/resource/log4j.properties" />
+        <option value="$PROJECT_DIR$/xsl_user_web/src/main/resources/resource/resource.properties" />
+        <option value="$PROJECT_DIR$/xsl_user_web/src/main/java/com/xsl/user/userServiceResourceImpl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/xsl_user_service/src/main/java/com/xsl/user/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/xsl_user_export/src/main/java/userSource/Resource.java" />
+        <option value="$PROJECT_DIR$/xsl_user_service/src/main/java/com/xsl/user/service/impl/HunMasterImpl.java" />
+        <option value="$PROJECT_DIR$/xsl_user_service/src/main/java/com/xsl/user/service/UserSerivice.java" />
+        <option value="$PROJECT_DIR$/xsl_user_export/src/main/java/userSource/UserServiceResource.java" />
+        <option value="$PROJECT_DIR$/xsl_user_export/src/main/java/userSource/UserService.java" />
+        <option value="$PROJECT_DIR$/xsl_user_web/src/main/java/userSourceImpl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-service.xml" />
+        <option value="$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-duubo.xml" />
       </list>
     </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -280,6 +584,23 @@
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="xsl_user_common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="xsl_user_common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="xsl_user_dao" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="xsl_user_service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="xsl_user_web" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
@@ -298,8 +619,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="6" />
-    <option name="y" value="23" />
+    <option name="x" value="25" />
+    <option name="y" value="26" />
     <option name="width" value="1400" />
     <option name="height" value="848" />
   </component>
@@ -309,6 +630,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -320,6 +642,86 @@
             <path>
               <item name="com.bh.xsl.user" type="b2602c69:ProjectViewProjectNode" />
               <item name="com.bh.xsl.user" type="462c0819:PsiDirectoryNode" />
+              <item name="xsl_user_export" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.bh.xsl.user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.bh.xsl.user" type="462c0819:PsiDirectoryNode" />
+              <item name="xsl_user_export" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.bh.xsl.user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.bh.xsl.user" type="462c0819:PsiDirectoryNode" />
+              <item name="xsl_user_export" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.bh.xsl.user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.bh.xsl.user" type="462c0819:PsiDirectoryNode" />
+              <item name="xsl_user_export" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.bh.xsl.user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.bh.xsl.user" type="462c0819:PsiDirectoryNode" />
+              <item name="xsl_user_export" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="userSource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.bh.xsl.user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.bh.xsl.user" type="462c0819:PsiDirectoryNode" />
+              <item name="xsl_user_service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.bh.xsl.user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.bh.xsl.user" type="462c0819:PsiDirectoryNode" />
+              <item name="xsl_user_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.bh.xsl.user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.bh.xsl.user" type="462c0819:PsiDirectoryNode" />
+              <item name="xsl_user_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.bh.xsl.user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.bh.xsl.user" type="462c0819:PsiDirectoryNode" />
+              <item name="xsl_user_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.bh.xsl.user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.bh.xsl.user" type="462c0819:PsiDirectoryNode" />
+              <item name="xsl_user_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.bh.xsl.user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.bh.xsl.user" type="462c0819:PsiDirectoryNode" />
+              <item name="xsl_user_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.bh.xsl.user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.bh.xsl.user" type="462c0819:PsiDirectoryNode" />
               <item name="xsl_user_web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -341,13 +743,47 @@
               <item name="xsl_user_web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.bh.xsl.user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.bh.xsl.user" type="462c0819:PsiDirectoryNode" />
+              <item name="xsl_user_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="userSourceImpl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.bh.xsl.user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.bh.xsl.user" type="462c0819:PsiDirectoryNode" />
+              <item name="xsl_user_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.bh.xsl.user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.bh.xsl.user" type="462c0819:PsiDirectoryNode" />
+              <item name="xsl_user_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.bh.xsl.user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.bh.xsl.user" type="462c0819:PsiDirectoryNode" />
+              <item name="xsl_user_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,18 +792,28 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/xsl_user_web/src/main/webapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/xsl_user_web/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="service.impl" />
+      <recent name="service" />
+      <recent name="enums" />
+      <recent name="pojo" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/xsl_user_web/src/main/webapp" />
       <recent name="$PROJECT_DIR$/xsl_user_web/src/main/resources" />
+      <recent name="$PROJECT_DIR$/xsl_user_common/src/main/java" />
+      <recent name="$PROJECT_DIR$/xsl_user_service/src/main/java" />
+      <recent name="$PROJECT_DIR$/xsl_user_dao/src/main/java" />
+      <recent name="$PROJECT_DIR$/xsl_user_domain/src/main/java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -382,6 +828,81 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.19" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.19" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/xsl_user_web_war_exploded/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="xsl_user_web:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/xsl_user_web_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_com_bh_xsl_user" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51933" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="xsl_user_web:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -392,7 +913,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556350312988</updated>
-      <workItem from="1556350317872" duration="3582000" />
+      <workItem from="1556350317872" duration="14871000" />
+      <workItem from="1556445571936" duration="4810000" />
+      <workItem from="1556458691663" duration="9359000" />
+      <workItem from="1556496314338" duration="506000" />
+      <workItem from="1556498892263" duration="5192000" />
     </task>
     <task id="LOCAL-00001" summary="用户中心系统">
       <created>1556353191279</created>
@@ -408,46 +933,56 @@
       <option name="project" value="LOCAL" />
       <updated>1556353422461</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="用户中心系统">
+      <created>1556355067916</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556355067916</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3582000" />
+    <option name="totallyTimeSpent" value="34738000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="23" width="1400" height="848" extended-state="0" />
+    <frame x="25" y="26" width="1400" height="848" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Web" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496318" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26435935" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" weight="0.32936507" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936507" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3287858" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4324693" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" visible="true" weight="0.20324005" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" weight="0.3298969" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32936507" />
+      <window_info anchor="bottom" id="Application Servers" order="14" weight="0.3287858" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.3287858" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.19808541" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3298969" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,99 +993,213 @@
     <option name="LAST_COMMIT_MESSAGE" value="用户中心系统" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/xsl_user-domain/pom.xml">
+    <entry file="file://$PROJECT_DIR$/xsl_user_common/src/main/java/util/XslResultOk.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/xsl_user_export/pom.xml">
+    <entry file="file://$PROJECT_DIR$/xsl_user_common/src/main/java/util/Md5Utils.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/xsl_user_common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xsl_user_dao/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/mybatis/SqlMapConfig.xml">
+    <entry file="file://$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslUserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        <state relative-caret-position="165">
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/IbmCommercialMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/IbmCommercialMapper.java" />
+    <entry file="file://$PROJECT_DIR$/xsl_user_common/src/main/java/util/RandomWriter.java" />
+    <entry file="file://$PROJECT_DIR$/xsl_user_common/src/main/java/util/HttpClientUtil.java" />
+    <entry file="file://$PROJECT_DIR$/xsl_user_dao/src/main/java/mapper/XslHunterShopMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_service/src/main/java/service/impl/TaskTopushImpl.java" />
+    <entry file="file://$PROJECT_DIR$/xsl_user_service/src/main/java/service/createQrcode.java" />
+    <entry file="file://$PROJECT_DIR$/xsl_user_service/src/main/java/service/impl/HunterRecommendImpl.java" />
+    <entry file="file://$PROJECT_DIR$/xsl_user_service/src/main/java/service/impl/UserviceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/xsl_user_service/src/main/java/service/VerifyCodeService.java" />
+    <entry file="file://$PROJECT_DIR$/xsl_user_service/src/main/java/service/UserService.java" />
+    <entry file="file://$PROJECT_DIR$/xsl_user_service/src/main/java/service/impl/VerifyCodeServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/xsl_user_common/src/main/java/util/JsonUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_domain/pom.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/xsl_user_service/pom.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="159" selection-start-line="159" selection-end-line="159" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_web/target/tomcat/conf/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1845">
-          <caret line="123" column="21" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
+        <state relative-caret-position="-26125" />
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/FutureTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="121" column="14" selection-start-line="121" selection-start-column="14" selection-end-line="121" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-jedis.xml">
+    <entry file="file://$PROJECT_DIR$/xsl_user_export/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="255">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
         </state>
       </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-mapper.xml">
+    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/resource/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/resource/db.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/resource/resource.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="100" selection-start-line="21" selection-start-column="100" selection-end-line="21" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/springmvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-service.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        <state relative-caret-position="90">
+          <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-trans.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        <state relative-caret-position="15">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/springmvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="52" lean-forward="true" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+        <state relative-caret-position="255">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xsl_user_domain/pom.xml">
+    <entry file="file://$PROJECT_DIR$/xsl_user_service/src/main/java/dao/impl/JedisClientSingle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        <state relative-caret-position="75">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_common/src/main/java/util/XslResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_common/src/main/java/util/UuidTaskId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_common/src/main/java/util/JedisClientUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_common/src/main/java/util/FtpUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-859">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-mapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_dao/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-jedis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/resource/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/resource/db.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_common/src/main/java/util/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/resource/resource.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_service/src/main/java/dao/JedisClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -560,28 +1209,98 @@
           <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
         </state>
       </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/xsl_user_web/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        <state relative-caret-position="340">
+          <caret line="123" column="21" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
         </state>
       </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xsl_user_web/xsl_user_web.iml">
+    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/java/userServiceResourceImpl1/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/com.bh.xsl.user.iml">
+    <entry file="file://$PROJECT_DIR$/xsl_user_service/src/main/java/com/xsl/user/service/impl/HunMasterImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        <state relative-caret-position="78">
+          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_service/src/main/java/com/xsl/user/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding>
+            <element signature="e#1290#1317#1" expanded="true" />
+            <element signature="e#1373#1398#1" expanded="true" />
+            <element signature="e#1453#1483#1" expanded="true" />
+            <element signature="e#1543#1577#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_export/src/main/java/userSource/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-302">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-service.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="59" lean-forward="true" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/java/userSourceImpl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_service/src/main/java/com/xsl/user/service/HunMaster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_service/src/main/java/com/xsl/user/service/UserSerivice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-349">
+          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsl_user_web/src/main/resources/spring/applicationContext-duubo.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -591,10 +1310,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>xsl_user_web:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -602,6 +1323,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -624,6 +1346,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -635,12 +1358,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>xsl_user_service</last-edited>
+          <last-edited>xsl_user_web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -648,6 +1370,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

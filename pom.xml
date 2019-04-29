@@ -18,6 +18,8 @@
     </modules>
 
     <properties>
+        <httpclient.version>4.5.3</httpclient.version>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>4.12</junit.version>
 
@@ -72,7 +74,11 @@
     <dependencyManagement>
         <dependencies>
             <!-- 时间操作组件 -->
-
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
             <dependency>
 
                 <groupId>joda-time</groupId>

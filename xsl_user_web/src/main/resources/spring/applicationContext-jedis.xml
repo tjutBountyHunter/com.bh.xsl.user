@@ -33,6 +33,15 @@
         <constructor-arg name="poolConfig" ref="jedisPoolConfig"></constructor-arg>
     </bean>
 
-    <!--读取jedisClient的实现类-->
-    <!--<bean id="jedisClient" class="com.xsl.weChat.redis.Impl.JedisClientSingle"/>-->
-</beans>
+<!--    读取jedisClient的实现类-->
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+        <constructor-arg name="host" value="39.108.211.37"></constructor-arg>
+        <constructor-arg name="port" value="8379"></constructor-arg>
+        <constructor-arg name="poolConfig" ref="jedisPoolConfig"></constructor-arg>
+    </bean>
+    <bean id="jedisClientSingle" class="dao.impl.JedisClientSingle"></bean>
+    <bean id="jedisClientUtil" class="util.JedisClientUtil"></bean>
+
+
+
+   </beans>
