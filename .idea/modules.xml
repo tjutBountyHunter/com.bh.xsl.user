@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/xsl-user.iml" filepath="$PROJECT_DIR$/xsl-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xsl_user_common/xsl_user_common.iml" filepath="$PROJECT_DIR$/xsl_user_common/xsl_user_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xsl_user_dao/xsl_user_dao.iml" filepath="$PROJECT_DIR$/xsl_user_dao/xsl_user_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xsl_user_domain/xsl_user_domain.iml" filepath="$PROJECT_DIR$/xsl_user_domain/xsl_user_domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xsl_user_export/xsl_user_export.iml" filepath="$PROJECT_DIR$/xsl_user_export/xsl_user_export.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xsl_user_service/xsl_user_service.iml" filepath="$PROJECT_DIR$/xsl_user_service/xsl_user_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xsl_user_web/xsl_user_web.iml" filepath="$PROJECT_DIR$/xsl_user_web/xsl_user_web.iml" />
+    </modules>
+  </component>
+</project>

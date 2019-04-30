@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="xsl_user_service" />
+        <module name="xsl_user_web" />
+        <module name="xsl_user_domain" />
+        <module name="xsl_user_export" />
+        <module name="xsl_user_dao" />
+        <module name="xsl_user_common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="xsl-user" target="1.5" />
+      <module name="xsl_user_common" target="1.5" />
+      <module name="xsl_user_dao" target="1.5" />
+      <module name="xsl_user_domain" target="1.5" />
+      <module name="xsl_user_export" target="1.5" />
+      <module name="xsl_user_service" target="1.8" />
+      <module name="xsl_user_web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
