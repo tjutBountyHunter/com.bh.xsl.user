@@ -301,8 +301,7 @@ public class UserServiceImpl implements UserSerivice {
         xslUser.setPassword(Md5Utils.digestMds(xslUserRegister.getPassword()));
         xslUser.setSex("男");
         xslUser.setName(xslUserRegister.getPhone());
-        xslUser.setCreatedate(new Date());
-        xslUser.setUpdatedate(new Date());
+
         try {
             int result = xslUserMapper.insertSelective(xslUser);
 

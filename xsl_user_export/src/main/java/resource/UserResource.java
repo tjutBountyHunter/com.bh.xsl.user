@@ -8,7 +8,7 @@ import vo.XslUserRegister;
 public interface UserResource {
     /**
      * 快速注册
-     * @param XslUserRegister
+     * @param xslUserRegister
      * @return
      * @throws Exception
      */
