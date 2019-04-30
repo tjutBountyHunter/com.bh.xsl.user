@@ -22,7 +22,7 @@ public class UserResourceImplTest {
     private UserServiceImpl userService;
     @Test
     public void quickCreateUser() {
-        System.out.print("test");
+        12
 
     }
 //
