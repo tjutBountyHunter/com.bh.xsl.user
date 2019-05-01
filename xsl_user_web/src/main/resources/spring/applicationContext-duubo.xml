@@ -13,6 +13,7 @@
     <dubbo:application name="userCenter"/>
     <!-- 注册中心服务地址 -->
     <dubbo:registry protocol="zookeeper" address="47.93.230.61:2181"/>
+    <dubbo:protocol  name="dubbo" port="-1"/>
 
     <bean id="userResource" class="resourceImpl.UserResourceImpl"/>
     <dubbo:service interface="resource.UserResource" ref="userResource" timeout="600000"/>
