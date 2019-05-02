@@ -2,7 +2,7 @@ package user.service;
 import vo.XslResult;
 import vo.XslUserRegister;
 import vo.UserReqVo;
-public interface UserSerivice {
+public interface UserService {
 
 
     /**

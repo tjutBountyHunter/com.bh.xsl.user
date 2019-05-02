@@ -20,12 +20,12 @@ import vo.UserReqVo;
 import vo.UserResVo;
 import vo.XslUserRegister;
 import java.util.*;
-import user.service.UserSerivice;
+import user.service.UserService;
 
 
 
 @Service
-public class UserServiceImpl implements UserSerivice {
+public class UserServiceImpl implements UserService {
 
     @Autowired
     private HunMaster hunMaster;

@@ -2,7 +2,6 @@ package pojo;
 
 import java.math.BigDecimal;
 
-
 public class XslTaskPosh {
     private Integer id;
     private String descr;

@@ -4,36 +4,36 @@ import org.springframework.beans.factory.annotation.Autowired;
 import resource.UserResource;
 import vo.UserReqVo;
 import vo.XslResult;
-import user.service.UserSerivice;
+import user.service.UserService;
 import vo.XslUserRegister;
 
 public class UserResourceImpl implements UserResource {
 
     @Autowired
-    private UserSerivice userSerivice;
+    private UserService userService;
 
 
     @Override
     public XslResult quickCreateUser(XslUserRegister xslUserRegister) {
 
-        return userSerivice.quickCreateUser(xslUserRegister);
+        return userService.quickCreateUser(xslUserRegister);
     }
 
     @Override
     public XslResult userLogin(UserReqVo userReqVo) {
 
-        return userSerivice.userLogin(userReqVo);
+        return userService.userLogin(userReqVo);
     }
 
     @Override
     public XslResult getUserByToken(String token, String phone) {
 
-        return userSerivice.getUserByToken(token,phone);
+        return userService.getUserByToken(token,phone);
     }
 
     @Override
     public XslResult Password(String phone, String password) {
 
-        return userSerivice.Password(phone,password);
+        return userService.Password(phone,password);
     }
 }

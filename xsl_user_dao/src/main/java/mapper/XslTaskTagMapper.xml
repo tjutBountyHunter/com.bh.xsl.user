@@ -208,4 +208,43 @@
       state = #{state,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <!-- 批量插入 -->
+  <insert id="insertSelectiveBatch" parameterType="java.util.List">
+    insert into xsl_task_tag
+    (taskId, tagId)
+    values
+      <foreach collection="list" item="item" index="index" separator=",">
+        (
+          #{item.taskid,jdbcType=VARCHAR},
+          #{item.tagid,jdbcType=VARCHAR}
+        )
+      </foreach>
+  </insert>
+
+  <select id="getTagsByTaskId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from xsl_task_tag
+    where taskId = #{taskId,jdbcType=INTEGER}
+  </select>
+
+  <select id="getTasksByTagId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from xsl_task_tag
+    where tagId = #{taskTag,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectTagIdByExample" resultType="string" parameterType="example.XslTaskTagExample" >
+    select
+      tagId
+    from xsl_task_tag
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
 </mapper>
