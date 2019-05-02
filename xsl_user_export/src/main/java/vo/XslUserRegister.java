@@ -1,6 +1,8 @@
 package vo;
 
-public class XslUserRegister {
+import java.io.Serializable;
+
+public class XslUserRegister implements Serializable {
     private Integer hunterid;
     private String userId;
     private String password;

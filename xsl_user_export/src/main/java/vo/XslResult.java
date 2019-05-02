@@ -1,6 +1,7 @@
 package vo;
 
 
+import java.io.Serializable;
 
 /**
  * @version V1.0
@@ -9,7 +10,7 @@ package vo;
  * @author:何林鸿
  * @date: 2018年7月29日
  */
-public class XslResult {
+public class XslResult implements Serializable {
 
 
     // 响应业务状态

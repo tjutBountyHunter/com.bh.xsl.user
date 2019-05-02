@@ -1,6 +1,8 @@
 package vo;
 
-public class JPushReqVo {
+import java.io.Serializable;
+
+public class JPushReqVo implements Serializable {
 	/**
 	 * 手机号
 	 *

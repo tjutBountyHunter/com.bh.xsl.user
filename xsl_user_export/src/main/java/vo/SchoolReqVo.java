@@ -1,6 +1,8 @@
 package vo;
 
-public class SchoolReqVo {
+import java.io.Serializable;
+
+public class SchoolReqVo implements Serializable {
 	private Integer schoolid;
 	private Integer collegeid;
 

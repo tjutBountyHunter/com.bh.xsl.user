@@ -1,6 +1,8 @@
 package vo;
 
-public class SchoolResVo {
+import java.io.Serializable;
+
+public class SchoolResVo implements Serializable {
 	private String version;
 	private String schools;
 	private String colleges;
