@@ -1,6 +1,8 @@
 package vo;
 
-public class UserReqVo {
+import java.io.Serializable;
+
+public class UserReqVo implements Serializable {
 	private String phone;
 	private String password;
 	private String token;
