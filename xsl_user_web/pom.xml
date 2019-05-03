@@ -23,10 +23,6 @@
             <groupId>com.bh.xsl.user</groupId>
             <artifactId>xsl_user_service</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.bh.xsl.user</groupId>
-            <artifactId>xsl_user_export</artifactId>
-        </dependency>
 
 
         <!-- JSP相关 -->

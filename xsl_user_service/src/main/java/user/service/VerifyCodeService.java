@@ -1,6 +1,6 @@
 package user.service;
 
-import pojo.XslResult;
+import vo.XslResult;
 
 public interface VerifyCodeService {
 	/**

@@ -1,4 +1,5 @@
 package user.service;
+import vo.UserAccReqVo;
 import vo.XslResult;
 import vo.XslUserRegister;
 import vo.UserReqVo;
@@ -34,6 +35,18 @@ public interface UserService {
      * @return
      */
     XslResult Password(String phone, String password);
+
+    /**
+     * 获取雇主和猎人信息
+     * @return
+     */
+    XslResult getHMinfo(UserReqVo userReqVo);
+
+    /**
+     * 用户认证
+     * @return
+     */
+    XslResult userAcc(UserAccReqVo userAccReqVo);
 
 
 }

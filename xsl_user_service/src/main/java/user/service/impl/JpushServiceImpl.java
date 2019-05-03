@@ -20,10 +20,15 @@ import org.springframework.stereotype.Service;
 import user.service.JpushService;
 import vo.JPushVo;
 
+import javax.annotation.Resource;
+
 @Service
 public class JpushServiceImpl implements JpushService {
-	@Autowired
-	private JPushClient jPushClient;
+	@Resource
+	private JPushClient jedjpushClient;
+
+	@Resource
+	private JPushClient jedjpushClient_Zd;
 
 	private static final Logger LOG = LoggerFactory.getLogger(JpushServiceImpl.class);
 
@@ -34,14 +39,21 @@ public class JpushServiceImpl implements JpushService {
 	 * @return 0推送失败，1推送成功
 	 */
 
-	public int sendToRegistrationId(JPushVo jPushVo) {
+	public int sendToRegistrationId(JPushVo jPushVo, String source) {
 		int result = 0;
 		try {
 			PushPayload pushPayload = buildPushObject_all_registrationId_alertWithTitle(jPushVo.getRegistrationId(),jPushVo.getNotificationTitle(), jPushVo.getMsgTitle(), jPushVo.getMsgContent(), jPushVo.getExtrasparam());
 
-			PushResult pushResult = jPushClient.sendPush(pushPayload);
+			if("XSL".equals(source)){
+				jedjpushClient.sendPush(pushPayload);
+				result = 1;
+			}
 
-			result = 1;
+			if("ZD".equals(source)){
+				jedjpushClient_Zd.sendPush(pushPayload);
+				result = 1;
+			}
+
 		} catch (APIConnectionException e) {
 			e.printStackTrace();
 
@@ -57,12 +69,19 @@ public class JpushServiceImpl implements JpushService {
 	 * 发送给所有用户
 	 * @return 0推送失败，1推送成功
 	 */
-	public int sendToAll(JPushVo jPushVo) {
+	public int sendToAll(JPushVo jPushVo, String source) {
 		int result = 0;
 		try {
 			PushPayload pushPayload = buildPushObject_android_and_ios(jPushVo.getNotificationTitle(), jPushVo.getMsgTitle(), jPushVo.getMsgContent(), jPushVo.getExtrasparam());
-			PushResult pushResult = jPushClient.sendPush(pushPayload);
-			result = 1;
+			if("XSL".equals(source)){
+				jedjpushClient.sendPush(pushPayload);
+				result = 1;
+			}
+
+			if("ZD".equals(source)){
+				jedjpushClient_Zd.sendPush(pushPayload);
+				result = 1;
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

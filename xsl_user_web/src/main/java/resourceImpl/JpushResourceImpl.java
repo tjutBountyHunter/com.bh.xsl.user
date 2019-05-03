@@ -1,11 +1,9 @@
 package resourceImpl;
 
-import example.XslUserExample;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import pojo.XslUser;
 import resource.JpushResource;
 import user.service.JpushService;
 import util.JedisClientUtil;
@@ -30,7 +28,8 @@ public class JpushResourceImpl implements JpushResource {
 		String s = JedisClientUtil.get(REDIS_USER_SESSION_KEY + ":" + phone);
 		jPushVo.setRegistrationId(s);
 		//发推送
-		int i = jpushService.sendToRegistrationId(jPushVo);
+		String source = jPushReqVo.getSource();
+		int i = jpushService.sendToRegistrationId(jPushVo, source);
 
 		if(i < 1){
 			return XslResult.build(500, "发送失败");
@@ -45,7 +44,8 @@ public class JpushResourceImpl implements JpushResource {
 		BeanUtils.copyProperties(jPushReqVo, jPushVo);
 
 		//发推送
-		int i = jpushService.sendToAll(jPushVo);
+		String source = jPushReqVo.getSource();
+		int i = jpushService.sendToAll(jPushVo, source);
 
 		if(i < 1){
 			return XslResult.build(500, "发送失败");

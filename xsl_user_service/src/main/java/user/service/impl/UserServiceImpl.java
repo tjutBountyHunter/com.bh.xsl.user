@@ -1,5 +1,6 @@
 package user.service.impl;
 
+import com.google.gson.Gson;
 import dao.JedisClient;
 import enums.UserStateEnum;
 import example.*;
@@ -13,22 +14,16 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 import org.springframework.util.StringUtils;
 import pojo.*;
-import user.service.HunMaster;
-import util.*;
-import vo.XslResult;
-import vo.UserReqVo;
-import vo.UserResVo;
-import vo.XslUserRegister;
-import java.util.*;
+import user.service.UserInfoService;
 import user.service.UserService;
+import util.*;
+import vo.*;
 
+import java.util.*;
 
 
 @Service
 public class UserServiceImpl implements UserService {
-
-    @Autowired
-    private HunMaster hunMaster;
     @Autowired
     private XslFileMapper xslFileMapper;
     @Autowired
@@ -40,23 +35,22 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private XslSchoolinfoMapper xslSchoollinfoMapper;
     @Autowired
-    private XslUserUpdateMapper xslUserUpdateMapper;
-    @Autowired
     private XslUserFileMapper xslUserFileMapper;
     @Autowired
+    private XslHunterTagMapper xslHunterTagMapper;
+
+
+    @Autowired
     private JedisClient jedisClient;
+    @Autowired
+    private UserInfoService userInfoService;
 
     @Value("${REDIS_USER_SESSION_KEY}")
     private String REDIS_USER_SESSION_KEY;
-    @Value("${Login_SESSION_EXPIRE}")
-    private Integer Login_SESSION_EXPIRE;
-    @Value("${Login_SESSION_EXPIRE_CODE}")
-    private Integer Login_SESSION_EXPIRE_CODE;
-    @Value("${Login_SESSION_EXPIRE_PASSWORD}")
-    private Integer Login_SESSION_EXPIRE_PASSWORD;
+    @Value("${USER_INFO}")
+    private String USER_INFO;
 
     private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
-
 
 
     /**
@@ -65,7 +59,7 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     @Override
-    public XslResult quickCreateUser(XslUserRegister xslUserRegister){
+    public XslResult quickCreateUser(vo.XslUserRegister xslUserRegister) {
         XslUserExample example = new XslUserExample();
         XslUserExample.Criteria criteria = example.createCriteria();
         criteria.andPhoneEqualTo(xslUserRegister.getPhone());
@@ -75,7 +69,7 @@ public class UserServiceImpl implements UserService {
         }
 
         XslUser xslUser = new XslUser();
-        xslUser.setUserid(UUID.randomUUID().toString());
+        xslUser.setUserid(UUIDUtil.getUUID());
         //初始化猎人信息
         XslHunter xslHunter = initXslHunter(xslUser);
         //初始化雇主信息
@@ -93,45 +87,7 @@ public class UserServiceImpl implements UserService {
         userResVo.setTxUrl("http://47.93.200.190/images/default.png");
 
         return XslResult.ok(userResVo);
-
     }
-
-    /**
-     * 用户学校信息
-     *
-     * @param xslUserRegister
-     * @return
-     */
-    private XslResult createUserSchool(XslUserRegister xslUserRegister) {
-        XslSchoolinfo xslSchoolinfo = initXslSchoolinfo(xslUserRegister);
-        try {
-            int i = xslSchoollinfoMapper.insertSelective(xslSchoolinfo);
-
-            if(i < 1){
-                throw new RuntimeException("插入学校信息异常");
-            }
-
-            return XslResult.ok(xslSchoolinfo.getSchoolid());
-        } catch (Exception e) {
-            e.printStackTrace();
-            return XslResult.build(500, "服务器异常");
-        }
-    }
-
-    private XslSchoolinfo initXslSchoolinfo(XslUserRegister xslUserRegister) {
-        XslSchoolinfo xslSchoolinfo = new XslSchoolinfo();
-        xslSchoolinfo.setSchoolid(UUID.randomUUID().toString());
-        xslSchoolinfo.setDegree((byte) 2);
-        xslSchoolinfo.setSchoolhours((byte) 4);
-        xslSchoolinfo.setSno(xslUserRegister.getSchoolNumber());
-        xslSchoolinfo.setSchool(xslUserRegister.getSchoolinfo());
-        xslSchoolinfo.setCollege(xslUserRegister.getCollege());
-        xslSchoolinfo.setMajor(xslUserRegister.getMajor());
-        xslSchoolinfo.setStartdate(new Date().toString());
-        return xslSchoolinfo;
-    }
-
-
 
 
     /**
@@ -184,19 +140,15 @@ public class UserServiceImpl implements UserService {
 
         //4.判断用户异常状态
         Byte state = user.getState();
-        if(state == -2){
-            logger.info("login check status is {}", user.getState());
-            return XslResult.build(403, "审核未通过");
-        }
 
         if(state == -1){
             logger.info("login check status is {}", user.getState());
-            return XslResult.build(403, "账户被冻结");
+            return XslResult.build(403, "用户被冻结");
         }
 
         if(state == -3){
             logger.info("login check status is {}", user.getState());
-            return XslResult.build(403, "账户已被删除");
+            return XslResult.build(403, "用户不存在");
         }
 
         //5.查询图片信息
@@ -240,12 +192,15 @@ public class UserServiceImpl implements UserService {
             XslSchoolinfoExample.Criteria criteria4 = xslSchoolinfoExample.createCriteria();
             criteria4.andSchoolIdEqualTo(user.getSchoolinfo());
             List<XslSchoolinfo> xslSchoolinfos = xslSchoollinfoMapper.selectByExample(xslSchoolinfoExample);
-            BeanUtils.copyProperties(xslSchoolinfos.get(0), user);
+            BeanUtils.copyProperties(xslSchoolinfos.get(0), resVo);
         }
 
 
         jedisClient.set(REDIS_USER_SESSION_KEY + ":" + user.getPhone(), token);
-        jedisClient.expire(REDIS_USER_SESSION_KEY + ":" + user.getPhone(), Login_SESSION_EXPIRE);
+
+        Gson gson = GsonSingle.getGson();
+        String userInfo = gson.toJson(user);
+        JedisClientUtil.setEx(USER_INFO + ":" + user.getUserid(), userInfo, 300);
 
         logger.info("login return message is {}", JsonUtils.objectToJson(resVo));
 
@@ -288,9 +243,102 @@ public class UserServiceImpl implements UserService {
             return XslResult.build(400, "手机号没有注册，请注册!");
         }
         XslUser xslUser = list.get(0);
-        xslUser.setPassword(password);
+        xslUser.setPassword(Md5Utils.digestMds(password));
         xslUserMapper.updateByExample(xslUser, example);
         return XslResult.build(200, "修改成功！");
+    }
+
+    public XslResult getHMinfo(UserReqVo userReqVo){
+        String userid = userReqVo.getUserid();
+        if(StringUtils.isEmpty(userid)){
+            return XslResult.build(403, "参数错误");
+        }
+
+        XslUser userInfo = userInfoService.getUserInfo(userid);
+
+        String hunterid = userInfo.getHunterid();
+        String masterid = userInfo.getMasterid();
+
+        if(StringUtils.isEmpty(hunterid) || StringUtils.isEmpty(masterid)){
+            return XslResult.build(403, "用户不存在");
+        }
+
+        XslMaster masterInfo = userInfoService.getMasterInfo(masterid);
+        XslHunter hunterInfo = userInfoService.getHunterInfo(hunterid);
+
+        UserHMResVo userHMResVo = new UserHMResVo();
+        userHMResVo.setHunterEmpirical(hunterInfo.getEmpirical());
+        userHMResVo.setHunterlevel(hunterInfo.getLevel());
+        userHMResVo.setMasterEmpirical(masterInfo.getEmpirical());
+        userHMResVo.setMasterlevel(masterInfo.getLevel());
+
+        return XslResult.ok(userHMResVo);
+    }
+
+    @Override
+    public XslResult userAcc(UserAccReqVo userAccReqVo){
+        XslSchoolinfo xslSchoolinfo = new XslSchoolinfo();
+
+        //初步信息录入
+        BeanUtils.copyProperties(userAccReqVo, xslSchoolinfo);
+        xslSchoolinfo.setSchoolid(UUIDUtil.getUUID());
+        xslSchoolinfo.setStartdate("2015-09-01");
+        xslSchoolinfo.setDegree((byte) 2);
+        xslSchoolinfo.setSchoolhours((byte) 4);
+
+        int i = xslSchoollinfoMapper.insertSelective(xslSchoolinfo);
+
+        if(i < 1){
+            return XslResult.build(500, "服务器繁忙，请重试");
+        }
+
+        String userid = userAccReqVo.getUserid();
+        XslUser xslUser = new XslUser();
+        xslUser.setSchoolinfo(xslSchoolinfo.getSchoolid());
+        xslUser.setState((byte) 2);
+        XslUserExample xslUserExample = new XslUserExample();
+        xslUserExample.createCriteria().andUseridEqualTo(userid);
+        int count = xslUserMapper.updateByExampleSelective(xslUser, xslUserExample);
+
+        if(count < 1){
+            return XslResult.build(500, "服务器繁忙，请重试");
+        }
+
+        JedisClientUtil.delete(USER_INFO +":"+ userid);
+
+        //二次自动审核认证
+        List<TagVo> tagVos = userAccReqVo.getTagVos();
+        if(tagVos == null || tagVos.size() == 0){
+            return XslResult.ok(2);
+        }
+
+        XslUser userInfo = userInfoService.getUserInfo(userid);
+        String hunterId = userInfo.getHunterid();
+
+        List<XslHunterTag> xslHunterTags = new ArrayList<>();
+
+        for (TagVo tagVo : tagVos){
+            XslHunterTag xslHunterTag = new XslHunterTag();
+            xslHunterTag.setHunterid(hunterId);
+            xslHunterTag.setTagid(tagVo.getTagid());
+
+            xslHunterTags.add(xslHunterTag);
+        }
+
+        int tagCount = xslHunterTagMapper.insertSelectiveBatch(xslHunterTags);
+
+        if(tagCount < 1){
+            return XslResult.ok(2);
+        }
+
+        xslUser.setState((byte) 1);
+        int AccCount = xslUserMapper.updateByExampleSelective(xslUser, xslUserExample);
+
+        if(AccCount < 1){
+            return XslResult.build(200, "认证成功，待管理员审核");
+        }
+
+        return XslResult.ok(1);
     }
 
     private void initUserInfo(XslUserRegister xslUserRegister, XslUser xslUser, XslHunter xslHunter, XslMaster xslMaster) {
@@ -300,7 +348,7 @@ public class UserServiceImpl implements UserService {
         xslUser.setState(UserStateEnum.NA.getCode());
         xslUser.setPassword(Md5Utils.digestMds(xslUserRegister.getPassword()));
         xslUser.setSex("男");
-        xslUser.setName(xslUserRegister.getPhone());
+        xslUser.setName("xsl_"+xslUserRegister.getPhone());
 
         try {
             int result = xslUserMapper.insertSelective(xslUser);
@@ -319,10 +367,9 @@ public class UserServiceImpl implements UserService {
         //初始化雇主信息
         XslMaster xslMaster = new XslMaster();
         xslMaster.setUserid(xslUser.getUserid());
-        xslMaster.setMasterid(UUID.randomUUID().toString());
+        xslMaster.setMasterid(UUIDUtil.getUUID());
         xslMaster.setLevel((short) 1);
         xslMaster.setDescr("新人雇主");
-        xslMaster.setLastaccdate(new Date());
         try {
             int result = xslMasterMapper.insertSelective(xslMaster);
 
@@ -342,10 +389,9 @@ public class UserServiceImpl implements UserService {
         //初始化猎人信息
         XslHunter xslHunter = new XslHunter();
         xslHunter.setUserid(xslUser.getUserid());
-        xslHunter.setHunterid(UUID.randomUUID().toString());
+        xslHunter.setHunterid(UUIDUtil.getUUID());
         xslHunter.setLevel((short) 1);
         xslHunter.setDescr("新手猎人");
-        xslHunter.setLasttime(new Date());
         try {
             int result = xslHunterMapper.insertSelective(xslHunter);
 
@@ -361,38 +407,4 @@ public class UserServiceImpl implements UserService {
         return xslHunter;
     }
 
-    /**
-     * 用户表
-     *
-     * @param xslUserRegister
-     * @param schoolId
-     * @return
-     */
-    private XslResult createUseruser(XslUserRegister xslUserRegister, String schoolId) {
-        XslUser xslUser = new XslUser();
-        xslUser.setPhone(xslUserRegister.getPhone());
-        xslUser.setSchoolinfo(schoolId);
-        xslUser.setPassword(Md5Utils.digestMds(xslUserRegister.getPassword()));
-        xslUser.setName(xslUserRegister.getName());
-        xslUser.setSex(xslUserRegister.getSex());
-        xslUser.setUpdatedate(new Date());
-        xslUser.setCreatedate(new Date());
-        try {
-            xslUserMapper.insertSelective(xslUser);
-            XslUserExample xslUserExample = new XslUserExample();
-
-            XslUserExample.Criteria criteria = xslUserExample.createCriteria();
-            criteria.andPhoneEqualTo(xslUserRegister.getPhone());
-            List<XslUser> list = xslUserMapper.selectByExample(xslUserExample);
-            return XslResult.ok(list.get(0).getId());
-        } catch (Exception e) {
-            e.printStackTrace();
-            return XslResult.build(500, "服务器异常");
-        }
-
-    }
-
-
-
 }
-

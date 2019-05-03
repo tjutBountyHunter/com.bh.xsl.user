@@ -10,4 +10,9 @@
         <constructor-arg name="appKey" value="58bb0db196bb64bdd5ccd70c"></constructor-arg>
     </bean>
 
+    <bean id="jedjpushClient_Zd" class="cn.jpush.api.JPushClient">
+        <constructor-arg name="masterSecret" value="61ef56694bda7490d0978596"></constructor-arg>
+        <constructor-arg name="appKey" value="e7764f509e952ff0221141fc"></constructor-arg>
+    </bean>
+
 </beans>

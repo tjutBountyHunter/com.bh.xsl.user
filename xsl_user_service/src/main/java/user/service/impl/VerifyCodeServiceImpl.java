@@ -8,11 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
-import pojo.XslResult;
 import user.service.VerifyCodeService;
 import util.JsonUtils;
 import util.Message;
 import util.RandomNumUtil;
+import vo.XslResult;
 
 @Service
 public class VerifyCodeServiceImpl implements VerifyCodeService {
