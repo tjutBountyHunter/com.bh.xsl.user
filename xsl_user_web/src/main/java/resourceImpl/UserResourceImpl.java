@@ -1,12 +1,14 @@
 package resourceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import resource.UserResource;
 import vo.UserReqVo;
 import vo.XslResult;
 import user.service.UserService;
 import vo.XslUserRegister;
 
+@Controller
 public class UserResourceImpl implements UserResource {
 
     @Autowired

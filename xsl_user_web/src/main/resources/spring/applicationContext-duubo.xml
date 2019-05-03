@@ -21,4 +21,10 @@
     <bean id="JpushResource" class="resourceImpl.JpushResourceImpl"/>
     <dubbo:service interface="resource.JpushResource" ref="JpushResource" timeout="600000"/>
 
+    <bean id="UserInfoResouce" class="resourceImpl.UserInfoResouceImpl"/>
+    <dubbo:service interface="resource.UserInfoResouce" ref="JpushResource" timeout="600000"/>
+
+    <bean id="VerifyCodeResource" class="resourceImpl.VerifyCodeResourceImpl"/>
+    <dubbo:service interface="resource.VerifyCodeResource" ref="JpushResource" timeout="600000"/>
+
 </beans>
