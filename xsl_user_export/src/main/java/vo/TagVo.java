@@ -1,6 +1,8 @@
 package vo;
 
-public class TagVo {
+import java.io.Serializable;
+
+public class TagVo implements Serializable {
 	private String tagName;
 	private String tagid;
 

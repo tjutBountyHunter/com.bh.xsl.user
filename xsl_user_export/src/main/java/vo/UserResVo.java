@@ -2,7 +2,7 @@ package vo;
 
 import java.io.Serializable;
 
-public class UserResVo    implements Serializable{
+public class UserResVo extends ResponseBaseVo{
 	private String userid;
 
 	private String hunterid;

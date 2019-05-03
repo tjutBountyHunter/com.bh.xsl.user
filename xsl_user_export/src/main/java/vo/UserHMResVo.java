@@ -1,6 +1,6 @@
 package vo;
 
-public class UserHMResVo {
+public class UserHMResVo extends ResponseBaseVo {
 	private Short hunterlevel;
 	private Short masterlevel;
 	private Integer hunterEmpirical;

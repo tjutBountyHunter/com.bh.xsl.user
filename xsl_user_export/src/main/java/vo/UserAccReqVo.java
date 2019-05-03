@@ -2,7 +2,7 @@ package vo;
 
 import java.util.List;
 
-public class UserAccReqVo {
+public class UserAccReqVo extends RequestBaseVo {
 	private String userid;
 
 	private String sno;

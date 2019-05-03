@@ -2,7 +2,7 @@ package vo;
 
 import java.io.Serializable;
 
-public class UserReqVo implements Serializable {
+public class UserReqVo extends RequestBaseVo {
 	private String userid;
 	private String phone;
 	private String password;
