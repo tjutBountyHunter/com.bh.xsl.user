@@ -1,6 +1,6 @@
-package pojo;
+package vo;
 
-public class XslSchoolinfo {
+public class XslSchoolinfo extends ResponseBaseVo{
     private Integer id;
 
     private String schoolid;

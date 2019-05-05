@@ -26,6 +26,11 @@
             <artifactId>jsp-api</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.bh.xsl.user</groupId>
+            <artifactId>xsl_user_export</artifactId>
+        </dependency>
+
         <!-- 时间操作组件 -->
         <dependency>
             <groupId>joda-time</groupId>

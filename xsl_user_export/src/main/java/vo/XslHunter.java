@@ -1,8 +1,8 @@
-package pojo;
+package vo;
 
 import java.util.Date;
 
-public class XslHunter {
+public class XslHunter extends ResponseBaseVo{
     private Integer id;
 
     private String hunterid;

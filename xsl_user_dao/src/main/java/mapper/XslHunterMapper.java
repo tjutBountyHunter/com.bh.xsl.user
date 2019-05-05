@@ -2,7 +2,7 @@ package mapper;
 
 import example.XslHunterExample;
 import org.apache.ibatis.annotations.Param;
-import pojo.XslHunter;
+import vo.XslHunter;
 
 import java.util.List;
 

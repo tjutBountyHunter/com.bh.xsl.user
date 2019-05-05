@@ -8,9 +8,9 @@ import mapper.XslMasterLevelMapper;
 import mapper.XslMasterMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pojo.XslHunter;
+import vo.XslHunter;
 import pojo.XslHunterLevel;
-import pojo.XslMaster;
+import vo.XslMaster;
 import pojo.XslMasterLevel;
 import user.service.HunMaster;
 

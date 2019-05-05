@@ -1,6 +1,6 @@
 package user.service;
 
-import pojo.*;
+import vo.*;
 
 public interface UserInfoService {
 	 XslUser getUserInfo(String useid);

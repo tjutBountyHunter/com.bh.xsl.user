@@ -2,10 +2,9 @@ package resourceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import pojo.*;
 import resource.UserInfoResouce;
 import user.service.UserInfoService;
-import vo.XslResult;
+import vo.*;
 
 @Controller
 public class UserInfoResouceImpl implements UserInfoResouce {
@@ -14,44 +13,44 @@ public class UserInfoResouceImpl implements UserInfoResouce {
 
 
 	@Override
-	public XslResult getUserInfo(String useid) {
+	public XslUser getUserInfo(String useid) {
 		XslUser userInfo = userInfoService.getUserInfo(useid);
-		return XslResult.ok(userInfo);
+		return userInfo;
 	}
 
 	@Override
-	public XslResult getUserInfoByHunterId(String hunterid) {
+	public XslUser getUserInfoByHunterId(String hunterid) {
 		XslUser userInfoByHunterId = userInfoService.getUserInfoByHunterId(hunterid);
-		return XslResult.ok(userInfoByHunterId);
+		return userInfoByHunterId;
 	}
 
 	@Override
-	public XslResult getUserInfoMasterId(String masterid) {
+	public XslUser getUserInfoMasterId(String masterid) {
 		XslUser userInfoMasterId = userInfoService.getUserInfoMasterId(masterid);
-		return XslResult.ok(userInfoMasterId);
+		return userInfoMasterId;
 	}
 
 	@Override
-	public XslResult getSchoolInfo(String schoolid) {
+	public XslSchoolinfo getSchoolInfo(String schoolid) {
 		XslSchoolinfo schoolInfo = userInfoService.getSchoolInfo(schoolid);
-		return XslResult.ok(schoolInfo);
+		return schoolInfo;
 	}
 
 	@Override
-	public XslResult getHunterInfo(String hunterid) {
+	public XslHunter getHunterInfo(String hunterid) {
 		XslHunter hunterInfo = userInfoService.getHunterInfo(hunterid);
-		return XslResult.ok(hunterInfo);
+		return hunterInfo;
 	}
 
 	@Override
-	public XslResult getMasterInfo(String masterid) {
+	public XslMaster getMasterInfo(String masterid) {
 		XslMaster masterInfo = userInfoService.getMasterInfo(masterid);
-		return XslResult.ok(masterInfo);
+		return masterInfo;
 	}
 
 	@Override
-	public XslResult getSchoolByName(String schoolName) {
+	public XslSchool getSchoolByName(String schoolName) {
 		XslSchool school = userInfoService.getSchoolByName(schoolName);
-		return XslResult.ok(school);
+		return school;
 	}
 }

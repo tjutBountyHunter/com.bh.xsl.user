@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="mapper.XslMasterMapper" >
-  <resultMap id="BaseResultMap" type="pojo.XslMaster" >
+  <resultMap id="BaseResultMap" type="vo.XslMaster" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="masterId" property="masterid" jdbcType="VARCHAR" />
     <result column="userId" property="userid" jdbcType="VARCHAR" />
@@ -106,7 +106,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="pojo.XslMaster" >
+  <insert id="insert" parameterType="vo.XslMaster" >
     insert into xsl_master (id, masterId, userId, 
       level, empirical, taskAccNum, 
       taskRevokeNum, credit, descr, 
@@ -116,7 +116,7 @@
       #{taskrevokenum,jdbcType=INTEGER}, #{credit,jdbcType=SMALLINT}, #{descr,jdbcType=VARCHAR}, 
       #{lastaccdate,jdbcType=DATE}, #{state,jdbcType=BIT})
   </insert>
-  <insert id="insertSelective" parameterType="pojo.XslMaster" >
+  <insert id="insertSelective" parameterType="vo.XslMaster" >
     insert into xsl_master
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -253,7 +253,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="pojo.XslMaster" >
+  <update id="updateByPrimaryKeySelective" parameterType="vo.XslMaster" >
     update xsl_master
     <set >
       <if test="masterid != null" >
@@ -289,7 +289,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="pojo.XslMaster" >
+  <update id="updateByPrimaryKey" parameterType="vo.XslMaster" >
     update xsl_master
     set masterId = #{masterid,jdbcType=VARCHAR},
       userId = #{userid,jdbcType=VARCHAR},

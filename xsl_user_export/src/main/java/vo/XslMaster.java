@@ -1,8 +1,8 @@
-package pojo;
+package vo;
 
 import java.util.Date;
 
-public class XslMaster {
+public class XslMaster extends ResponseBaseVo{
     private Integer id;
 
     private String masterid;

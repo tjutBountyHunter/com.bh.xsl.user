@@ -1,8 +1,9 @@
-package pojo;
+package vo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class XslUser {
+public class XslUser extends ResponseBaseVo {
     private Integer id;
 
     private String userid;

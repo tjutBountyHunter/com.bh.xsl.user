@@ -1,22 +1,21 @@
 package resource;
 
-import vo.XslResult;
+import vo.*;
 
 public interface UserInfoResouce {
 
-	XslResult getUserInfo(String useid);
+	XslUser getUserInfo(String useid);
 
-	XslResult getUserInfoByHunterId(String hunterid);
+	XslUser getUserInfoByHunterId(String hunterid);
 
-	XslResult getUserInfoMasterId(String masterid);
+	XslUser getUserInfoMasterId(String masterid);
 
-	XslResult getSchoolInfo(String schoolid);
+	XslSchoolinfo getSchoolInfo(String schoolid);
 
-	XslResult getHunterInfo(String hunterid);
+	XslHunter getHunterInfo(String hunterid);
 
-	XslResult getMasterInfo(String masterid);
+	XslMaster getMasterInfo(String masterid);
 
-	XslResult getSchoolByName(String SchoolName);
-
+	XslSchool getSchoolByName(String SchoolName);
 
 }
