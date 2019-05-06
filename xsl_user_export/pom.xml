@@ -20,7 +20,6 @@
             <name>Release Deploy</name>
             <url>http://211.159.184.66:8081/repository/maven-releases/</url>
         </repository>
-
     </distributionManagement>
 
 
