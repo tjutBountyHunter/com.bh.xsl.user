@@ -369,7 +369,7 @@
         <repository>
             <id>xsl_repos</id>
             <name>xsl_interface_repository</name>
-            <url>http://211.159.184.66:8081/repository/maven-releases/</url>
+            <url>http://211.159.184.66:8081/repository/maven-public/</url>
         </repository>
     </repositories>
 
