@@ -1,6 +1,6 @@
 package mapper;
 
-import pojo.XslSchool;
+import vo.XslSchool;
 
 import java.util.List;
 
