@@ -1,14 +1,13 @@
 package user.service.impl;
 
 import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
-import dao.JedisClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import user.service.VerifyCodeService;
+import util.JedisClientUtil;
 import util.JsonUtils;
 import util.Message;
 import util.RandomNumUtil;
@@ -16,9 +15,6 @@ import vo.XslResult;
 
 @Service
 public class VerifyCodeServiceImpl implements VerifyCodeService {
-	@Autowired
-	private JedisClient jedisClient;
-
 	@Value("${REDIS_USER_SESSION_CODE_KEY}")
 	private String REDIS_USER_SESSION_CODE_KEY;
 	@Value("${Login_SESSION_EXPIRE_CODE}")
@@ -62,7 +58,7 @@ public class VerifyCodeServiceImpl implements VerifyCodeService {
 	 */
 	@Override
 	public XslResult checkCode(String phone, String code) {
-		String num = jedisClient.get(REDIS_USER_SESSION_CODE_KEY + ":" + phone);
+		String num = JedisClientUtil.get(REDIS_USER_SESSION_CODE_KEY + ":" + phone);
 		if (StringUtils.isEmpty(num)) {
 			return XslResult.build(403, "您的验证码失效");
 		}
@@ -86,9 +82,9 @@ public class VerifyCodeServiceImpl implements VerifyCodeService {
 		SendSmsResponse response = Message.sendIdentifyingCode(phone, code);
 		//2.1验证码发送成功添加缓存
 		if ("OK".equals(response.getCode())){
-			jedisClient.set(REDIS_USER_SESSION_CODE_KEY+ ":" +phone, code);
+			JedisClientUtil.set(REDIS_USER_SESSION_CODE_KEY+ ":" +phone, code);
 			//设置session过期时间
-			jedisClient.expire(REDIS_USER_SESSION_CODE_KEY + ":" + phone, Login_SESSION_EXPIRE_CODE);
+			JedisClientUtil.expire(REDIS_USER_SESSION_CODE_KEY + ":" + phone, Login_SESSION_EXPIRE_CODE);
 		}
 
 		return response;

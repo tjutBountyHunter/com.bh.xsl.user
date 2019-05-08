@@ -1,7 +1,6 @@
 package user.service.impl;
 
 import com.google.gson.Gson;
-import dao.JedisClient;
 import enums.UserStateEnum;
 import example.*;
 import mapper.*;
@@ -39,9 +38,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private XslHunterTagMapper xslHunterTagMapper;
 
-
-    @Autowired
-    private JedisClient jedisClient;
     @Autowired
     private UserInfoService userInfoService;
 
@@ -196,7 +192,7 @@ public class UserServiceImpl implements UserService {
         }
 
 
-        jedisClient.set(REDIS_USER_SESSION_KEY + ":" + user.getPhone(), token);
+        JedisClientUtil.set(REDIS_USER_SESSION_KEY + ":" + user.getPhone(), token);
 
         Gson gson = GsonSingle.getGson();
         String userInfo = gson.toJson(user);
@@ -216,14 +212,14 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public XslResult getUserByToken(String token, String phone) {
-        String result = jedisClient.get(REDIS_USER_SESSION_KEY + ":" + phone);
+        String result = JedisClientUtil.get(REDIS_USER_SESSION_KEY + ":" + phone);
 
         //判断是否为空
         if (!token.equals(result)) {
             return XslResult.build(400, "登陆时间已经过期。请重新登录");
         }
 
-        return XslResult.ok(jedisClient.get(REDIS_USER_SESSION_KEY + ":" + phone));
+        return XslResult.ok(JedisClientUtil.get(REDIS_USER_SESSION_KEY + ":" + phone));
     }
 
     /**
