@@ -39,7 +39,6 @@
         <constructor-arg name="port" value="8379"></constructor-arg>
         <constructor-arg name="poolConfig" ref="jedisPoolConfig"></constructor-arg>
     </bean>
-    <bean id="jedisClientSingle" class="dao.impl.JedisClientSingle"></bean>
     <bean id="jedisClientUtil" class="util.JedisClientUtil"></bean>
 
 
