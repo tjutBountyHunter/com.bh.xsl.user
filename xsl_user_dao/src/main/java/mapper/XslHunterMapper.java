@@ -37,4 +37,10 @@ public interface XslHunterMapper {
     XslHunter selectHunterByHunterId(String hunterId);
 
     List<String> selectGoodHunter();
+
+    int updateLevel(String masterId);
+
+    int updateEmpirical(String hunterId);
+
+    int  selectEmpirical(String hunterId);
 }

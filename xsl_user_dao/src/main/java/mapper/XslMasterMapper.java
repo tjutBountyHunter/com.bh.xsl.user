@@ -28,4 +28,12 @@ public interface XslMasterMapper {
     int updateByPrimaryKeySelective(XslMaster record);
 
     int updateByPrimaryKey(XslMaster record);
+
+    int updateLevel(String masterId);
+
+    int updateEmpirical(String masterId);
+
+    int  selectEmpirical(String masterId);
+
+
 }

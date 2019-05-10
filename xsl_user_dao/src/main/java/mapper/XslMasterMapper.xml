@@ -303,4 +303,25 @@
       state = #{state,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+
+
+<update id="updateLevel" parameterType="java.lang.String">
+    update xsl_master
+    set  level = level + 1
+    where masterId = #{masterId}
+</update>
+
+  <update id="updateEmpirical" parameterType="java.lang.String">
+    update xsl_master
+    set  empirical = empirical + 1
+    where masterId = #{masterId}
+</update>
+
+  <select id="selectEmpirical" resultType="int">
+    select empirical from xsl_master
+    where masterId = #{masterId}
+  </select>
+
+
 </mapper>

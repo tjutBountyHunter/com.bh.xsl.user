@@ -334,4 +334,21 @@
     limit 10
   </select>
 
+  <update id="updateLevel" parameterType="java.lang.String">
+    update xsl_hunter
+    set  level = level + 1
+    where hunterId = #{hunterId}
+</update>
+
+  <update id="updateEmpirical" parameterType="java.lang.String">
+    update xsl_hunter
+    set  empirical = empirical + 1
+    where hunterId = #{hunterId}
+</update>
+
+  <select id="selectEmpirical" resultType="int">
+    select empirical from xsl_hunter
+    where hunterId = #{hunterId}
+  </select>
+
 </mapper>
