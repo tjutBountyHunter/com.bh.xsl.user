@@ -16,50 +16,8 @@ public class LevelServiceImpl implements LevelService {
 	private XslMasterMapper xslMasterMapper;
 	@Autowired
 	private XslHunterMapper xslHunterMapper;
+
 	private static final Logger logger = LoggerFactory.getLogger(LevelServiceImpl.class);
-
-
-	@Override
-	public ResBaseVo MasterUpLevel(UserLevelReqVo userLevelReqVo) {
-//		try {
-//			String masterId=userLevelReqVo.getMasterId();
-//			xslMasterMapper.updateLevel(masterId);
-//			return ResBaseVo.build(200,"成功");
-//		}
-//		catch (Exception e){
-//			logger.error(e.getMessage());
-//
-//		}
-//
-//        return ResBaseVo.build(500,"服务器异常");
-		return  null;
-	}
-
-	@Override
-	public ResBaseVo HunterUpLevel(UserLevelReqVo userLevelReqVo) {
-//		try {
-//			String hunterId=userLevelReqVo.getHunterId();
-//			xslHunterMapper.updateLevel(hunterId);
-//			return ResBaseVo.build(200,"成功");
-//		}
-//		catch (Exception e){
-//			logger.error(e.getMessage());
-//
-//		}
-//
-//		return ResBaseVo.build(500,"服务器异常");
-		return null;
-	}
-
-	@Override
-	public ResBaseVo MasterDownLevel(UserLevelReqVo userLevelReqVo) {
-		return null;
-	}
-
-	@Override
-	public ResBaseVo HunterDownLevel(UserLevelReqVo userLevelReqVo) {
-		return null;
-	}
 
 	@Override
 	public ResBaseVo MasterAddEmpirical(UserLevelReqVo userLevelReqVo) {
@@ -74,10 +32,8 @@ public class LevelServiceImpl implements LevelService {
 		}
 		catch (Exception e){
 			logger.error(e.getMessage());
-
+			throw new RuntimeException(e);
 		}
-
-		return ResBaseVo.build(500,"服务器异常");
 	}
 
 	@Override
@@ -93,19 +49,8 @@ public class LevelServiceImpl implements LevelService {
 		}
 		catch (Exception e){
 			logger.error(e.getMessage());
-			System.out.print(e);
-
+			throw new RuntimeException(e);
 		}
-
-		return ResBaseVo.build(500,"服务器异常");	}
-
-	@Override
-	public ResBaseVo MasterSubEmpirical(UserLevelReqVo userLevelReqVo) {
-		return null;
 	}
 
-	@Override
-	public ResBaseVo HunterSubEmpirical(UserLevelReqVo userLevelReqVo) {
-		return null;
-	}
 }
