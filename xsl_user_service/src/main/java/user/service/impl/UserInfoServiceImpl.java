@@ -143,7 +143,7 @@ public class UserInfoServiceImpl implements UserInfoService {
 
 	private XslUser getUserInfo(String useid, String hunterid, String masterid){
 		Gson gson = GsonSingle.getGson();
-		String userInfo = JedisClientUtil.get(USER_INFO + ":" + useid);
+		String userInfo = JedisClientUtil.get(USER_INFO + ":" + useid + hunterid + masterid);
 
 		if(!StringUtils.isEmpty(userInfo)){
 			return gson.fromJson(userInfo, XslUser.class);
@@ -168,7 +168,7 @@ public class UserInfoServiceImpl implements UserInfoService {
 
 		if(xslUsers != null && xslUsers.size() > 0){
 			String info =  gson.toJson(xslUsers.get(0));
-			JedisClientUtil.setEx(USER_INFO + ":" + useid, info , 300);
+			JedisClientUtil.setEx(USER_INFO + ":" + useid + hunterid + masterid, info , 300);
 			return xslUsers.get(0);
 		}
 
