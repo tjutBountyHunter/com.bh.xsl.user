@@ -23,7 +23,7 @@
 
     <!-- 监听任务添加消息，同步索引库(新) -->
     <!--updateNetwork -->
-    <bean id="updateNetwork" class="org.apache.activemq.command.ActiveMQTopic">
+    <bean id="updateNetwork" class="org.apache.activemq.command.ActiveMQQueue">
         <constructor-arg value="updateNetwork" />
     </bean>
     <bean id="updateNetworkListener" class="listener.UpdateNetworkListener"/>

@@ -24,7 +24,7 @@ public class UserNetworkServiceImpl implements UserNetworkService {
 	@Override
 	public ResBaseVo updateNetwork(NetworkReqVo networkReq) {
 		String hunterId = networkReq.getHunterId();
-		String masterId = networkReq.getHunterId();
+		String masterId = networkReq.getMasterId();
 
 		try {
 			XslNetworkExample xslNetworkExample = new XslNetworkExample();
