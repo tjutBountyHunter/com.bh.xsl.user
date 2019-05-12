@@ -1,4 +1,4 @@
-package com.xsl.user.export;
+package com.xsl.user;
 
 import vo.JPushReqVo;
 import vo.ResBaseVo;

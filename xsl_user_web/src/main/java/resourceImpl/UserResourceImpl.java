@@ -3,7 +3,7 @@ package resourceImpl;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import com.xsl.user.export.UserResource;
+import com.xsl.user.UserResource;
 import vo.*;
 import user.service.UserService;
 

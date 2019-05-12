@@ -3,7 +3,7 @@ package resourceImpl;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import com.xsl.user.export.VerifyCodeResource;
+import com.xsl.user.VerifyCodeResource;
 import user.service.VerifyCodeService;
 import vo.ResBaseVo;
 import vo.XslResult;

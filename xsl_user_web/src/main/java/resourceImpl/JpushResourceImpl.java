@@ -4,7 +4,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import com.xsl.user.export.JpushResource;
+import com.xsl.user.JpushResource;
 import user.service.JpushService;
 import util.JedisClientUtil;
 import vo.JPushReqVo;
