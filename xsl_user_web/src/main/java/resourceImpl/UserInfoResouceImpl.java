@@ -1,8 +1,10 @@
 package resourceImpl;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import resource.UserInfoResouce;
+import pojo.*;
+import com.xsl.user.export.UserInfoResouce;
 import user.service.UserInfoService;
 import vo.*;
 
@@ -13,44 +15,58 @@ public class UserInfoResouceImpl implements UserInfoResouce {
 
 
 	@Override
-	public XslUser getUserInfo(String useid) {
+	public UserVo getUserInfo(String useid) {
 		XslUser userInfo = userInfoService.getUserInfo(useid);
-		return userInfo;
+		UserVo userVo = new UserVo();
+		BeanUtils.copyProperties(userInfo, userVo);
+		return userVo;
 	}
 
 	@Override
-	public XslUser getUserInfoByHunterId(String hunterid) {
+	public UserVo getUserInfoByHunterId(String hunterid) {
 		XslUser userInfoByHunterId = userInfoService.getUserInfoByHunterId(hunterid);
-		return userInfoByHunterId;
+		UserVo userVo = new UserVo();
+		BeanUtils.copyProperties(userInfoByHunterId, userVo);
+		return userVo;
 	}
 
 	@Override
-	public XslUser getUserInfoMasterId(String masterid) {
+	public UserVo getUserInfoMasterId(String masterid) {
 		XslUser userInfoMasterId = userInfoService.getUserInfoMasterId(masterid);
-		return userInfoMasterId;
+		UserVo userVo = new UserVo();
+		BeanUtils.copyProperties(userInfoMasterId, userVo);
+		return userVo;
 	}
 
 	@Override
-	public XslSchoolinfo getSchoolInfo(String schoolid) {
+	public SchoolinfoVo getSchoolInfo(String schoolid) {
 		XslSchoolinfo schoolInfo = userInfoService.getSchoolInfo(schoolid);
-		return schoolInfo;
+		SchoolinfoVo schoolinfoVo = new SchoolinfoVo();
+		BeanUtils.copyProperties(schoolInfo, schoolinfoVo);
+		return schoolinfoVo;
 	}
 
 	@Override
-	public XslHunter getHunterInfo(String hunterid) {
+	public HunterVo getHunterInfo(String hunterid) {
 		XslHunter hunterInfo = userInfoService.getHunterInfo(hunterid);
-		return hunterInfo;
+		HunterVo hunterVo = new HunterVo();
+		BeanUtils.copyProperties(hunterInfo, hunterVo);
+		return hunterVo;
 	}
 
 	@Override
-	public XslMaster getMasterInfo(String masterid) {
+	public MasterVo getMasterInfo(String masterid) {
 		XslMaster masterInfo = userInfoService.getMasterInfo(masterid);
-		return masterInfo;
+		MasterVo masterVo = new MasterVo();
+		BeanUtils.copyProperties(masterInfo, masterVo);
+		return masterVo;
 	}
 
 	@Override
-	public XslSchool getSchoolByName(String schoolName) {
+	public SchoolVo getSchoolByName(String schoolName) {
 		XslSchool school = userInfoService.getSchoolByName(schoolName);
-		return school;
+		SchoolVo schoolVo = new SchoolVo();
+		BeanUtils.copyProperties(school, schoolVo);
+		return schoolVo;
 	}
 }

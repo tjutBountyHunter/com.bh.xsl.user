@@ -2,7 +2,7 @@ package mapper;
 
 import example.XslUserExample;
 import org.apache.ibatis.annotations.Param;
-import vo.XslUser;
+import pojo.XslUser;
 
 import java.util.List;
 

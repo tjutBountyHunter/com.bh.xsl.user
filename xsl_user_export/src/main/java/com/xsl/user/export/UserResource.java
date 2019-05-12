@@ -1,8 +1,8 @@
-package resource;
+package com.xsl.user.export;
 
 
+import vo.ResBaseVo;
 import vo.UserReqVo;
-import vo.XslResult;
 import vo.XslUserRegister;
 
 public interface UserResource {
@@ -12,7 +12,7 @@ public interface UserResource {
      * @return
      * @throws Exception
      */
-    XslResult quickCreateUser(XslUserRegister xslUserRegister);
+    ResBaseVo quickCreateUser(XslUserRegister xslUserRegister);
 
     /**
      * 登录
@@ -20,7 +20,7 @@ public interface UserResource {
      * @param userReqVo
      * @return
      */
-    XslResult userLogin(UserReqVo userReqVo);
+    ResBaseVo userLogin(UserReqVo userReqVo);
 
     /**
      * 检查Token被更换
@@ -28,11 +28,6 @@ public interface UserResource {
      * @param token
      * @return
      */
-    XslResult getUserByToken(String token, String phone);
+    ResBaseVo getUserByToken(String token, String phone);
 
-    /**
-     * 忘记密码
-     * @return
-     */
-    XslResult Password(String phone, String password);
 }

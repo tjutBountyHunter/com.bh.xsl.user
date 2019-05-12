@@ -1,6 +1,6 @@
-package resource;
+package com.xsl.user.export;
 
-import vo.XslResult;
+import vo.ResBaseVo;
 
 public interface VerifyCodeResource {
 	/**
@@ -9,11 +9,11 @@ public interface VerifyCodeResource {
 	 * @param phone
 	 * @return
 	 */
-	XslResult sendMessageCode(String phone);
+	ResBaseVo sendMessageCode(String phone);
 	/**
 	 * 检验手机验证码
 	 * @param phone
 	 * @return
 	 */
-	XslResult checkCode(String phone, String code);
+	ResBaseVo checkCode(String phone, String code);
 }

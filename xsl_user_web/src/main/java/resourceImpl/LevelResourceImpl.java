@@ -2,8 +2,7 @@ package resourceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
-import resource.LevelResource;
+import com.xsl.user.export.LevelResource;
 import user.service.LevelService;
 import vo.ResBaseVo;
 import vo.UserLevelReqVo;

@@ -1,11 +1,13 @@
-package vo;
+package pojo;
+
+import vo.ResponseBaseVo;
 
 import java.util.Date;
 
-public class XslMaster extends ResponseBaseVo{
+public class XslHunter extends ResponseBaseVo {
     private Integer id;
 
-    private String masterid;
+    private String hunterid;
 
     private String userid;
 
@@ -15,13 +17,13 @@ public class XslMaster extends ResponseBaseVo{
 
     private Integer taskaccnum;
 
-    private Integer taskrevokenum;
+    private Integer taskfailnum;
 
     private Short credit;
 
     private String descr;
 
-    private Date lastaccdate;
+    private Date lasttime;
 
     private Boolean state;
 
@@ -33,12 +35,12 @@ public class XslMaster extends ResponseBaseVo{
         this.id = id;
     }
 
-    public String getMasterid() {
-        return masterid;
+    public String getHunterid() {
+        return hunterid;
     }
 
-    public void setMasterid(String masterid) {
-        this.masterid = masterid == null ? null : masterid.trim();
+    public void setHunterid(String hunterid) {
+        this.hunterid = hunterid == null ? null : hunterid.trim();
     }
 
     public String getUserid() {
@@ -73,12 +75,12 @@ public class XslMaster extends ResponseBaseVo{
         this.taskaccnum = taskaccnum;
     }
 
-    public Integer getTaskrevokenum() {
-        return taskrevokenum;
+    public Integer getTaskfailnum() {
+        return taskfailnum;
     }
 
-    public void setTaskrevokenum(Integer taskrevokenum) {
-        this.taskrevokenum = taskrevokenum;
+    public void setTaskfailnum(Integer taskfailnum) {
+        this.taskfailnum = taskfailnum;
     }
 
     public Short getCredit() {
@@ -97,12 +99,12 @@ public class XslMaster extends ResponseBaseVo{
         this.descr = descr == null ? null : descr.trim();
     }
 
-    public Date getLastaccdate() {
-        return lastaccdate;
+    public Date getLasttime() {
+        return lasttime;
     }
 
-    public void setLastaccdate(Date lastaccdate) {
-        this.lastaccdate = lastaccdate;
+    public void setLasttime(Date lasttime) {
+        this.lasttime = lasttime;
     }
 
     public Boolean getState() {

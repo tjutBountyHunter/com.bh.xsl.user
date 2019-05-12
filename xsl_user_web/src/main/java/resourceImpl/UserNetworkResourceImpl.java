@@ -2,7 +2,7 @@ package resourceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import resource.UserNetworkResource;
+import com.xsl.user.export.UserNetworkResource;
 import user.service.UserNetworkService;
 import vo.NetworkReqVo;
 import vo.ResBaseVo;

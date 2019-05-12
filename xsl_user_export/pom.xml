@@ -25,20 +25,26 @@
 
 </project>
 
-
+        <!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<project xmlns="http://maven.apache.org/POM/4.0.0"-->
+         <!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+         <!--xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">-->
 <!--<modelVersion>4.0.0</modelVersion>-->
 
 <!--<groupId>com.bh.xsl.user</groupId>-->
-<!--<artifactId>xsl_user_export</artifactId>-->
-<!--<version>1.1</version>-->
+<!--<artifactId>xsl-user-export</artifactId>-->
+<!--<version>1.2</version>-->
 <!--<dependencies>-->
 
 <!--</dependencies>-->
 
 <!--<distributionManagement>-->
-<!--<repository>-->
-    <!--<id>release_user</id>-->
-    <!--<name>Release Deploy</name>-->
-    <!--<url>http://39.96.195.196:8081/repository/maven-releases/</url>-->
-<!--</repository>-->
+    <!--<repository>-->
+        <!--<id>release_user</id>-->
+        <!--<name>Release Deploy</name>-->
+        <!--<url>http://39.96.195.196:8081/repository/maven-releases/</url>-->
+    <!--</repository>-->
 <!--</distributionManagement>-->
+
+
+<!--</project>-->

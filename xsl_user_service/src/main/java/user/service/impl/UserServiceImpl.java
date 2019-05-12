@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 import org.springframework.util.StringUtils;
 import pojo.*;
+import vo.XslResult;
 import user.service.UserInfoService;
 import user.service.UserService;
 import util.*;

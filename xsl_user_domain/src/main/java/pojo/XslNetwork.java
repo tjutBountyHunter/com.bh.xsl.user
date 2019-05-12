@@ -7,7 +7,11 @@ public class XslNetwork {
 
     private String aid;
 
+    private String aphone;
+
     private String bid;
+
+    private String bphone;
 
     private Integer num;
 
@@ -31,12 +35,28 @@ public class XslNetwork {
         this.aid = aid == null ? null : aid.trim();
     }
 
+    public String getAphone() {
+        return aphone;
+    }
+
+    public void setAphone(String aphone) {
+        this.aphone = aphone == null ? null : aphone.trim();
+    }
+
     public String getBid() {
         return bid;
     }
 
     public void setBid(String bid) {
         this.bid = bid == null ? null : bid.trim();
+    }
+
+    public String getBphone() {
+        return bphone;
+    }
+
+    public void setBphone(String bphone) {
+        this.bphone = bphone == null ? null : bphone.trim();
     }
 
     public Integer getNum() {

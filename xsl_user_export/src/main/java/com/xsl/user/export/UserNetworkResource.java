@@ -1,4 +1,4 @@
-package resource;
+package com.xsl.user.export;
 
 import vo.NetworkReqVo;
 import vo.ResBaseVo;

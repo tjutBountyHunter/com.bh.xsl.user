@@ -7,7 +7,7 @@ import pojo.XslNetwork;
 import java.util.List;
 
 public interface XslNetworkMapper {
-    int countByExample(XslNetworkExample example);
+    long countByExample(XslNetworkExample example);
 
     int deleteByExample(XslNetworkExample example);
 
@@ -18,6 +18,8 @@ public interface XslNetworkMapper {
     int insertSelective(XslNetwork record);
 
     List<XslNetwork> selectByExample(XslNetworkExample example);
+
+    List<XslNetwork> selectLimit();
 
     XslNetwork selectByPrimaryKey(Integer id);
 

@@ -2,7 +2,7 @@ package vo;
 
 import java.util.Date;
 
-public class XslHunter extends ResponseBaseVo{
+public class HunterVo extends ResponseBaseVo {
     private Integer id;
 
     private String hunterid;

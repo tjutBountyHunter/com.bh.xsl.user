@@ -262,6 +262,76 @@ public class XslNetworkExample {
             return (Criteria) this;
         }
 
+        public Criteria andAphoneIsNull() {
+            addCriterion("APhone is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAphoneIsNotNull() {
+            addCriterion("APhone is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAphoneEqualTo(String value) {
+            addCriterion("APhone =", value, "aphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andAphoneNotEqualTo(String value) {
+            addCriterion("APhone <>", value, "aphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andAphoneGreaterThan(String value) {
+            addCriterion("APhone >", value, "aphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andAphoneGreaterThanOrEqualTo(String value) {
+            addCriterion("APhone >=", value, "aphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andAphoneLessThan(String value) {
+            addCriterion("APhone <", value, "aphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andAphoneLessThanOrEqualTo(String value) {
+            addCriterion("APhone <=", value, "aphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andAphoneLike(String value) {
+            addCriterion("APhone like", value, "aphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andAphoneNotLike(String value) {
+            addCriterion("APhone not like", value, "aphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andAphoneIn(List<String> values) {
+            addCriterion("APhone in", values, "aphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andAphoneNotIn(List<String> values) {
+            addCriterion("APhone not in", values, "aphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andAphoneBetween(String value1, String value2) {
+            addCriterion("APhone between", value1, value2, "aphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andAphoneNotBetween(String value1, String value2) {
+            addCriterion("APhone not between", value1, value2, "aphone");
+            return (Criteria) this;
+        }
+
         public Criteria andBidIsNull() {
             addCriterion("BId is null");
             return (Criteria) this;
@@ -329,6 +399,76 @@ public class XslNetworkExample {
 
         public Criteria andBidNotBetween(String value1, String value2) {
             addCriterion("BId not between", value1, value2, "bid");
+            return (Criteria) this;
+        }
+
+        public Criteria andBphoneIsNull() {
+            addCriterion("BPhone is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBphoneIsNotNull() {
+            addCriterion("BPhone is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBphoneEqualTo(String value) {
+            addCriterion("BPhone =", value, "bphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andBphoneNotEqualTo(String value) {
+            addCriterion("BPhone <>", value, "bphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andBphoneGreaterThan(String value) {
+            addCriterion("BPhone >", value, "bphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andBphoneGreaterThanOrEqualTo(String value) {
+            addCriterion("BPhone >=", value, "bphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andBphoneLessThan(String value) {
+            addCriterion("BPhone <", value, "bphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andBphoneLessThanOrEqualTo(String value) {
+            addCriterion("BPhone <=", value, "bphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andBphoneLike(String value) {
+            addCriterion("BPhone like", value, "bphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andBphoneNotLike(String value) {
+            addCriterion("BPhone not like", value, "bphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andBphoneIn(List<String> values) {
+            addCriterion("BPhone in", values, "bphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andBphoneNotIn(List<String> values) {
+            addCriterion("BPhone not in", values, "bphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andBphoneBetween(String value1, String value2) {
+            addCriterion("BPhone between", value1, value2, "bphone");
+            return (Criteria) this;
+        }
+
+        public Criteria andBphoneNotBetween(String value1, String value2) {
+            addCriterion("BPhone not between", value1, value2, "bphone");
             return (Criteria) this;
         }
 

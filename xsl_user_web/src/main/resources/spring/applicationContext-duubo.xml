@@ -16,18 +16,18 @@
     <dubbo:protocol  name="dubbo" port="-1"/>
 
     <bean id="userResource" class="resourceImpl.UserResourceImpl"/>
-    <dubbo:service interface="resource.UserResource" ref="userResource" timeout="600000"/>
+    <dubbo:service interface="com.xsl.user.export.UserResource" ref="userResource" timeout="600000"/>
 
     <bean id="jpushResource" class="resourceImpl.JpushResourceImpl"/>
-    <dubbo:service interface="resource.JpushResource" ref="jpushResource" timeout="600000"/>
+    <dubbo:service interface="com.xsl.user.export.JpushResource" ref="jpushResource" timeout="600000"/>
 
     <bean id="userInfoResouce" class="resourceImpl.UserInfoResouceImpl"/>
-    <dubbo:service interface="resource.UserInfoResouce" ref="userInfoResouce" timeout="600000"/>
+    <dubbo:service interface="com.xsl.user.export.UserInfoResouce" ref="userInfoResouce" timeout="600000"/>
 
     <bean id="verifyCodeResource" class="resourceImpl.VerifyCodeResourceImpl"/>
-    <dubbo:service interface="resource.VerifyCodeResource" ref="verifyCodeResource" timeout="600000"/>
+    <dubbo:service interface="com.xsl.user.export.VerifyCodeResource" ref="verifyCodeResource" timeout="600000"/>
 
     <bean id="LevelResource" class="resourceImpl.LevelResourceImpl"/>
-    <dubbo:service interface="resource.LevelResource" ref="LevelResource" timeout="600000"/>
+    <dubbo:service interface="com.xsl.user.export.LevelResource" ref="LevelResource" timeout="600000"/>
 
 </beans>

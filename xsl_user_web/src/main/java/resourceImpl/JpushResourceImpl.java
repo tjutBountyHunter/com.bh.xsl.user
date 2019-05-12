@@ -4,12 +4,12 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import resource.JpushResource;
+import com.xsl.user.export.JpushResource;
 import user.service.JpushService;
 import util.JedisClientUtil;
 import vo.JPushReqVo;
 import vo.JPushVo;
-import vo.XslResult;
+import vo.ResBaseVo;
 
 @Controller
 public class JpushResourceImpl implements JpushResource {
@@ -19,7 +19,7 @@ public class JpushResourceImpl implements JpushResource {
 	private String REDIS_USER_SESSION_KEY;
 
 	@Override
-	public XslResult sendByPhone(JPushReqVo jPushReqVo) {
+	public ResBaseVo sendByPhone(JPushReqVo jPushReqVo) {
 		JPushVo jPushVo = new JPushVo();
 		BeanUtils.copyProperties(jPushReqVo, jPushVo);
 
@@ -32,14 +32,14 @@ public class JpushResourceImpl implements JpushResource {
 		int i = jpushService.sendToRegistrationId(jPushVo, source);
 
 		if(i < 1){
-			return XslResult.build(500, "发送失败");
+			return ResBaseVo.build(500, "发送失败");
 		}
 
-		return XslResult.ok();
+		return ResBaseVo.ok();
 	}
 
 	@Override
-	public XslResult sendAll(JPushReqVo jPushReqVo) {
+	public ResBaseVo sendAll(JPushReqVo jPushReqVo) {
 		JPushVo jPushVo = new JPushVo();
 		BeanUtils.copyProperties(jPushReqVo, jPushVo);
 
@@ -48,9 +48,9 @@ public class JpushResourceImpl implements JpushResource {
 		int i = jpushService.sendToAll(jPushVo, source);
 
 		if(i < 1){
-			return XslResult.build(500, "发送失败");
+			return ResBaseVo.build(500, "发送失败");
 		}
 
-		return XslResult.ok();
+		return ResBaseVo.ok();
 	}
 }

@@ -1,12 +1,11 @@
 package resourceImpl;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import resource.UserResource;
-import vo.UserReqVo;
-import vo.XslResult;
+import com.xsl.user.export.UserResource;
+import vo.*;
 import user.service.UserService;
-import vo.XslUserRegister;
 
 @Controller
 public class UserResourceImpl implements UserResource {
@@ -16,26 +15,27 @@ public class UserResourceImpl implements UserResource {
 
 
     @Override
-    public XslResult quickCreateUser(XslUserRegister xslUserRegister) {
-
-        return userService.quickCreateUser(xslUserRegister);
+    public ResBaseVo quickCreateUser(XslUserRegister xslUserRegister) {
+        XslResult xslResult = userService.quickCreateUser(xslUserRegister);
+        ResBaseVo resBaseVo = new ResBaseVo();
+        BeanUtils.copyProperties(xslResult, resBaseVo);
+        return resBaseVo;
     }
 
     @Override
-    public XslResult userLogin(UserReqVo userReqVo) {
-
-        return userService.userLogin(userReqVo);
+    public ResBaseVo userLogin(UserReqVo userReqVo) {
+        XslResult xslResult = userService.userLogin(userReqVo);
+        ResBaseVo resBaseVo = new ResBaseVo();
+        BeanUtils.copyProperties(xslResult, resBaseVo);
+        return resBaseVo;
     }
 
     @Override
-    public XslResult getUserByToken(String token, String phone) {
-
-        return userService.getUserByToken(token,phone);
+    public ResBaseVo getUserByToken(String token, String phone) {
+        XslResult xslResult = userService.getUserByToken(token, phone);
+        ResBaseVo resBaseVo = new ResBaseVo();
+        BeanUtils.copyProperties(xslResult, resBaseVo);
+        return resBaseVo;
     }
 
-    @Override
-    public XslResult Password(String phone, String password) {
-
-        return userService.Password(phone,password);
-    }
 }

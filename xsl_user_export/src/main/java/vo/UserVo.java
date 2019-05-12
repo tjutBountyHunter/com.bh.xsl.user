@@ -1,9 +1,8 @@
 package vo;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class XslUser extends ResponseBaseVo {
+public class UserVo extends ResponseBaseVo {
     private Integer id;
 
     private String userid;

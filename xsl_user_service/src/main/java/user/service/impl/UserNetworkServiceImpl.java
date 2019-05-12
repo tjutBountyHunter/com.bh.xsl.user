@@ -26,31 +26,35 @@ public class UserNetworkServiceImpl implements UserNetworkService {
 		String hunterId = networkReq.getHunterId();
 		String masterId = networkReq.getHunterId();
 
-		XslNetworkExample xslNetworkExample = new XslNetworkExample();
-		xslNetworkExample.createCriteria().andAidEqualTo(hunterId).andBidEqualTo(masterId);
-		List<XslNetwork> xslNetworkA = xslNetworkMapper.selectByExample(xslNetworkExample);
+		try {
+			XslNetworkExample xslNetworkExample = new XslNetworkExample();
+			xslNetworkExample.createCriteria().andAidEqualTo(hunterId).andBidEqualTo(masterId);
+			List<XslNetwork> xslNetworkA = xslNetworkMapper.selectByExample(xslNetworkExample);
 
-		if(ListUtil.isNotEmpty(xslNetworkA)){
-			updateNum(xslNetworkExample, xslNetworkA);
-			return ResBaseVo.ok();
+			if(ListUtil.isNotEmpty(xslNetworkA)){
+				updateNum(xslNetworkExample, xslNetworkA);
+				return ResBaseVo.ok();
+			}
+
+			xslNetworkExample.clear();
+			xslNetworkExample.createCriteria().andAidEqualTo(masterId).andBidEqualTo(hunterId);
+			List<XslNetwork> xslNetworkB = xslNetworkMapper.selectByExample(xslNetworkExample);
+
+			if (ListUtil.isNotEmpty(xslNetworkB)){
+				updateNum(xslNetworkExample, xslNetworkB);
+				return ResBaseVo.ok();
+			}
+			XslNetwork xslNetwork = new XslNetwork();
+			xslNetwork.setAid(masterId);
+			xslNetwork.setAphone(userInfoService.getUserInfoMasterId(masterId).getPhone());
+			xslNetwork.setBid(hunterId);
+			xslNetwork.setBphone(userInfoService.getUserInfoByHunterId(hunterId).getPhone());
+			xslNetwork.setBid(hunterId);
+			xslNetwork.setNum(1);
+			xslNetworkMapper.insertSelective(xslNetwork);
+		}catch (Exception e){
+			e.printStackTrace();
 		}
-
-		xslNetworkExample.clear();
-		xslNetworkExample.createCriteria().andAidEqualTo(masterId).andBidEqualTo(hunterId);
-		List<XslNetwork> xslNetworkB = xslNetworkMapper.selectByExample(xslNetworkExample);
-
-		if (ListUtil.isNotEmpty(xslNetworkB)){
-			updateNum(xslNetworkExample, xslNetworkB);
-			return ResBaseVo.ok();
-		}
-		XslNetwork xslNetwork = new XslNetwork();
-		xslNetwork.setAid(masterId);
-		xslNetwork.setAphone(userInfoService.getUserInfoMasterId(masterId).getPhone());
-		xslNetwork.setBid(hunterId);
-		xslNetwork.setBphone(userInfoService.getUserInfoByHunterId(hunterId).getPhone());
-		xslNetwork.setBid(hunterId);
-		xslNetwork.setNum(1);
-		xslNetworkMapper.insertSelective(xslNetwork);
 
 		return ResBaseVo.ok();
 	}
