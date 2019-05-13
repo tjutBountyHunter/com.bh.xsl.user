@@ -198,15 +198,6 @@
   <update id="updateByExampleSelective" parameterType="map" >
     update xsl_master
     <set >
-      <if test="record.id != null" >
-        id = #{record.id,jdbcType=INTEGER},
-      </if>
-      <if test="record.masterid != null" >
-        masterId = #{record.masterid,jdbcType=VARCHAR},
-      </if>
-      <if test="record.userid != null" >
-        userId = #{record.userid,jdbcType=VARCHAR},
-      </if>
       <if test="record.level != null" >
         level = #{record.level,jdbcType=SMALLINT},
       </if>
