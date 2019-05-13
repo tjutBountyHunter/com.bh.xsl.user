@@ -8,4 +8,6 @@ public interface LevelResource {
 
      ResBaseVo HunterAddEmpirical(UserLevelReqVo userLevelReqVo);
 
+     ResBaseVo AddEmpirical(UserLevelReqVo userLevelReqVo);
+
 }

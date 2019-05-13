@@ -20,4 +20,12 @@ public interface LevelService {
 	 */
 	ResBaseVo HunterAddEmpirical(UserLevelReqVo userLevelReqVo);
 
+	/**
+	 * 增加经验
+	 * @param
+	 * @return
+	 * @throws Exception
+	 */
+	ResBaseVo AddEmpirical(UserLevelReqVo userLevelReqVo);
+
 }

@@ -20,4 +20,9 @@ public class LevelResourceImpl implements LevelResource {
     public ResBaseVo HunterAddEmpirical(UserLevelReqVo userLevelReqVo) {
         return levelService.HunterAddEmpirical(userLevelReqVo);
     }
+
+    @Override
+    public ResBaseVo AddEmpirical(UserLevelReqVo userLevelReqVo) {
+        return levelService.AddEmpirical(userLevelReqVo);
+    }
 }
