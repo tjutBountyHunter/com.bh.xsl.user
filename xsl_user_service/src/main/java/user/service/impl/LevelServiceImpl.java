@@ -96,7 +96,7 @@ public class LevelServiceImpl implements LevelService {
 		int level = xslMaster.getLevel();
 		Integer empirical = xslMaster.getEmpirical();
 		xslMasterExample.clear();
-		xslMasterExample.createCriteria().andEmpiricalEqualTo(empirical).andLevelEqualTo((short) level);
+		xslMasterExample.createCriteria().andMasteridEqualTo(masterId).andEmpiricalEqualTo(empirical).andLevelEqualTo((short) level);
 		int newExample = empirical + 20;
 		xslMaster.setEmpirical(newExample);
 
@@ -122,7 +122,7 @@ public class LevelServiceImpl implements LevelService {
 		int level = xslHunter.getLevel();
 		Integer empirical = xslHunter.getEmpirical();
 		xslHunterExample.clear();
-		xslHunterExample.createCriteria().andEmpiricalEqualTo(empirical).andLevelEqualTo((short) level);
+		xslHunterExample.createCriteria().andHunteridEqualTo(hunterId).andEmpiricalEqualTo(empirical).andLevelEqualTo((short) level);
 		int newExample = empirical + 20;
 		xslHunter.setEmpirical(newExample);
 
