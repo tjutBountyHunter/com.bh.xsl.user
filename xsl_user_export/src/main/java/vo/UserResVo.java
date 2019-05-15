@@ -1,8 +1,6 @@
 package vo;
 
-import java.io.Serializable;
-
-public class UserResVo extends ResponseBaseVo{
+public class UserResVo extends ResponseBaseVo {
 	private String userid;
 
 	private String hunterid;
@@ -21,6 +19,8 @@ public class UserResVo extends ResponseBaseVo{
 
 	private String school;
 
+	private Byte state;
+
 	private Short hunterlevel;
 
 	private Short masterlevel;
@@ -30,6 +30,8 @@ public class UserResVo extends ResponseBaseVo{
 	private String major;
 
 	private String txUrl;
+
+	private String sno;
 
 	public String getUserid() {
 		return userid;
@@ -103,6 +105,14 @@ public class UserResVo extends ResponseBaseVo{
 		this.school = school;
 	}
 
+	public Byte getState() {
+		return state;
+	}
+
+	public void setState(Byte state) {
+		this.state = state;
+	}
+
 	public Short getHunterlevel() {
 		return hunterlevel;
 	}
@@ -141,5 +151,13 @@ public class UserResVo extends ResponseBaseVo{
 
 	public void setTxUrl(String txUrl) {
 		this.txUrl = txUrl;
+	}
+
+	public String getSno() {
+		return sno;
+	}
+
+	public void setSno(String sno) {
+		this.sno = sno;
 	}
 }

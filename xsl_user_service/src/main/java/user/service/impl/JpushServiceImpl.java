@@ -4,7 +4,6 @@ package user.service.impl;
 import cn.jpush.api.JPushClient;
 import cn.jpush.api.common.resp.APIConnectionException;
 import cn.jpush.api.common.resp.APIRequestException;
-import cn.jpush.api.push.PushResult;
 import cn.jpush.api.push.model.Message;
 import cn.jpush.api.push.model.Options;
 import cn.jpush.api.push.model.Platform;
@@ -15,7 +14,6 @@ import cn.jpush.api.push.model.notification.IosNotification;
 import cn.jpush.api.push.model.notification.Notification;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import user.service.JpushService;
 import vo.JPushVo;
@@ -38,7 +36,7 @@ public class JpushServiceImpl implements JpushService {
 	 *
 	 * @return 0推送失败，1推送成功
 	 */
-
+	@Override
 	public int sendToRegistrationId(JPushVo jPushVo, String source) {
 		int result = 0;
 		try {
@@ -69,6 +67,7 @@ public class JpushServiceImpl implements JpushService {
 	 * 发送给所有用户
 	 * @return 0推送失败，1推送成功
 	 */
+	@Override
 	public int sendToAll(JPushVo jPushVo, String source) {
 		int result = 0;
 		try {

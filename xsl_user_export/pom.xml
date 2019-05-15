@@ -21,8 +21,6 @@
             <url>http://211.159.184.66:8081/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
-
-
 </project>
 
         <!--<?xml version="1.0" encoding="UTF-8"?>-->

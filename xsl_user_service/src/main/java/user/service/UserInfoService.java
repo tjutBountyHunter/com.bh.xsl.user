@@ -1,21 +1,26 @@
 package user.service;
 
 import pojo.*;
+import vo.ResBaseVo;
+import vo.UserReqVo;
 
 public interface UserInfoService {
-	 XslUser getUserInfo(String useid);
+	XslUser getUserInfo(String useid);
 
-	 XslUser getUserInfoByHunterId(String hunterid);
+	XslUser getUserInfoByHunterId(String hunterid);
 
-	 XslUser getUserInfoMasterId(String masterid);
+	XslUser getUserInfoMasterId(String masterid);
 
-	 XslSchoolinfo getSchoolInfo(String schoolid);
+	XslSchoolinfo getSchoolInfo(String schoolid);
 
-	 XslHunter getHunterInfo(String hunterid);
+	XslHunter getHunterInfo(String hunterid);
 
-	 XslMaster getMasterInfo(String masterid);
+	XslMaster getMasterInfo(String masterid);
 
-	 XslSchool getSchoolByName(String SchoolName);
+	XslSchool getSchoolByName(String SchoolName);
 
+	String getUserTx(String userid);
+
+	ResBaseVo getHMinfo(UserReqVo userReqVo);
 
 }

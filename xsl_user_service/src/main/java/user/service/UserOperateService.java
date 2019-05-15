@@ -1,10 +1,16 @@
-package com.xsl.user;
+package user.service;
 
 import vo.ResBaseVo;
 import vo.UserReqVo;
 import vo.XslUserRegister;
 
-public interface UserResource {
+/**
+ * @author 梁俊伟
+ * @version 1.0
+ * @date 2019/5/15 13:54
+ */
+public interface UserOperateService {
+
     /**
      * 快速注册
      * @param xslUserRegister
@@ -22,10 +28,11 @@ public interface UserResource {
     ResBaseVo userLogin(UserReqVo userReqVo);
 
     /**
-     * 检查Token被更换
+     * 注销
      *
-     * @param token
+     * @param userReqVo
      * @return
      */
-    ResBaseVo getUserByToken(String token, String phone);
+    ResBaseVo userLogout(UserReqVo userReqVo);
+
 }

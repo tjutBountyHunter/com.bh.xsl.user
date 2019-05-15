@@ -69,4 +69,9 @@ public class UserInfoResouceImpl implements UserInfoResouce {
 		BeanUtils.copyProperties(school, schoolVo);
 		return schoolVo;
 	}
+
+	@Override
+	public ResBaseVo getHMinfo(UserReqVo userReqVo) {
+		return userInfoService.getHMinfo(userReqVo);
+	}
 }

@@ -2,14 +2,8 @@ package resourceImpl;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import user.service.impl.UserServiceImpl;
-import vo.UserReqVo;
-import vo.XslUserRegister;
-
-import static org.junit.Assert.*;
 
 
 
@@ -18,12 +12,8 @@ import static org.junit.Assert.*;
 
 public class UserResourceImplTest {
 
-    @Autowired
-    private UserServiceImpl userService;
     @Test
     public void quickCreateUser() {
-        12
-
     }
 //
 //    @Test

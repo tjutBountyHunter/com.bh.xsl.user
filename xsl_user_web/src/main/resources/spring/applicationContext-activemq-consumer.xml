@@ -21,6 +21,12 @@
         </constructor-arg>
     </bean>
 
+    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <!-- 这个connectionFactory对应的是我们定义的Spring提供的那个ConnectionFactory对象 -->
+        <property name="connectionFactory" ref="connectionFactory" />
+    </bean>
+
+
     <!-- 监听任务添加消息，同步索引库(新) -->
     <!--updateNetwork -->
     <bean id="updateNetwork" class="org.apache.activemq.command.ActiveMQQueue">

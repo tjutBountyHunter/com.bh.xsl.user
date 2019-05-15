@@ -11,6 +11,9 @@ import pojo.*;
 import user.service.UserInfoService;
 import util.GsonSingle;
 import util.JedisClientUtil;
+import vo.ResBaseVo;
+import vo.UserHMResVo;
+import vo.UserReqVo;
 
 import java.util.List;
 
@@ -27,6 +30,12 @@ public class UserInfoServiceImpl implements UserInfoService {
 	private XslSchoolinfoMapper xslSchoolinfoMapper;
 	@Autowired
 	private XslSchoolMapper xslSchoolMapper;
+	@Autowired
+	private XslUserFileMapper xslUserFileMapper;
+	@Autowired
+	private XslFileMapper xslFileMapper;
+	@Autowired
+	private UserInfoService userInfoService;
 
 
 	@Value("${USER_INFO}")
@@ -39,6 +48,9 @@ public class UserInfoServiceImpl implements UserInfoService {
 	private String USER_SCHOOL_INFO_INFO;
 	@Value("${USER_SCHOOL_INFO}")
 	private String USER_SCHOOL_INFO;
+	@Value("${USER_TX_URL}")
+	private String USER_TX_URL;
+
 
 	@Override
 	public XslUser getUserInfo(String useid){
@@ -156,6 +168,63 @@ public class UserInfoServiceImpl implements UserInfoService {
 		}
 	}
 
+	@Override
+	public String getUserTx(String userid) {
+		Gson gson = GsonSingle.getGson();
+		String url = JedisClientUtil.get(USER_TX_URL + ":" + userid);
+
+		if(!StringUtils.isEmpty(url)){
+			return url;
+		}
+
+		XslUserFileExample xslUserFileExample = new XslUserFileExample();
+		xslUserFileExample.createCriteria().andUseridEqualTo(userid).andTypeEqualTo("TX");
+		List<XslUserFile> xslUserFiles = xslUserFileMapper.selectByExample(xslUserFileExample);
+
+		if(xslUserFiles != null && xslUserFiles.size() > 0){
+			XslFileExample xslFileExample = new XslFileExample();
+			xslFileExample.createCriteria().andFileidEqualTo(xslUserFiles.get(0).getFileid());
+			List<XslFile> xslFiles = xslFileMapper.selectByExample(xslFileExample);
+
+			if(xslFiles != null && xslFiles.size() > 0){
+				String txUrl = xslFiles.get(0).getUrl();
+				JedisClientUtil.setEx(USER_TX_URL + ":" + userid, txUrl , 300);
+
+				return txUrl;
+			}
+		}
+
+		return "";
+
+	}
+
+	@Override
+	public ResBaseVo getHMinfo(UserReqVo userReqVo) {
+		String userid = userReqVo.getUserid();
+		if(StringUtils.isEmpty(userid)){
+			return ResBaseVo.build(403, "参数错误");
+		}
+
+		XslUser userInfo = userInfoService.getUserInfo(userid);
+
+		String hunterid = userInfo.getHunterid();
+		String masterid = userInfo.getMasterid();
+
+		if(StringUtils.isEmpty(hunterid) || StringUtils.isEmpty(masterid)){
+			return ResBaseVo.build(403, "用户不存在");
+		}
+
+		XslMaster masterInfo = userInfoService.getMasterInfo(masterid);
+		XslHunter hunterInfo = userInfoService.getHunterInfo(hunterid);
+
+		UserHMResVo userHMResVo = new UserHMResVo();
+		userHMResVo.setHunterEmpirical(hunterInfo.getEmpirical());
+		userHMResVo.setHunterlevel(hunterInfo.getLevel());
+		userHMResVo.setMasterEmpirical(masterInfo.getEmpirical());
+		userHMResVo.setMasterlevel(masterInfo.getLevel());
+
+		return ResBaseVo.ok(userHMResVo);
+	}
 
 	private XslUser getUserInfo(String useid, String hunterid, String masterid){
 		try {

@@ -1,10 +1,10 @@
 package vo;
 
-import java.io.Serializable;
 
 public class UserReqVo extends RequestBaseVo {
 	private String userid;
 	private String phone;
+	private String name;
 	private String password;
 	private String token;
 	private String code;
@@ -23,6 +23,14 @@ public class UserReqVo extends RequestBaseVo {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getPassword() {
