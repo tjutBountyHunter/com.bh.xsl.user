@@ -18,10 +18,7 @@ import user.service.TaskInfoService;
 import util.GsonSingle;
 import util.JedisClientUtil;
 import util.ListUtil;
-import vo.XslResult;
 
-import javax.annotation.Resource;
-import javax.jms.Destination;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -41,9 +38,6 @@ public class TaskInfoServiceImpl implements TaskInfoService {
 
 	@Autowired
 	private JmsTemplate jmsTemplate;
-
-	@Resource
-	private Destination mqTest;
 
 
 	@Override
@@ -72,13 +66,6 @@ public class TaskInfoServiceImpl implements TaskInfoService {
 		}
 
 		return xslTags;
-	}
-
-	@Override
-	public XslResult sendMq(String msg) {
-		XslResult build = XslResult.build(500, "000");
-		jmsTemplate.send(mqTest, (session)->session.createObjectMessage(build));
-		return XslResult.ok();
 	}
 
 	@Override

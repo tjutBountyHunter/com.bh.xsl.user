@@ -18,6 +18,7 @@ public class UserNetworkServiceImpl implements UserNetworkService {
 
 	@Autowired
 	private XslNetworkMapper xslNetworkMapper;
+
 	@Autowired
 	private UserInfoService userInfoService;
 

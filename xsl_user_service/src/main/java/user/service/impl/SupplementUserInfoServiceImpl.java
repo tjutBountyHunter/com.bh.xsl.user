@@ -16,7 +16,7 @@ import pojo.XslTask;
 import pojo.XslUser;
 import user.service.SupplementUserInfoService;
 import user.service.TaskInfoService;
-import user.service.TaskMqService;
+import user.service.UserMqService;
 import user.service.UserInfoService;
 import util.JedisClientUtil;
 import util.ListUtil;
@@ -54,7 +54,7 @@ public class SupplementUserInfoServiceImpl implements SupplementUserInfoService 
     @Resource
     private ThreadPoolTaskExecutor userExecutor;
     @Autowired
-    private TaskMqService taskMqService;
+    private UserMqService userMqService;
 
     @Resource
     private TaskInfoService taskInfoService;
@@ -179,7 +179,7 @@ public class SupplementUserInfoServiceImpl implements SupplementUserInfoService 
                     updateTaskVo.setTxUrl(txUrl);
                 }
                 updateTaskVo.setTaskId(xslTask.getTaskid());
-                taskMqService.updateEsTask(updateTaskVo);
+                userMqService.updateEsTask(updateTaskVo);
             }
         }
     }
