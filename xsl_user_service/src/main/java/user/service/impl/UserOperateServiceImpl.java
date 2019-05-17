@@ -99,7 +99,6 @@ public class UserOperateServiceImpl implements UserOperateService {
      */
     @Override
     public UserResVo userLogin(UserReqVo userReqVo) {
-
         String phone = userReqVo.getPhone();
         String password = userReqVo.getPassword();
         String token = userReqVo.getToken();
@@ -218,7 +217,6 @@ public class UserOperateServiceImpl implements UserOperateService {
 
         logger.info("login return message is {}", JsonUtils.objectToJson(resVo));
 
-        resVo.setStatus(200);
         return resVo;
     }
 
