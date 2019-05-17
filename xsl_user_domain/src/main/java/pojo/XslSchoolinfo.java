@@ -1,8 +1,8 @@
 package pojo;
 
-import vo.ResponseBaseVo;
+import java.io.Serializable;
 
-public class XslSchoolinfo extends ResponseBaseVo {
+public class XslSchoolinfo implements Serializable {
     private Integer id;
 
     private String schoolid;

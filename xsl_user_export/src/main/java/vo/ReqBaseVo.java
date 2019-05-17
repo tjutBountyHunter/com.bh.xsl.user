@@ -2,7 +2,7 @@ package vo;
 
 import java.io.Serializable;
 
-public class RequestBaseVo implements Serializable {
+public class ReqBaseVo implements Serializable {
 	private String source;
 
 	public String getSource() {

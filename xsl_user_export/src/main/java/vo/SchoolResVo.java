@@ -2,7 +2,7 @@ package vo;
 
 import java.io.Serializable;
 
-public class SchoolResVo extends ResponseBaseVo {
+public class SchoolResVo implements Serializable {
 	private String version;
 	private String schools;
 	private String colleges;

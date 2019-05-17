@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import user.service.UserOperateService;
 import vo.ResBaseVo;
 import vo.UserReqVo;
+import vo.UserResVo;
 import vo.XslUserRegister;
 
 /**
@@ -20,17 +21,30 @@ public class UserOperateResourceImpl implements UserOperateResource {
     private UserOperateService userOperateService;
 
     @Override
-    public ResBaseVo quickCreateUser(XslUserRegister xslUserRegister) {
-        return userOperateService.quickCreateUser(xslUserRegister);
+    public UserResVo quickCreateUser(XslUserRegister xslUserRegister) {
+        try {
+            return userOperateService.quickCreateUser(xslUserRegister);
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
+
     }
 
     @Override
-    public ResBaseVo userLogin(UserReqVo userReqVo) {
-        return userOperateService.userLogin(userReqVo);
+    public UserResVo userLogin(UserReqVo userReqVo) {
+        try {
+            return userOperateService.userLogin(userReqVo);
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
     public ResBaseVo userLogout(UserReqVo userReqVo) {
-        return userOperateService.userLogout(userReqVo);
+        try {
+            return userOperateService.userLogout(userReqVo);
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
     }
 }

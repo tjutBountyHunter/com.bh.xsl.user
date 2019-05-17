@@ -2,6 +2,7 @@ package com.xsl.user;
 
 import vo.ResBaseVo;
 import vo.UserReqVo;
+import vo.UserResVo;
 import vo.XslUserRegister;
 
 /**
@@ -17,7 +18,7 @@ public interface UserOperateResource {
      * @return
      * @throws Exception
      */
-    ResBaseVo quickCreateUser(XslUserRegister xslUserRegister);
+    UserResVo quickCreateUser(XslUserRegister xslUserRegister);
 
     /**
      * 登录
@@ -25,7 +26,7 @@ public interface UserOperateResource {
      * @param userReqVo
      * @return
      */
-    ResBaseVo userLogin(UserReqVo userReqVo);
+    UserResVo userLogin(UserReqVo userReqVo);
 
     /**
      * 注销

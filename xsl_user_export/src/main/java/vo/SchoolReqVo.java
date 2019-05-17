@@ -1,8 +1,6 @@
 package vo;
 
-import java.io.Serializable;
-
-public class SchoolReqVo extends RequestBaseVo {
+public class SchoolReqVo extends ReqBaseVo {
 	private Integer schoolid;
 	private Integer collegeid;
 

@@ -1,6 +1,6 @@
 package vo;
 
-public class UserResVo extends ResponseBaseVo {
+public class UserResVo extends ResBaseVo {
 	private String userid;
 
 	private String hunterid;

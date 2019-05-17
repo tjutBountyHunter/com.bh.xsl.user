@@ -1,6 +1,6 @@
 package vo;
 
-public class UserLevelReqVo extends RequestBaseVo {
+public class UserLevelReqVo extends ReqBaseVo {
 	private String masterId;
 	private String hunterId;
 

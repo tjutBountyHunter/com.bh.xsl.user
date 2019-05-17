@@ -1,8 +1,9 @@
 package vo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class HunterVo extends ResponseBaseVo {
+public class HunterVo implements Serializable {
     private Integer id;
 
     private String hunterid;

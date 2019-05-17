@@ -1,7 +1,7 @@
 package vo;
 
 
-public class UserReqVo extends RequestBaseVo {
+public class UserReqVo extends ReqBaseVo {
 	private String userid;
 	private String phone;
 	private String name;

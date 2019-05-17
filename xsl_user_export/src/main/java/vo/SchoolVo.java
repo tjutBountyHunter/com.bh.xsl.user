@@ -1,6 +1,8 @@
 package vo;
 
-public class SchoolVo extends ResponseBaseVo {
+import java.io.Serializable;
+
+public class SchoolVo implements Serializable {
     private Integer id;
 
     private String schoolname;

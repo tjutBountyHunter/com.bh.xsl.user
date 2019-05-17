@@ -25,20 +25,13 @@ public class ResBaseVo implements Serializable {
         this.msg = msg;
     }
 
-    public static ResBaseVo build(Integer status, String msg, Object data) {
-        return new ResBaseVo(status, msg);
-    }
-
-    public static ResBaseVo ok(Object data) {
-        return new ResBaseVo(data);
-    }
-
     public static ResBaseVo ok() {
-        return new ResBaseVo(null);
+        return new ResBaseVo();
     }
 
     public ResBaseVo() {
-
+        this.status = 200;
+        this.msg = "OK";
     }
 
     public static ResBaseVo build(Integer status, String msg) {
@@ -48,11 +41,6 @@ public class ResBaseVo implements Serializable {
     public ResBaseVo(Integer status, String msg) {
         this.status = status;
         this.msg = msg;
-    }
-
-    public ResBaseVo(Object data) {
-        this.status = 200;
-        this.msg = "OK";
     }
 
     public Boolean isOK() {

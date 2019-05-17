@@ -1,10 +1,9 @@
 package pojo;
 
-import vo.ResponseBaseVo;
-
+import java.io.Serializable;
 import java.util.Date;
 
-public class XslMaster extends ResponseBaseVo {
+public class XslMaster implements Serializable {
     private Integer id;
 
     private String masterid;

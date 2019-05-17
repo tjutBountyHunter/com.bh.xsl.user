@@ -1,6 +1,6 @@
 package vo;
 
-public class JPushReqVo extends RequestBaseVo{
+public class JPushReqVo extends ReqBaseVo {
 	/**
 	 * 手机号
 	 *

@@ -1,6 +1,6 @@
 package vo;
 
-public class NetworkReqVo extends RequestBaseVo{
+public class NetworkReqVo extends ReqBaseVo {
 	private String masterId;
 
 	private String hunterId;

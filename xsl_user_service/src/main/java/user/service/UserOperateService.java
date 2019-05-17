@@ -2,13 +2,10 @@ package user.service;
 
 import vo.ResBaseVo;
 import vo.UserReqVo;
+import vo.UserResVo;
 import vo.XslUserRegister;
 
-/**
- * @author 梁俊伟
- * @version 1.0
- * @date 2019/5/15 13:54
- */
+
 public interface UserOperateService {
 
     /**
@@ -17,7 +14,7 @@ public interface UserOperateService {
      * @return
      * @throws Exception
      */
-    ResBaseVo quickCreateUser(XslUserRegister xslUserRegister);
+    UserResVo quickCreateUser(XslUserRegister xslUserRegister);
 
     /**
      * 登录
@@ -25,7 +22,7 @@ public interface UserOperateService {
      * @param userReqVo
      * @return
      */
-    ResBaseVo userLogin(UserReqVo userReqVo);
+    UserResVo userLogin(UserReqVo userReqVo);
 
     /**
      * 注销

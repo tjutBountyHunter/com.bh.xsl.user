@@ -1,10 +1,9 @@
 package pojo;
 
-import vo.ResponseBaseVo;
-
+import java.io.Serializable;
 import java.util.Date;
 
-public class XslHunter extends ResponseBaseVo {
+public class XslHunter implements Serializable {
     private Integer id;
 
     private String hunterid;

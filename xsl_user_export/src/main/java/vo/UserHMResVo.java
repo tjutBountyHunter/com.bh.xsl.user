@@ -1,6 +1,8 @@
 package vo;
 
-public class UserHMResVo extends ResponseBaseVo {
+import java.io.Serializable;
+
+public class UserHMResVo implements Serializable {
 	private Short hunterlevel;
 	private Short masterlevel;
 	private Integer hunterEmpirical;
