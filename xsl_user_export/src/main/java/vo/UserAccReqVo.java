@@ -15,6 +15,8 @@ public class UserAccReqVo extends RequestBaseVo {
 
 	private String sex;
 
+	private String phone;
+
 	private List<TagVo> tagVos;
 
 	public String getUserid() {
@@ -71,5 +73,13 @@ public class UserAccReqVo extends RequestBaseVo {
 
 	public void setTagVos(List<TagVo> tagVos) {
 		this.tagVos = tagVos;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 }

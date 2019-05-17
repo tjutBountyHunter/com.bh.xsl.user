@@ -31,4 +31,7 @@
     <bean id="LevelResource" class="resourceImpl.LevelResourceImpl"/>
     <dubbo:service interface="com.xsl.user.LevelResource" ref="LevelResource" timeout="600000"/>
 
+    <bean id="weChatUserResource" class="resourceImpl.WeChatUserResourceImpl"/>
+    <dubbo:service interface="com.xsl.user.WeChatUserResource" ref="weChatUserResource" timeout="600000"/>
+
 </beans>

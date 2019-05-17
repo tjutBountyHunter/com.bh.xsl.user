@@ -113,6 +113,11 @@ public class SupplementUserInfoServiceImpl implements SupplementUserInfoService 
         XslUser xslUser = new XslUser();
         xslUser.setSchoolinfo(xslSchoolinfo.getSchoolid());
         xslUser.setState((byte) 2);
+
+        if(!StringUtils.isEmpty(userAccReqVo.getPhone())){
+            xslUser.setPhone(userAccReqVo.getPhone());
+        }
+
         XslUserExample xslUserExample = new XslUserExample();
         xslUserExample.createCriteria().andUseridEqualTo(userid);
         int count = xslUserMapper.updateByExampleSelective(xslUser, xslUserExample);
@@ -124,7 +129,7 @@ public class SupplementUserInfoServiceImpl implements SupplementUserInfoService 
         JedisClientUtil.delete(USER_INFO +":"+ userid);
 
         //二次自动审核认证
-        List<tagVo> tagVos = userAccReqVo.getTagVos();
+        List<TagVo> tagVos = userAccReqVo.getTagVos();
         if(tagVos == null || tagVos.size() == 0){
             return ResBaseVo.ok(2);
         }
@@ -134,11 +139,10 @@ public class SupplementUserInfoServiceImpl implements SupplementUserInfoService 
 
         List<XslHunterTag> xslHunterTags = new ArrayList<>();
 
-        for (tagVo tagVo : tagVos){
+        for (TagVo tagVo : tagVos){
             XslHunterTag xslHunterTag = new XslHunterTag();
             xslHunterTag.setHunterid(hunterId);
             xslHunterTag.setTagid(tagVo.getTagid());
-
             xslHunterTags.add(xslHunterTag);
         }
 

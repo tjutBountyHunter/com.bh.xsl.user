@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 import org.springframework.util.StringUtils;
 import pojo.*;
+import user.service.InitUserInfo;
 import user.service.UserInfoService;
 import user.service.UserOperateService;
 import util.*;
@@ -47,6 +48,9 @@ public class UserOperateServiceImpl implements UserOperateService {
     @Autowired
     private UserInfoService userInfoService;
 
+    @Autowired
+    private InitUserInfo initUserInfo;
+
 
     private static final Logger logger = LoggerFactory.getLogger(UserOperateServiceImpl.class);
 
@@ -68,12 +72,13 @@ public class UserOperateServiceImpl implements UserOperateService {
             return ResBaseVo.build(403,"该手机号已经注册过");
         }
 
+
         XslUser xslUser = new XslUser();
         xslUser.setUserid(UUIDUtil.getUUID().substring(0, 12));
         //初始化猎人信息
-        XslHunter xslHunter = initXslHunter(xslUser);
+        XslHunter xslHunter = initUserInfo.initXslHunter(xslUser);
         //初始化雇主信息
-        XslMaster xslMaster = initXslMaster(xslUser);
+        XslMaster xslMaster = initUserInfo.initXslMaster(xslUser);
         //初始化用户信息
         initUserInfo(xslUserRegister, xslUser, xslHunter, xslMaster);
 
@@ -227,50 +232,6 @@ public class UserOperateServiceImpl implements UserOperateService {
         }
         JedisClientUtil.delete(REDIS_USER_SESSION_KEY + ":" + userReqVo.getPhone());
         return ResBaseVo.ok();
-    }
-
-    private XslHunter initXslHunter(XslUser xslUser) {
-        //初始化猎人信息
-        XslHunter xslHunter = new XslHunter();
-        xslHunter.setUserid(xslUser.getUserid());
-        xslHunter.setHunterid(UUIDUtil.getUUID().substring(0, 12));
-        xslHunter.setLevel((short) 1);
-        xslHunter.setDescr("新手猎人");
-        try {
-            int result = xslHunterMapper.insertSelective(xslHunter);
-
-            if (result < 1){
-                throw new RuntimeException("猎人信息插入失败");
-            }
-
-        }catch (Exception e){
-            e.printStackTrace();
-            throw new RuntimeException("服务器异常");
-        }
-
-        return xslHunter;
-    }
-
-    private XslMaster initXslMaster(XslUser xslUser) {
-        //初始化雇主信息
-        XslMaster xslMaster = new XslMaster();
-        xslMaster.setUserid(xslUser.getUserid());
-        xslMaster.setMasterid(UUIDUtil.getUUID().substring(0, 12));
-        xslMaster.setLevel((short) 1);
-        xslMaster.setDescr("新人雇主");
-        try {
-            int result = xslMasterMapper.insertSelective(xslMaster);
-
-            if (result < 1){
-                throw new RuntimeException("雇主信息插入失败");
-            }
-
-        }catch (Exception e){
-            e.printStackTrace();
-            throw new RuntimeException("服务器异常");
-        }
-
-        return xslMaster;
     }
 
     private void initUserInfo(XslUserRegister xslUserRegister, XslUser xslUser, XslHunter xslHunter, XslMaster xslMaster) {
