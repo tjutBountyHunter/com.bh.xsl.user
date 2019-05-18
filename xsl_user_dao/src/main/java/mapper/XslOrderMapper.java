@@ -1,13 +1,13 @@
 package mapper;
 
-import example.XslOrderExample;
 import org.apache.ibatis.annotations.Param;
 import pojo.XslOrder;
+import example.XslOrderExample;
 
 import java.util.List;
 
 public interface XslOrderMapper {
-    int countByExample(XslOrderExample example);
+    long countByExample(XslOrderExample example);
 
     int deleteByExample(XslOrderExample example);
 
