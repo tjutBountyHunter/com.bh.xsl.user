@@ -270,4 +270,14 @@
       endDate = #{enddate,jdbcType=DATE}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="selectHunterIdByExample" parameterType="example.XslOrderExample" resultType="string">
+    select
+      distinct receiveId
+    from xsl_order
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    order by startdate DESC
+  </select>
 </mapper>

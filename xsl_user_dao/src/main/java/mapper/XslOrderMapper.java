@@ -28,4 +28,6 @@ public interface XslOrderMapper {
     int updateByPrimaryKeySelective(XslOrder record);
 
     int updateByPrimaryKey(XslOrder record);
+
+    List<String> selectHunterIdByExample(XslOrderExample example);
 }

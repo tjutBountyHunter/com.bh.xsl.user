@@ -34,13 +34,10 @@ public class HunterInfoServiceImpl implements HunterInfoService {
 		Integer size = hunterListReq.getSize();
 		String masterId = hunterListReq.getMasterId();
 		XslOrderExample xslOrderExample = new XslOrderExample();
-		xslOrderExample.createCriteria().andSendidEqualTo(masterId).andStateBetween(0, 1);
+		xslOrderExample.setDistinct(true);
+		xslOrderExample.createCriteria().andSendidEqualTo(masterId).andStateBetween(2, 3);
 		PageHelper.startPage(1, size);
-		List<XslOrder> xslOrders = xslOrderMapper.selectByExample(xslOrderExample);
-		List<String> hunterIds = new ArrayList<>();
-		if(ListUtil.isNotEmpty(xslOrders)){
-			xslOrders.forEach(var -> hunterIds.add(var.getReceiveid()));
-		}
+		List<String> hunterIds = xslOrderMapper.selectHunterIdByExample(xslOrderExample);
 
 		return hunterIds;
 	}
@@ -64,6 +61,7 @@ public class HunterInfoServiceImpl implements HunterInfoService {
 			hunterInfoVo.setTxUrl(userTx);
 			XslHunter hunterInfo = userInfoService.getHunterInfo(hunterId);
 			BeanUtils.copyProperties(hunterInfo, hunterInfoVo);
+			hunterInfoVo.setTagVos(userInfoService.getHunterTags(hunterId));
 			hunterInfoVos.add(hunterInfoVo);
 		}
 
