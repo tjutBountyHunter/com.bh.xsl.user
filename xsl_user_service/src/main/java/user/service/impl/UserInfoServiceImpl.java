@@ -256,4 +256,14 @@ public class UserInfoServiceImpl implements UserInfoService {
 		return ResBaseVo.ok(userHMResVo);
 	}
 
+	@Override
+	public int getUserNums() {
+		try{
+			return xslUserMapper.getTotal();
+		}
+		catch (Exception e){
+			throw new RuntimeException(e);
+		}
+	}
+
 }

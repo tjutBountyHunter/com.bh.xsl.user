@@ -23,4 +23,10 @@ public interface UserInfoService {
 
 	ResBaseVo getHMinfo(UserReqVo userReqVo);
 
+	/**
+	 *
+	 * @return 得到用户总数
+	 */
+	int getUserNums();
+
 }

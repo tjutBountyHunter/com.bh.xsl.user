@@ -19,4 +19,6 @@ public interface UserInfoResouce {
 	SchoolVo getSchoolByName(String SchoolName);
 
 	ResBaseVo getHMinfo(UserReqVo userReqVo);
+
+	int getUserNums();
 }
