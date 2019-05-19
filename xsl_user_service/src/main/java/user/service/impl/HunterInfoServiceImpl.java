@@ -44,8 +44,9 @@ public class HunterInfoServiceImpl implements HunterInfoService {
 
 	@Override
 	public List<String> getHunterIdByNB(HunterListReq hunterListReq) {
+		Integer size = hunterListReq.getSize();
 		List<String> ids = xslHunterMapper.selectGoodHunter();
-
+		ids = ids.subList(0, size);
 		return ids;
 	}
 
