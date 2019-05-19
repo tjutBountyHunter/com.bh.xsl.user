@@ -28,4 +28,10 @@ public interface UserInfoService {
 
 	List<TagVo> getHunterTags(String hunterid);
 
+	/**
+	 *
+	 * @return 得到用户总数
+	 */
+	int getUserNums();
+
 }

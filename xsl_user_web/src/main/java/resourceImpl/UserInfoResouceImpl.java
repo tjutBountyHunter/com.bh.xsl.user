@@ -74,4 +74,9 @@ public class UserInfoResouceImpl implements UserInfoResouce {
 	public ResBaseVo getHMinfo(UserReqVo userReqVo) {
 		return userInfoService.getHMinfo(userReqVo);
 	}
+
+	@Override
+	public int getUserNums() {
+		return userInfoService.getUserNums();
+	}
 }

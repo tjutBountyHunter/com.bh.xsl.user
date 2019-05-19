@@ -350,4 +350,8 @@
       updateDate = #{updatedate,jdbcType=DATE}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="getTotal" resultType="int">
+    SELECT COUNT(*)
+    FROM xsl_user
+  </select>
 </mapper>

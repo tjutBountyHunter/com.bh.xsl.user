@@ -291,4 +291,14 @@ public class UserInfoServiceImpl implements UserInfoService {
 		return list;
 	}
 
+	@Override
+	public int getUserNums() {
+		try{
+			return xslUserMapper.getTotal();
+		}
+		catch (Exception e){
+			throw new RuntimeException(e);
+		}
+	}
+
 }
