@@ -39,7 +39,7 @@ public class HunterInfoServiceImpl implements HunterInfoService {
 		List<XslOrder> xslOrders = xslOrderMapper.selectByExample(xslOrderExample);
 		List<String> hunterIds = new ArrayList<>();
 		if(ListUtil.isNotEmpty(xslOrders)){
-			xslOrders.forEach((var) -> hunterIds.add(var.getReceiveid()));
+			xslOrders.forEach(var -> hunterIds.add(var.getReceiveid()));
 		}
 
 		return hunterIds;
