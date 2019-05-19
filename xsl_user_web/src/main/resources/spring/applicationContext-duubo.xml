@@ -34,4 +34,7 @@
     <bean id="weChatUserResource" class="resourceImpl.WeChatUserResourceImpl"/>
     <dubbo:service interface="com.xsl.user.WeChatUserResource" ref="weChatUserResource" timeout="600000"/>
 
+    <bean id="hunterListResource" class="resourceImpl.HunterListResourceImpl"/>
+    <dubbo:service interface="com.xsl.user.HunterListResource" ref="hunterListResource" timeout="600000"/>
+
 </beans>

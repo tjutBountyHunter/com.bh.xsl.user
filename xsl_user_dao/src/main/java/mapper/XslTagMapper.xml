@@ -310,4 +310,14 @@
       <include refid="Update_By_Example_Where_Clause_2" />
     </if>
   </update>
+
+  <select id="selectTagNameByTagId" resultType="string" parameterType="string" >
+    select
+        name
+    from
+       xsl_tag
+    where
+       tagId = #{tagid,jdbcType=VARCHAR}
+  </select>
+
 </mapper>

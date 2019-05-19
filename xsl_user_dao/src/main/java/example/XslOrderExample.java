@@ -273,52 +273,62 @@ public class XslOrderExample {
             return (Criteria) this;
         }
 
-        public Criteria andSendidEqualTo(Integer value) {
+        public Criteria andSendidEqualTo(String value) {
             addCriterion("sendId =", value, "sendid");
             return (Criteria) this;
         }
 
-        public Criteria andSendidNotEqualTo(Integer value) {
+        public Criteria andSendidNotEqualTo(String value) {
             addCriterion("sendId <>", value, "sendid");
             return (Criteria) this;
         }
 
-        public Criteria andSendidGreaterThan(Integer value) {
+        public Criteria andSendidGreaterThan(String value) {
             addCriterion("sendId >", value, "sendid");
             return (Criteria) this;
         }
 
-        public Criteria andSendidGreaterThanOrEqualTo(Integer value) {
+        public Criteria andSendidGreaterThanOrEqualTo(String value) {
             addCriterion("sendId >=", value, "sendid");
             return (Criteria) this;
         }
 
-        public Criteria andSendidLessThan(Integer value) {
+        public Criteria andSendidLessThan(String value) {
             addCriterion("sendId <", value, "sendid");
             return (Criteria) this;
         }
 
-        public Criteria andSendidLessThanOrEqualTo(Integer value) {
+        public Criteria andSendidLessThanOrEqualTo(String value) {
             addCriterion("sendId <=", value, "sendid");
             return (Criteria) this;
         }
 
-        public Criteria andSendidIn(List<Integer> values) {
+        public Criteria andSendidLike(String value) {
+            addCriterion("sendId like", value, "sendid");
+            return (Criteria) this;
+        }
+
+        public Criteria andSendidNotLike(String value) {
+            addCriterion("sendId not like", value, "sendid");
+            return (Criteria) this;
+        }
+
+        public Criteria andSendidIn(List<String> values) {
             addCriterion("sendId in", values, "sendid");
             return (Criteria) this;
         }
 
-        public Criteria andSendidNotIn(List<Integer> values) {
+        public Criteria andSendidNotIn(List<String> values) {
             addCriterion("sendId not in", values, "sendid");
             return (Criteria) this;
         }
 
-        public Criteria andSendidBetween(Integer value1, Integer value2) {
+        public Criteria andSendidBetween(String value1, String value2) {
             addCriterion("sendId between", value1, value2, "sendid");
             return (Criteria) this;
         }
 
-        public Criteria andSendidNotBetween(Integer value1, Integer value2) {
+        public Criteria andSendidNotBetween(String value1, String value2) {
             addCriterion("sendId not between", value1, value2, "sendid");
             return (Criteria) this;
         }
@@ -333,52 +343,62 @@ public class XslOrderExample {
             return (Criteria) this;
         }
 
-        public Criteria andTaskidEqualTo(Integer value) {
+        public Criteria andTaskidEqualTo(String value) {
             addCriterion("taskId =", value, "taskid");
             return (Criteria) this;
         }
 
-        public Criteria andTaskidNotEqualTo(Integer value) {
+        public Criteria andTaskidNotEqualTo(String value) {
             addCriterion("taskId <>", value, "taskid");
             return (Criteria) this;
         }
 
-        public Criteria andTaskidGreaterThan(Integer value) {
+        public Criteria andTaskidGreaterThan(String value) {
             addCriterion("taskId >", value, "taskid");
             return (Criteria) this;
         }
 
-        public Criteria andTaskidGreaterThanOrEqualTo(Integer value) {
+        public Criteria andTaskidGreaterThanOrEqualTo(String value) {
             addCriterion("taskId >=", value, "taskid");
             return (Criteria) this;
         }
 
-        public Criteria andTaskidLessThan(Integer value) {
+        public Criteria andTaskidLessThan(String value) {
             addCriterion("taskId <", value, "taskid");
             return (Criteria) this;
         }
 
-        public Criteria andTaskidLessThanOrEqualTo(Integer value) {
+        public Criteria andTaskidLessThanOrEqualTo(String value) {
             addCriterion("taskId <=", value, "taskid");
             return (Criteria) this;
         }
 
-        public Criteria andTaskidIn(List<Integer> values) {
+        public Criteria andTaskidLike(String value) {
+            addCriterion("taskId like", value, "taskid");
+            return (Criteria) this;
+        }
+
+        public Criteria andTaskidNotLike(String value) {
+            addCriterion("taskId not like", value, "taskid");
+            return (Criteria) this;
+        }
+
+        public Criteria andTaskidIn(List<String> values) {
             addCriterion("taskId in", values, "taskid");
             return (Criteria) this;
         }
 
-        public Criteria andTaskidNotIn(List<Integer> values) {
+        public Criteria andTaskidNotIn(List<String> values) {
             addCriterion("taskId not in", values, "taskid");
             return (Criteria) this;
         }
 
-        public Criteria andTaskidBetween(Integer value1, Integer value2) {
+        public Criteria andTaskidBetween(String value1, String value2) {
             addCriterion("taskId between", value1, value2, "taskid");
             return (Criteria) this;
         }
 
-        public Criteria andTaskidNotBetween(Integer value1, Integer value2) {
+        public Criteria andTaskidNotBetween(String value1, String value2) {
             addCriterion("taskId not between", value1, value2, "taskid");
             return (Criteria) this;
         }
@@ -393,52 +413,62 @@ public class XslOrderExample {
             return (Criteria) this;
         }
 
-        public Criteria andReceiveidEqualTo(Integer value) {
+        public Criteria andReceiveidEqualTo(String value) {
             addCriterion("receiveId =", value, "receiveid");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveidNotEqualTo(Integer value) {
+        public Criteria andReceiveidNotEqualTo(String value) {
             addCriterion("receiveId <>", value, "receiveid");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveidGreaterThan(Integer value) {
+        public Criteria andReceiveidGreaterThan(String value) {
             addCriterion("receiveId >", value, "receiveid");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveidGreaterThanOrEqualTo(Integer value) {
+        public Criteria andReceiveidGreaterThanOrEqualTo(String value) {
             addCriterion("receiveId >=", value, "receiveid");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveidLessThan(Integer value) {
+        public Criteria andReceiveidLessThan(String value) {
             addCriterion("receiveId <", value, "receiveid");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveidLessThanOrEqualTo(Integer value) {
+        public Criteria andReceiveidLessThanOrEqualTo(String value) {
             addCriterion("receiveId <=", value, "receiveid");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveidIn(List<Integer> values) {
+        public Criteria andReceiveidLike(String value) {
+            addCriterion("receiveId like", value, "receiveid");
+            return (Criteria) this;
+        }
+
+        public Criteria andReceiveidNotLike(String value) {
+            addCriterion("receiveId not like", value, "receiveid");
+            return (Criteria) this;
+        }
+
+        public Criteria andReceiveidIn(List<String> values) {
             addCriterion("receiveId in", values, "receiveid");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveidNotIn(List<Integer> values) {
+        public Criteria andReceiveidNotIn(List<String> values) {
             addCriterion("receiveId not in", values, "receiveid");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveidBetween(Integer value1, Integer value2) {
+        public Criteria andReceiveidBetween(String value1, String value2) {
             addCriterion("receiveId between", value1, value2, "receiveid");
             return (Criteria) this;
         }
 
-        public Criteria andReceiveidNotBetween(Integer value1, Integer value2) {
+        public Criteria andReceiveidNotBetween(String value1, String value2) {
             addCriterion("receiveId not between", value1, value2, "receiveid");
             return (Criteria) this;
         }
@@ -553,7 +583,7 @@ public class XslOrderExample {
             return (Criteria) this;
         }
 
-        public Criteria andStateBetween(Byte value1, Byte value2) {
+        public Criteria andStateBetween(Integer value1, Integer value2) {
             addCriterion("state between", value1, value2, "state");
             return (Criteria) this;
         }

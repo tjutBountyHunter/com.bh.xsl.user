@@ -8,11 +8,11 @@ public class XslOrder {
 
     private String orderid;
 
-    private Integer sendid;
+    private String sendid;
 
-    private Integer taskid;
+    private String taskid;
 
-    private Integer receiveid;
+    private String receiveid;
 
     private BigDecimal money;
 
@@ -38,28 +38,28 @@ public class XslOrder {
         this.orderid = orderid == null ? null : orderid.trim();
     }
 
-    public Integer getSendid() {
+    public String getSendid() {
         return sendid;
     }
 
-    public void setSendid(Integer sendid) {
-        this.sendid = sendid;
+    public void setSendid(String sendid) {
+        this.sendid = sendid == null ? null : sendid.trim();
     }
 
-    public Integer getTaskid() {
+    public String getTaskid() {
         return taskid;
     }
 
-    public void setTaskid(Integer taskid) {
-        this.taskid = taskid;
+    public void setTaskid(String taskid) {
+        this.taskid = taskid == null ? null : taskid.trim();
     }
 
-    public Integer getReceiveid() {
+    public String getReceiveid() {
         return receiveid;
     }
 
-    public void setReceiveid(Integer receiveid) {
-        this.receiveid = receiveid;
+    public void setReceiveid(String receiveid) {
+        this.receiveid = receiveid == null ? null : receiveid.trim();
     }
 
     public BigDecimal getMoney() {

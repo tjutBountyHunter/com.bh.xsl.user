@@ -2,7 +2,10 @@ package user.service;
 
 import pojo.*;
 import vo.ResBaseVo;
+import vo.TagVo;
 import vo.UserReqVo;
+
+import java.util.List;
 
 public interface UserInfoService {
 	XslUser getUserInfo(String useid);
@@ -22,5 +25,7 @@ public interface UserInfoService {
 	String getUserTx(String userid);
 
 	ResBaseVo getHMinfo(UserReqVo userReqVo);
+
+	List<TagVo> getHunterTags(String hunterid);
 
 }

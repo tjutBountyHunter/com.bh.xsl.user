@@ -202,7 +202,7 @@ public class XslHunterTagExample {
             return (Criteria) this;
         }
 
-        public Criteria andHunteridEqualTo(Integer value) {
+        public Criteria andHunteridEqualTo(String value) {
             addCriterion("hunterId =", value, "hunterid");
             return (Criteria) this;
         }

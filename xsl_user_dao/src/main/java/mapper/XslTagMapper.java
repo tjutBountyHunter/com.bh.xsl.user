@@ -32,4 +32,6 @@ public interface XslTagMapper {
     int updateByPrimaryKey(XslTag record);
 
     int updateUseNumByExample(XslTagExample example);
+
+    String selectTagNameByTagId(String tagId);
 }

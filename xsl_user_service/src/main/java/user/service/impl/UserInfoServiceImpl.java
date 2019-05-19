@@ -11,10 +11,13 @@ import pojo.*;
 import user.service.UserInfoService;
 import util.GsonSingle;
 import util.JedisClientUtil;
+import util.ListUtil;
 import vo.ResBaseVo;
+import vo.TagVo;
 import vo.UserHMResVo;
 import vo.UserReqVo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -34,6 +37,10 @@ public class UserInfoServiceImpl implements UserInfoService {
 	private XslUserFileMapper xslUserFileMapper;
 	@Autowired
 	private XslFileMapper xslFileMapper;
+	@Autowired
+	private XslHunterTagMapper xslHunterTagMapper;
+	@Autowired
+	private XslTagMapper xslTagMapper;
 
 
 	@Value("${USER_INFO}")
@@ -48,6 +55,8 @@ public class UserInfoServiceImpl implements UserInfoService {
 	private String USER_SCHOOL_INFO;
 	@Value("${USER_TX_URL}")
 	private String USER_TX_URL;
+	@Value("${HUNTER_TAGS}")
+	private String HUNTER_TAGS;
 
 	@Override
 	public XslUser getUserInfo(String useid){
@@ -254,6 +263,32 @@ public class UserInfoServiceImpl implements UserInfoService {
 		userHMResVo.setMasterlevel(masterInfo.getLevel());
 
 		return ResBaseVo.ok(userHMResVo);
+	}
+
+	@Override
+	public List<TagVo> getHunterTags(String hunterid) {
+		Gson gson = GsonSingle.getGson();
+		String res = JedisClientUtil.get(HUNTER_TAGS + ":" + hunterid);
+
+		if(!StringUtils.isEmpty(res)){
+			return gson.fromJson(res, List.class);
+		}
+
+		XslHunterTagExample xslHunterTagExample = new XslHunterTagExample();
+		xslHunterTagExample.createCriteria().andHunteridEqualTo(hunterid);
+		List<XslHunterTag> xslHunterTags = xslHunterTagMapper.selectByExample(xslHunterTagExample);
+		List<TagVo> list = new ArrayList<>();
+		if(ListUtil.isNotEmpty(xslHunterTags)){
+			xslHunterTags.forEach(var -> {TagVo tagVo = new TagVo();
+			                              tagVo.setTagid(var.getTagid());
+			                              tagVo.setTagName(xslTagMapper.selectTagNameByTagId(var.getTagid()));
+			                              list.add(tagVo);
+			                             });
+
+			JedisClientUtil.setEx(HUNTER_TAGS + ":" + hunterid, gson.toJson(list) ,300);
+		}
+
+		return list;
 	}
 
 }
