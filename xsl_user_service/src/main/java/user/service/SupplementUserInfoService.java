@@ -1,14 +1,11 @@
 package user.service;
 
+import com.xsl.user.vo.FileUploadReqVo;
 import com.xsl.user.vo.ResBaseVo;
 import com.xsl.user.vo.UserAccReqVo;
 import com.xsl.user.vo.UserReqVo;
 
-/**
- * @author 梁俊伟
- * @version 1.0
- * @date 2019/5/15 14:18
- */
+
 public interface SupplementUserInfoService {
 
     /**
@@ -24,5 +21,11 @@ public interface SupplementUserInfoService {
      * @return
      */
     ResBaseVo userAcc(UserAccReqVo userAccReqVo);
+
+    /**
+     * 上传用户头像
+     * @return
+     */
+    ResBaseVo upLoadUserTx(FileUploadReqVo uploadFile, String userid);
 
 }

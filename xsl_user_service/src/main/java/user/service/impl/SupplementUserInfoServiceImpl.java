@@ -1,9 +1,11 @@
 package user.service.impl;
 
+import com.xsl.user.FileOperateResource;
+import com.xsl.user.vo.*;
+import com.xsl.user.vo.ResBaseVo;
 import com.xsl.user.vo.TagVo;
-import com.xsl.user.vo.UserAccReqVo;
-import com.xsl.user.vo.UserReqVo;
 import example.XslUserExample;
+import example.XslUserFileExample;
 import mapper.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,10 +15,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
-import pojo.XslHunterTag;
-import pojo.XslSchoolinfo;
-import pojo.XslTask;
-import pojo.XslUser;
+import pojo.*;
 import user.service.SupplementUserInfoService;
 import user.service.TaskInfoService;
 import user.service.UserMqService;
@@ -44,20 +43,23 @@ public class SupplementUserInfoServiceImpl implements SupplementUserInfoService 
     private XslSchoolinfoMapper xslSchoollinfoMapper;
     @Autowired
     private XslHunterTagMapper xslHunterTagMapper;
+    @Autowired
+    private XslUserFileMapper xslUserFileMapper;
+
+    @Autowired
+    private UserMqService userMqService;
+    @Autowired
+    private UserInfoService userInfoService;
+    @Autowired
+    private FileOperateResource fileOperateResource;
 
     @Resource
     private ThreadPoolTaskExecutor userExecutor;
-    @Autowired
-    private UserMqService userMqService;
-
     @Resource
     private TaskInfoService taskInfoService;
 
     private static final Logger logger = LoggerFactory.getLogger(SupplementUserInfoServiceImpl.class);
 
-
-    @Autowired
-    private UserInfoService userInfoService;
 
     @Value("${REDIS_USER_SESSION_KEY}")
     private String REDIS_USER_SESSION_KEY;
@@ -67,7 +69,7 @@ public class SupplementUserInfoServiceImpl implements SupplementUserInfoService 
     private String USER_TX_URL;
 
     @Override
-    public com.xsl.user.vo.ResBaseVo saveUserInfo(UserReqVo userReqVo) {
+    public ResBaseVo saveUserInfo(UserReqVo userReqVo) {
         XslUser xslUser = new XslUser();
         BeanUtils.copyProperties(userReqVo, xslUser);
         if(!StringUtils.isEmpty(userReqVo.getPassword())){
@@ -87,11 +89,11 @@ public class SupplementUserInfoServiceImpl implements SupplementUserInfoService 
         //es中数据同步待修复
         userExecutor.execute(() -> esUserName(userReqVo.getUserid(), userReqVo.getName()));
 
-        return com.xsl.user.vo.ResBaseVo.ok();
+        return ResBaseVo.ok();
     }
 
     @Override
-    public com.xsl.user.vo.ResBaseVo userAcc(UserAccReqVo userAccReqVo) {
+    public ResBaseVo userAcc(UserAccReqVo userAccReqVo) {
         XslSchoolinfo xslSchoolinfo = new XslSchoolinfo();
 
         //初步信息录入
@@ -104,7 +106,7 @@ public class SupplementUserInfoServiceImpl implements SupplementUserInfoService 
         int i = xslSchoollinfoMapper.insertSelective(xslSchoolinfo);
 
         if(i < 1){
-            return com.xsl.user.vo.ResBaseVo.build(500, "服务器繁忙，请重试");
+            return ResBaseVo.build(500, "服务器繁忙，请重试");
         }
 
         String userid = userAccReqVo.getUserid();
@@ -121,7 +123,7 @@ public class SupplementUserInfoServiceImpl implements SupplementUserInfoService 
         int count = xslUserMapper.updateByExampleSelective(xslUser, xslUserExample);
 
         if(count < 1){
-            return com.xsl.user.vo.ResBaseVo.build(500, "服务器繁忙，请重试");
+            return ResBaseVo.build(500, "服务器繁忙，请重试");
         }
 
         JedisClientUtil.delete(USER_INFO +":"+ userid);
@@ -129,7 +131,7 @@ public class SupplementUserInfoServiceImpl implements SupplementUserInfoService 
         //二次自动审核认证
         List<com.xsl.user.vo.TagVo> tagVos = userAccReqVo.getTagVos();
         if(tagVos == null || tagVos.size() == 0){
-            return com.xsl.user.vo.ResBaseVo.ok(2);
+            return ResBaseVo.ok(2);
         }
 
         XslUser userInfo = userInfoService.getUserInfo(userid);
@@ -147,17 +149,69 @@ public class SupplementUserInfoServiceImpl implements SupplementUserInfoService 
         int tagCount = xslHunterTagMapper.insertSelectiveBatch(xslHunterTags);
 
         if(tagCount < 1){
-            return com.xsl.user.vo.ResBaseVo.ok(2);
+            return ResBaseVo.ok(2);
         }
 
         xslUser.setState((byte) 1);
         int AccCount = xslUserMapper.updateByExampleSelective(xslUser, xslUserExample);
 
         if(AccCount < 1){
-            return com.xsl.user.vo.ResBaseVo.build(200, "认证成功，待管理员审核");
+            return ResBaseVo.build(200, "认证成功，待管理员审核");
         }
 
-        return com.xsl.user.vo.ResBaseVo.ok(1);
+        return ResBaseVo.ok(1);
+    }
+
+
+    @Override
+    public ResBaseVo upLoadUserTx(FileUploadReqVo uploadFile, String userid){
+        //1.获取用户信息
+        XslUser userInfo = userInfoService.getUserInfo(userid);
+        if (userInfo.getUserid() == null) {
+            return ResBaseVo.build(403, "用户不存在");
+        }
+
+        try {
+            String userTx = userInfoService.getUserTx(userid);
+            if(!StringUtils.isEmpty(userTx)){
+                XslUserFileExample xslUserFileExample = new XslUserFileExample();
+                xslUserFileExample.createCriteria().andUseridEqualTo(userid).andTypeEqualTo("TX");
+                xslUserFileMapper.deleteByExample(xslUserFileExample);
+                JedisClientUtil.delete(USER_TX_URL + ":" + userid);
+            }
+
+            FileVo fileVo = fileOperateResource.fileUpload(uploadFile);
+
+            if(fileVo.getStatus() != 200){
+                return ResBaseVo.build(fileVo.getStatus(), fileVo.getMsg());
+            }
+
+            //2.获取用户信息
+            //建立用户与文件关联
+            XslUserFile xslUserFile = new XslUserFile();
+            xslUserFile.setUserid(userInfo.getUserid());
+            xslUserFile.setFileid(fileVo.getFileid());
+            xslUserFile.setType("TX");
+
+            int insert = xslUserFileMapper.insert(xslUserFile);
+            if(insert < 1){
+                return ResBaseVo.build(500, "服务器异常");
+            }
+
+            //3.异步更新状态
+            userExecutor.execute(() -> esUserTxurl(userid, fileVo.getUrl()));
+
+            return ResBaseVo.ok(fileVo.getUrl());
+        } catch (Exception e) {
+           throw new RuntimeException(e);
+        }
+
+    }
+
+
+    private void esUserTxurl(String userid, String txUrl) {
+        logger.info("esUserName userid"+userid+"txUrl:"+txUrl);
+        esUserInfo(userid, "", txUrl);
     }
 
     private void esUserName(String userid, String name) {

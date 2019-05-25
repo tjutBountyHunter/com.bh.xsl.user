@@ -1,5 +1,6 @@
 package com.xsl.user;
 
+import com.xsl.user.vo.FileUploadReqVo;
 import com.xsl.user.vo.ResBaseVo;
 import com.xsl.user.vo.UserAccReqVo;
 import com.xsl.user.vo.UserReqVo;
@@ -24,5 +25,12 @@ public interface SupplementUserInfoResource {
      * @return
      */
     ResBaseVo userAcc(UserAccReqVo userAccReqVo);
+
+
+    /**
+     * 上传用户头像
+     * @return
+     */
+    ResBaseVo upLoadUserTx(FileUploadReqVo uploadFile, String userid);
 
 }

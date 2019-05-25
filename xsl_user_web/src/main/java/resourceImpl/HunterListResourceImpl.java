@@ -2,6 +2,7 @@ package resourceImpl;
 
 import com.xsl.user.HunterListResource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import user.service.HunterInfoService;
 import util.ListUtil;
 import com.xsl.user.vo.HunterInfoVo;
@@ -10,6 +11,7 @@ import com.xsl.user.vo.HunterListReq;
 import java.util.ArrayList;
 import java.util.List;
 
+@Controller
 public class HunterListResourceImpl implements HunterListResource {
 	@Autowired
 	private HunterInfoService hunterInfoService;
