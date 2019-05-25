@@ -1,8 +1,6 @@
 package com.xsl.user.vo;
 
-import java.io.Serializable;
-
-public class UserHMResVo implements Serializable {
+public class UserHMResVo extends ResBaseVo {
 	private Short hunterlevel;
 	private Short masterlevel;
 	private Integer hunterEmpirical;

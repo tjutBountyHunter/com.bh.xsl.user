@@ -12,7 +12,6 @@ import util.JsonUtils;
 import util.Message;
 import util.RandomNumUtil;
 import com.xsl.user.vo.ResBaseVo;
-import vo.XslResult;
 
 @Service
 public class VerifyCodeServiceImpl implements VerifyCodeService {
@@ -97,13 +96,13 @@ public class VerifyCodeServiceImpl implements VerifyCodeService {
 	 * @param content
 	 * @return
 	 */
-	private XslResult checkData(String content) {
+	private ResBaseVo checkData(String content) {
 		//用户校检
 		boolean b = content.matches("^[1][35678]\\d{9}");
 		if (b) {
-			return XslResult.ok();
+			return ResBaseVo.ok();
 		} else {
-			return XslResult.build(400,"手机格式错误");
+			return ResBaseVo.build(400,"手机格式错误");
 		}
 	}
 }

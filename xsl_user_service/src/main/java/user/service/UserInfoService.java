@@ -1,5 +1,6 @@
 package user.service;
 
+import com.xsl.user.vo.UserHMResVo;
 import pojo.*;
 import com.xsl.user.vo.ResBaseVo;
 import com.xsl.user.vo.TagVo;
@@ -24,7 +25,7 @@ public interface UserInfoService {
 
 	String getUserTx(String userid);
 
-	ResBaseVo getHMinfo(UserReqVo userReqVo);
+	UserHMResVo getHMinfo(UserReqVo userReqVo);
 
 	List<TagVo> getHunterTags(String hunterid);
 

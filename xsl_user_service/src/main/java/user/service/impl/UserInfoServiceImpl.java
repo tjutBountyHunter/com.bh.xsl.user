@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import pojo.*;
 import user.service.UserInfoService;
+import util.ErrorUtil;
 import util.GsonSingle;
 import util.JedisClientUtil;
 import util.ListUtil;
@@ -238,10 +239,11 @@ public class UserInfoServiceImpl implements UserInfoService {
 	}
 
 	@Override
-	public ResBaseVo getHMinfo(UserReqVo userReqVo) {
+	public UserHMResVo getHMinfo(UserReqVo userReqVo) {
+		UserHMResVo userHMResVo = new UserHMResVo();
 		String userid = userReqVo.getUserid();
 		if(StringUtils.isEmpty(userid)){
-			return ResBaseVo.build(403, "参数错误");
+			return (UserHMResVo) ErrorUtil.buildErrorInfo(userHMResVo, 403, "参数错误");
 		}
 
 		XslUser userInfo = getUserInfo(userid);
@@ -250,19 +252,19 @@ public class UserInfoServiceImpl implements UserInfoService {
 		String masterid = userInfo.getMasterid();
 
 		if(StringUtils.isEmpty(hunterid) || StringUtils.isEmpty(masterid)){
-			return ResBaseVo.build(403, "用户不存在");
+			return (UserHMResVo) ErrorUtil.buildErrorInfo(userHMResVo, 403, "用户不存在");
 		}
 
 		XslMaster masterInfo = getMasterInfo(masterid);
 		XslHunter hunterInfo = getHunterInfo(hunterid);
 
-		UserHMResVo userHMResVo = new UserHMResVo();
+
 		userHMResVo.setHunterEmpirical(hunterInfo.getEmpirical());
 		userHMResVo.setHunterlevel(hunterInfo.getLevel());
 		userHMResVo.setMasterEmpirical(masterInfo.getEmpirical());
 		userHMResVo.setMasterlevel(masterInfo.getLevel());
 
-		return ResBaseVo.ok(userHMResVo);
+		return userHMResVo;
 	}
 
 	@Override
