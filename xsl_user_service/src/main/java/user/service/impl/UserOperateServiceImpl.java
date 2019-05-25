@@ -60,12 +60,14 @@ public class UserOperateServiceImpl implements UserOperateService {
 
     @Override
     public UserResVo quickCreateUser(UserRegisterReqVo userRegisterReqVo) {
+        UserResVo userResVo = new UserResVo();
+
         XslUserExample example = new XslUserExample();
         XslUserExample.Criteria criteria = example.createCriteria();
         criteria.andPhoneEqualTo(userRegisterReqVo.getPhone());
         List<XslUser> list = xslUserMapper.selectByExample(example);
         if(list != null && list.size() > 0){
-            return (UserResVo) ResBaseVo.build(403,"该手机号已经注册过");
+            return (UserResVo) ErrorUtil.buildErrorInfo(userResVo, 400, "该手机号已经注册过");
         }
 
 
@@ -78,7 +80,7 @@ public class UserOperateServiceImpl implements UserOperateService {
         //初始化用户信息
         initUserInfo(userRegisterReqVo, xslUser, xslHunter, xslMaster);
 
-        UserResVo userResVo = new UserResVo();
+
         BeanUtils.copyProperties(xslUser, userResVo);
         userResVo.setUserid(xslUser.getUserid());
         userResVo.setMasterid(xslMaster.getMasterid());
@@ -99,20 +101,21 @@ public class UserOperateServiceImpl implements UserOperateService {
      */
     @Override
     public UserResVo userLogin(UserReqVo userReqVo) {
+        UserResVo resVo = new UserResVo();
         String phone = userReqVo.getPhone();
         String password = userReqVo.getPassword();
         String token = userReqVo.getToken();
 
         if(StringUtils.isEmpty(phone)){
-            return (UserResVo) ResBaseVo.build(403, "手机号码为空");
+            return (UserResVo) ErrorUtil.buildErrorInfo(resVo, 403, "手机号码为空");
         }
 
         if(StringUtils.isEmpty(password)){
-            return (UserResVo) ResBaseVo.build(403, "密码为空");
+            return (UserResVo) ErrorUtil.buildErrorInfo(resVo, 403, "密码为空");
         }
 
         if(StringUtils.isEmpty(token)){
-            return (UserResVo) ResBaseVo.build(403, "权限不足");
+            return (UserResVo) ErrorUtil.buildErrorInfo(resVo, 403, "权限不足");
         }
 
         //1.查询
@@ -123,11 +126,10 @@ public class UserOperateServiceImpl implements UserOperateService {
 
         //2.判断用户是否存在
         if(list == null || list.size() < 1){
-            return (UserResVo) ResBaseVo.build(403, "用户名或密码错误");
+            return (UserResVo) ErrorUtil.buildErrorInfo(resVo, 403, "用户名或者密码错误");
         }
         XslUser user = list.get(0);
 
-        UserResVo resVo = new UserResVo();
         BeanUtils.copyProperties(user, resVo);
         logger.info("login user is {}", JsonUtils.objectToJson(user));
         try {
@@ -142,7 +144,7 @@ public class UserOperateServiceImpl implements UserOperateService {
         //3.校验密码
         if (!DigestUtils.md5DigestAsHex(password.getBytes()).equals(user.getPassword())) {
             logger.info("password error");
-            return (UserResVo) ResBaseVo.build(400, "用户名或密码错误");
+            return (UserResVo) ErrorUtil.buildErrorInfo(resVo, 403, "用户名或者密码错误");
         }
 
         String userId = user.getUserid();
@@ -152,12 +154,12 @@ public class UserOperateServiceImpl implements UserOperateService {
 
         if(state == -1){
             logger.info("login check status is {}", user.getState());
-            return (UserResVo) ResBaseVo.build(403, "用户被冻结");
+            return (UserResVo) ErrorUtil.buildErrorInfo(resVo, 403, "用户被冻结");
         }
 
         if(state == -3){
             logger.info("login check status is {}", user.getState());
-            return (UserResVo) ResBaseVo.build(403, "用户不存在");
+            return (UserResVo) ErrorUtil.buildErrorInfo(resVo, 403, "用户不存在");
         }
 
         //5.查询图片信息
