@@ -78,7 +78,7 @@ public class VerifyCodeServiceImpl implements VerifyCodeService {
 	 */
 	private SendSmsResponse sendVerifyCode(String phone) {
 		//1.获取一个四位数的验证码
-		String code = RandomNumUtil.getRandom();
+		String code = RandomNumUtil.getRandom().substring(0,4);
 		//2.发送验证码
 		SendSmsResponse response = Message.sendIdentifyingCode(phone, code);
 		//2.1验证码发送成功添加缓存
