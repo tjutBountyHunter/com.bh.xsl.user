@@ -1,12 +1,10 @@
 package resourceImpl;
 
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import com.xsl.user.VerifyCodeResource;
 import user.service.VerifyCodeService;
-import vo.ResBaseVo;
-import vo.XslResult;
+import com.xsl.user.vo.ResBaseVo;
 
 @Controller
 public class VerifyCodeResourceImpl implements VerifyCodeResource {
@@ -16,17 +14,24 @@ public class VerifyCodeResourceImpl implements VerifyCodeResource {
 
 	@Override
 	public ResBaseVo sendMessageCode(String phone) {
-		XslResult xslResult = verifyCodeService.sendMessageCode(phone);
-		ResBaseVo resBaseVo = new ResBaseVo();
-		BeanUtils.copyProperties(xslResult, resBaseVo);
+		ResBaseVo resBaseVo;
+		try {
+			resBaseVo = verifyCodeService.sendMessageCode(phone);
+		}catch (Exception e){
+			throw new RuntimeException(e);
+		}
+
 		return resBaseVo;
 	}
 
 	@Override
 	public ResBaseVo checkCode(String phone, String code) {
-		XslResult xslResult = verifyCodeService.checkCode(phone, code);
-		ResBaseVo resBaseVo = new ResBaseVo();
-		BeanUtils.copyProperties(xslResult, resBaseVo);
+		ResBaseVo resBaseVo;
+		try {
+			resBaseVo = verifyCodeService.checkCode(phone, code);
+		}catch (Exception e){
+			throw new RuntimeException(e);
+		}
 		return resBaseVo;
 	}
 }

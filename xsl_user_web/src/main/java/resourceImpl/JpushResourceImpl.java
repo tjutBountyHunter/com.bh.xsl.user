@@ -7,9 +7,9 @@ import org.springframework.stereotype.Controller;
 import com.xsl.user.JpushResource;
 import user.service.JpushService;
 import util.JedisClientUtil;
-import vo.JPushReqVo;
+import com.xsl.user.vo.JPushReqVo;
 import vo.JPushVo;
-import vo.ResBaseVo;
+import com.xsl.user.vo.ResBaseVo;
 
 @Controller
 public class JpushResourceImpl implements JpushResource {

@@ -4,10 +4,10 @@ import com.xsl.user.UserOperateResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import user.service.UserOperateService;
-import vo.ResBaseVo;
-import vo.UserReqVo;
-import vo.UserResVo;
-import vo.XslUserRegister;
+import com.xsl.user.vo.ResBaseVo;
+import com.xsl.user.vo.UserReqVo;
+import com.xsl.user.vo.UserResVo;
+import com.xsl.user.vo.UserRegisterReqVo;
 
 /**
  * @author 梁俊伟
@@ -21,9 +21,9 @@ public class UserOperateResourceImpl implements UserOperateResource {
     private UserOperateService userOperateService;
 
     @Override
-    public UserResVo quickCreateUser(XslUserRegister xslUserRegister) {
+    public UserResVo quickCreateUser(UserRegisterReqVo userRegisterReqVo) {
         try {
-            return userOperateService.quickCreateUser(xslUserRegister);
+            return userOperateService.quickCreateUser(userRegisterReqVo);
         }catch (Exception e){
             throw new RuntimeException(e);
         }

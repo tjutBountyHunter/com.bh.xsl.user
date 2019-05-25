@@ -12,10 +12,10 @@ import user.service.UserInfoService;
 import util.GsonSingle;
 import util.JedisClientUtil;
 import util.ListUtil;
-import vo.ResBaseVo;
-import vo.TagVo;
-import vo.UserHMResVo;
-import vo.UserReqVo;
+import com.xsl.user.vo.ResBaseVo;
+import com.xsl.user.vo.TagVo;
+import com.xsl.user.vo.UserHMResVo;
+import com.xsl.user.vo.UserReqVo;
 
 import java.util.ArrayList;
 import java.util.List;

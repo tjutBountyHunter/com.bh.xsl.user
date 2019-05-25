@@ -1,4 +1,4 @@
-package vo;
+package com.xsl.user.vo;
 
 public class UserResVo extends ResBaseVo {
 	private String userid;

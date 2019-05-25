@@ -11,6 +11,7 @@ import util.JedisClientUtil;
 import util.JsonUtils;
 import util.Message;
 import util.RandomNumUtil;
+import com.xsl.user.vo.ResBaseVo;
 import vo.XslResult;
 
 @Service
@@ -29,24 +30,24 @@ public class VerifyCodeServiceImpl implements VerifyCodeService {
 	 * @return
 	 */
 	@Override
-	public XslResult sendMessageCode(String phone) {
+	public ResBaseVo sendMessageCode(String phone) {
 		String message;
 
 		//1.手机号检测
 		int bool = checkData(phone).getStatus();
 		if (bool != 200) {
 			message = "手机号码填写错误,请检查手机号码格式是否正确";
-			return XslResult.build(400, JsonUtils.objectToJson(message));
+			return ResBaseVo.build(400, JsonUtils.objectToJson(message));
 		}
 
 		//2.发送短信验证码
 		SendSmsResponse q = sendVerifyCode(phone);
 		if (!"OK".equals(q.getCode())) {
 			message = "短信验证未请求成功,请联系工作人员";
-			return XslResult.build(500, JsonUtils.objectToJson(message));
+			return ResBaseVo.build(500, JsonUtils.objectToJson(message));
 		}
 		message = "短信验证请求成功";
-		return XslResult.ok(JsonUtils.objectToJson(message));
+		return ResBaseVo.ok(JsonUtils.objectToJson(message));
 
 	}
 
@@ -57,17 +58,17 @@ public class VerifyCodeServiceImpl implements VerifyCodeService {
 	 * @return
 	 */
 	@Override
-	public XslResult checkCode(String phone, String code) {
+	public ResBaseVo checkCode(String phone, String code) {
 		String num = JedisClientUtil.get(REDIS_USER_SESSION_CODE_KEY + ":" + phone);
 		if (StringUtils.isEmpty(num)) {
-			return XslResult.build(403, "您的验证码失效");
+			return ResBaseVo.build(403, "您的验证码失效");
 		}
 
 		if (!code.equals(num)) {
-			return XslResult.build(403, "验证码错误");
+			return ResBaseVo.build(403, "验证码错误");
 		}
 
-		return XslResult.ok("验证成功");
+		return ResBaseVo.ok("验证成功");
 	}
 
 	/**

@@ -4,7 +4,7 @@ import com.xsl.user.WeChatUserResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import user.service.WeChatUserService;
-import vo.ResBaseVo;
+import com.xsl.user.vo.ResBaseVo;
 
 /**
  * @author 梁俊伟

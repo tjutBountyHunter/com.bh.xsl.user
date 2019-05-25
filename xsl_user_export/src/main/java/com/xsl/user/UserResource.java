@@ -1,17 +1,17 @@
 package com.xsl.user;
 
-import vo.ResBaseVo;
-import vo.UserReqVo;
-import vo.XslUserRegister;
+import com.xsl.user.vo.ResBaseVo;
+import com.xsl.user.vo.UserReqVo;
+import com.xsl.user.vo.UserRegisterReqVo;
 
 public interface UserResource {
     /**
      * 快速注册
-     * @param xslUserRegister
+     * @param userRegisterReqVo
      * @return
      * @throws Exception
      */
-    ResBaseVo quickCreateUser(XslUserRegister xslUserRegister);
+    ResBaseVo quickCreateUser(UserRegisterReqVo userRegisterReqVo);
 
     /**
      * 登录

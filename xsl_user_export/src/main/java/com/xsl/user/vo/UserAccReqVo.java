@@ -1,4 +1,4 @@
-package vo;
+package com.xsl.user.vo;
 
 import java.util.List;
 

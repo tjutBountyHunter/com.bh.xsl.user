@@ -1,7 +1,7 @@
 package user.service;
 
-import vo.ResBaseVo;
-import vo.UserLevelReqVo;
+import com.xsl.user.vo.ResBaseVo;
+import com.xsl.user.vo.UserLevelReqVo;
 
 public interface LevelService {
 	/**

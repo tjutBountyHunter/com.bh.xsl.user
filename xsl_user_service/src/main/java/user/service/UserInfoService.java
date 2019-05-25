@@ -1,9 +1,9 @@
 package user.service;
 
 import pojo.*;
-import vo.ResBaseVo;
-import vo.TagVo;
-import vo.UserReqVo;
+import com.xsl.user.vo.ResBaseVo;
+import com.xsl.user.vo.TagVo;
+import com.xsl.user.vo.UserReqVo;
 
 import java.util.List;
 

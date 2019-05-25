@@ -1,8 +1,8 @@
 package user.service;
 
-import vo.ResBaseVo;
-import vo.UserAccReqVo;
-import vo.UserReqVo;
+import com.xsl.user.vo.ResBaseVo;
+import com.xsl.user.vo.UserAccReqVo;
+import com.xsl.user.vo.UserReqVo;
 
 /**
  * @author 梁俊伟

@@ -1,4 +1,4 @@
-package vo;
+package com.xsl.user.vo;
 
 public class JPushReqVo extends ReqBaseVo {
 	/**

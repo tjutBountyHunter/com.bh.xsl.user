@@ -1,10 +1,12 @@
 package resourceImpl;
 
 import com.xsl.user.SupplementUserInfoResource;
+import com.xsl.user.vo.ResBaseVo;
+import com.xsl.user.vo.UserAccReqVo;
+import com.xsl.user.vo.UserReqVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import user.service.SupplementUserInfoService;
-import vo.*;
 
 /**
  * @author 梁俊伟
@@ -18,7 +20,7 @@ public class SupplementUserInfoResourceImpl implements SupplementUserInfoResourc
     private SupplementUserInfoService supplementUserInfoService;
 
     @Override
-    public ResBaseVo saveUserInfo(UserReqVo userReqVo) {
+    public com.xsl.user.vo.ResBaseVo saveUserInfo(UserReqVo userReqVo) {
         return supplementUserInfoService.saveUserInfo(userReqVo);
     }
 

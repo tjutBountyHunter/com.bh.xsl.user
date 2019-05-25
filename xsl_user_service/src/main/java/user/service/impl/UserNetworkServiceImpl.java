@@ -8,8 +8,8 @@ import pojo.XslNetwork;
 import user.service.UserInfoService;
 import user.service.UserNetworkService;
 import util.ListUtil;
-import vo.NetworkReqVo;
-import vo.ResBaseVo;
+import com.xsl.user.vo.NetworkReqVo;
+import com.xsl.user.vo.ResBaseVo;
 
 import java.util.List;
 

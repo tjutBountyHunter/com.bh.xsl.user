@@ -1,12 +1,13 @@
 package resourceImpl;
 
+import com.xsl.user.vo.*;
+import com.xsl.user.vo.ResBaseVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import pojo.*;
 import com.xsl.user.UserInfoResouce;
 import user.service.UserInfoService;
-import vo.*;
 
 @Controller
 public class UserInfoResouceImpl implements UserInfoResouce {

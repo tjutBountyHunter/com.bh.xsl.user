@@ -1,5 +1,8 @@
 package user.service.impl;
 
+import com.xsl.user.vo.TagVo;
+import com.xsl.user.vo.UserAccReqVo;
+import com.xsl.user.vo.UserReqVo;
 import example.XslUserExample;
 import mapper.*;
 import org.slf4j.Logger;
@@ -35,19 +38,10 @@ import java.util.List;
  */
 @Service
 public class SupplementUserInfoServiceImpl implements SupplementUserInfoService {
-
-    @Autowired
-    private XslFileMapper xslFileMapper;
-    @Autowired
-    private XslHunterMapper xslHunterMapper;
-    @Autowired
-    private XslMasterMapper xslMasterMapper;
     @Autowired
     private XslUserMapper xslUserMapper;
     @Autowired
     private XslSchoolinfoMapper xslSchoollinfoMapper;
-    @Autowired
-    private XslUserFileMapper xslUserFileMapper;
     @Autowired
     private XslHunterTagMapper xslHunterTagMapper;
 
@@ -73,7 +67,7 @@ public class SupplementUserInfoServiceImpl implements SupplementUserInfoService 
     private String USER_TX_URL;
 
     @Override
-    public ResBaseVo saveUserInfo(UserReqVo userReqVo) {
+    public com.xsl.user.vo.ResBaseVo saveUserInfo(UserReqVo userReqVo) {
         XslUser xslUser = new XslUser();
         BeanUtils.copyProperties(userReqVo, xslUser);
         if(!StringUtils.isEmpty(userReqVo.getPassword())){
@@ -82,18 +76,22 @@ public class SupplementUserInfoServiceImpl implements SupplementUserInfoService 
 
         XslUserExample xslUserExample = new XslUserExample();
         xslUserExample.createCriteria().andPhoneEqualTo(userReqVo.getPhone());
-        xslUserMapper.updateByExampleSelective(xslUser, xslUserExample);
+        try {
+            xslUserMapper.updateByExampleSelective(xslUser, xslUserExample);
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
 
         JedisClientUtil.delete(USER_INFO + ":" + userReqVo.getUserid());
 
         //es中数据同步待修复
         userExecutor.execute(() -> esUserName(userReqVo.getUserid(), userReqVo.getName()));
 
-        return ResBaseVo.ok();
+        return com.xsl.user.vo.ResBaseVo.ok();
     }
 
     @Override
-    public ResBaseVo userAcc(UserAccReqVo userAccReqVo) {
+    public com.xsl.user.vo.ResBaseVo userAcc(UserAccReqVo userAccReqVo) {
         XslSchoolinfo xslSchoolinfo = new XslSchoolinfo();
 
         //初步信息录入
@@ -106,7 +104,7 @@ public class SupplementUserInfoServiceImpl implements SupplementUserInfoService 
         int i = xslSchoollinfoMapper.insertSelective(xslSchoolinfo);
 
         if(i < 1){
-            return ResBaseVo.build(500, "服务器繁忙，请重试");
+            return com.xsl.user.vo.ResBaseVo.build(500, "服务器繁忙，请重试");
         }
 
         String userid = userAccReqVo.getUserid();
@@ -123,15 +121,15 @@ public class SupplementUserInfoServiceImpl implements SupplementUserInfoService 
         int count = xslUserMapper.updateByExampleSelective(xslUser, xslUserExample);
 
         if(count < 1){
-            return ResBaseVo.build(500, "服务器繁忙，请重试");
+            return com.xsl.user.vo.ResBaseVo.build(500, "服务器繁忙，请重试");
         }
 
         JedisClientUtil.delete(USER_INFO +":"+ userid);
 
         //二次自动审核认证
-        List<TagVo> tagVos = userAccReqVo.getTagVos();
+        List<com.xsl.user.vo.TagVo> tagVos = userAccReqVo.getTagVos();
         if(tagVos == null || tagVos.size() == 0){
-            return ResBaseVo.ok(2);
+            return com.xsl.user.vo.ResBaseVo.ok(2);
         }
 
         XslUser userInfo = userInfoService.getUserInfo(userid);
@@ -149,17 +147,17 @@ public class SupplementUserInfoServiceImpl implements SupplementUserInfoService 
         int tagCount = xslHunterTagMapper.insertSelectiveBatch(xslHunterTags);
 
         if(tagCount < 1){
-            return ResBaseVo.ok(2);
+            return com.xsl.user.vo.ResBaseVo.ok(2);
         }
 
         xslUser.setState((byte) 1);
         int AccCount = xslUserMapper.updateByExampleSelective(xslUser, xslUserExample);
 
         if(AccCount < 1){
-            return ResBaseVo.build(200, "认证成功，待管理员审核");
+            return com.xsl.user.vo.ResBaseVo.build(200, "认证成功，待管理员审核");
         }
 
-        return ResBaseVo.ok(1);
+        return com.xsl.user.vo.ResBaseVo.ok(1);
     }
 
     private void esUserName(String userid, String name) {

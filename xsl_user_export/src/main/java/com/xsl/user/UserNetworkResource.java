@@ -1,7 +1,7 @@
 package com.xsl.user;
 
-import vo.NetworkReqVo;
-import vo.ResBaseVo;
+import com.xsl.user.vo.NetworkReqVo;
+import com.xsl.user.vo.ResBaseVo;
 
 public interface UserNetworkResource {
 	ResBaseVo updateNetwork(NetworkReqVo networkReq);

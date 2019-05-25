@@ -4,8 +4,8 @@ import com.xsl.user.HunterListResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import user.service.HunterInfoService;
 import util.ListUtil;
-import vo.HunterInfoVo;
-import vo.HunterListReq;
+import com.xsl.user.vo.HunterInfoVo;
+import com.xsl.user.vo.HunterListReq;
 
 import java.util.ArrayList;
 import java.util.List;

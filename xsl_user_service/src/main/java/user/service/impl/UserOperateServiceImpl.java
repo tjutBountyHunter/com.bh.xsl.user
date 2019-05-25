@@ -17,10 +17,10 @@ import user.service.InitUserInfo;
 import user.service.UserInfoService;
 import user.service.UserOperateService;
 import util.*;
-import vo.ResBaseVo;
-import vo.UserReqVo;
-import vo.UserResVo;
-import vo.XslUserRegister;
+import com.xsl.user.vo.ResBaseVo;
+import com.xsl.user.vo.UserReqVo;
+import com.xsl.user.vo.UserResVo;
+import com.xsl.user.vo.UserRegisterReqVo;
 
 import java.util.List;
 
@@ -59,10 +59,10 @@ public class UserOperateServiceImpl implements UserOperateService {
     private String USER_TX_URL;
 
     @Override
-    public UserResVo quickCreateUser(XslUserRegister xslUserRegister) {
+    public UserResVo quickCreateUser(UserRegisterReqVo userRegisterReqVo) {
         XslUserExample example = new XslUserExample();
         XslUserExample.Criteria criteria = example.createCriteria();
-        criteria.andPhoneEqualTo(xslUserRegister.getPhone());
+        criteria.andPhoneEqualTo(userRegisterReqVo.getPhone());
         List<XslUser> list = xslUserMapper.selectByExample(example);
         if(list != null && list.size() > 0){
             return (UserResVo) ResBaseVo.build(403,"该手机号已经注册过");
@@ -76,7 +76,7 @@ public class UserOperateServiceImpl implements UserOperateService {
         //初始化雇主信息
         XslMaster xslMaster = initUserInfo.initXslMaster(xslUser);
         //初始化用户信息
-        initUserInfo(xslUserRegister, xslUser, xslHunter, xslMaster);
+        initUserInfo(userRegisterReqVo, xslUser, xslHunter, xslMaster);
 
         UserResVo userResVo = new UserResVo();
         BeanUtils.copyProperties(xslUser, userResVo);
@@ -87,7 +87,7 @@ public class UserOperateServiceImpl implements UserOperateService {
         userResVo.setHunterlevel(xslHunter.getLevel());
         userResVo.setTxUrl("http://47.93.200.190/images/default.png");
 
-        JedisClientUtil.set(REDIS_USER_SESSION_KEY + ":" + xslUserRegister.getPhone(), xslUserRegister.getToken());
+        JedisClientUtil.set(REDIS_USER_SESSION_KEY + ":" + userRegisterReqVo.getPhone(), userRegisterReqVo.getToken());
 
         return userResVo;
     }
@@ -229,14 +229,14 @@ public class UserOperateServiceImpl implements UserOperateService {
         return ResBaseVo.ok();
     }
 
-    private void initUserInfo(XslUserRegister xslUserRegister, XslUser xslUser, XslHunter xslHunter, XslMaster xslMaster) {
+    private void initUserInfo(UserRegisterReqVo userRegisterReqVo, XslUser xslUser, XslHunter xslHunter, XslMaster xslMaster) {
         xslUser.setHunterid(xslHunter.getHunterid());
         xslUser.setMasterid(xslMaster.getMasterid());
-        xslUser.setPhone(xslUserRegister.getPhone());
+        xslUser.setPhone(userRegisterReqVo.getPhone());
         xslUser.setState(UserStateEnum.NA.getCode());
-        xslUser.setPassword(Md5Utils.digestMds(xslUserRegister.getPassword()));
+        xslUser.setPassword(Md5Utils.digestMds(userRegisterReqVo.getPassword()));
         xslUser.setSex("男");
-        xslUser.setName("xsl_"+xslUserRegister.getPhone());
+        xslUser.setName("xsl_"+ userRegisterReqVo.getPhone());
 
         try {
             int result = xslUserMapper.insertSelective(xslUser);

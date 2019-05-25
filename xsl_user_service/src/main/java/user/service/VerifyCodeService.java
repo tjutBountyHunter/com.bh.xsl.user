@@ -1,6 +1,6 @@
 package user.service;
 
-import vo.XslResult;
+import com.xsl.user.vo.ResBaseVo;
 
 public interface VerifyCodeService {
 	/**
@@ -9,11 +9,11 @@ public interface VerifyCodeService {
 	 * @param phone
 	 * @return
 	 */
-	XslResult sendMessageCode(String phone);
+	ResBaseVo sendMessageCode(String phone);
 	/**
 	 * 检验手机验证码
 	 * @param phone
 	 * @return
 	 */
-	XslResult checkCode(String phone, String code);
+	ResBaseVo checkCode(String phone, String code);
 }

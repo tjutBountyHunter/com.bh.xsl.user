@@ -1,7 +1,7 @@
 package com.xsl.user;
 
-import vo.JPushReqVo;
-import vo.ResBaseVo;
+import com.xsl.user.vo.JPushReqVo;
+import com.xsl.user.vo.ResBaseVo;
 
 public interface JpushResource {
 

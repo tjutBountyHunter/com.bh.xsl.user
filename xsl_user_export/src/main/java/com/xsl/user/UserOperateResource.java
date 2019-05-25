@@ -1,9 +1,9 @@
 package com.xsl.user;
 
-import vo.ResBaseVo;
-import vo.UserReqVo;
-import vo.UserResVo;
-import vo.XslUserRegister;
+import com.xsl.user.vo.ResBaseVo;
+import com.xsl.user.vo.UserReqVo;
+import com.xsl.user.vo.UserResVo;
+import com.xsl.user.vo.UserRegisterReqVo;
 
 /**
  * @author 梁俊伟
@@ -14,11 +14,11 @@ public interface UserOperateResource {
 
     /**
      * 快速注册
-     * @param xslUserRegister
+     * @param userRegisterReqVo
      * @return
      * @throws Exception
      */
-    UserResVo quickCreateUser(XslUserRegister xslUserRegister);
+    UserResVo quickCreateUser(UserRegisterReqVo userRegisterReqVo);
 
     /**
      * 登录

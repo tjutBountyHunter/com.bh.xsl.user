@@ -3,9 +3,8 @@ package listener;
 import org.springframework.beans.factory.annotation.Autowired;
 import user.service.UserNetworkService;
 import util.GsonSingle;
-import vo.NetworkReqVo;
+import com.xsl.user.vo.NetworkReqVo;
 
-import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.TextMessage;

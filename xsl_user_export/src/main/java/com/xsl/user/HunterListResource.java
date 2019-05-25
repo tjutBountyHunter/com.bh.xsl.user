@@ -1,7 +1,7 @@
 package com.xsl.user;
 
-import vo.HunterInfoVo;
-import vo.HunterListReq;
+import com.xsl.user.vo.HunterInfoVo;
+import com.xsl.user.vo.HunterListReq;
 
 import java.util.List;
 

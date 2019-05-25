@@ -13,8 +13,8 @@ import pojo.XslHunter;
 import pojo.XslMaster;
 import user.service.LevelService;
 import util.ListUtil;
-import vo.ResBaseVo;
-import vo.UserLevelReqVo;
+import com.xsl.user.vo.ResBaseVo;
+import com.xsl.user.vo.UserLevelReqVo;
 
 import java.util.List;
 

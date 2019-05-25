@@ -1,4 +1,4 @@
-package vo;
+package com.xsl.user.vo;
 
 public class NetworkReqVo extends ReqBaseVo {
 	private String masterId;

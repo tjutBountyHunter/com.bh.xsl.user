@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import com.xsl.user.LevelResource;
 import user.service.LevelService;
-import vo.ResBaseVo;
-import vo.UserLevelReqVo;
+import com.xsl.user.vo.ResBaseVo;
+import com.xsl.user.vo.UserLevelReqVo;
 @Controller
 public class LevelResourceImpl implements LevelResource {
     @Autowired

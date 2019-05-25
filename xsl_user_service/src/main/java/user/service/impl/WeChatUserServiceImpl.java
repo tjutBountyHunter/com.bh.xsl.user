@@ -17,7 +17,7 @@ import pojo.XslUser;
 import user.service.InitUserInfo;
 import user.service.WeChatUserService;
 import util.CommonUtil;
-import vo.ResBaseVo;
+import com.xsl.user.vo.ResBaseVo;
 import vo.WeChatAccountConfig;
 
 import java.util.Date;

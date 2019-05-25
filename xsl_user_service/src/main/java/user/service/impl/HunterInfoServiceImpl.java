@@ -8,13 +8,11 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pojo.XslHunter;
-import pojo.XslOrder;
 import pojo.XslUser;
 import user.service.HunterInfoService;
 import user.service.UserInfoService;
-import util.ListUtil;
-import vo.HunterInfoVo;
-import vo.HunterListReq;
+import com.xsl.user.vo.HunterInfoVo;
+import com.xsl.user.vo.HunterListReq;
 
 import java.util.ArrayList;
 import java.util.List;

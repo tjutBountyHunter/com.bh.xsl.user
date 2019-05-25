@@ -1,6 +1,6 @@
 package com.xsl.user;
 
-import vo.*;
+import com.xsl.user.vo.*;
 
 public interface UserInfoResouce {
 
