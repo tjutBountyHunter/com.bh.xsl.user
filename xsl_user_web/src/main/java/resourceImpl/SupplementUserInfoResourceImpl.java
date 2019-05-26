@@ -5,10 +5,15 @@ import com.xsl.user.vo.FileUploadReqVo;
 import com.xsl.user.vo.ResBaseVo;
 import com.xsl.user.vo.UserAccReqVo;
 import com.xsl.user.vo.UserReqVo;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
+import pojo.FileUploadVo;
 import user.service.SupplementUserInfoService;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 
 /**
  * @author 梁俊伟
@@ -32,12 +37,12 @@ public class SupplementUserInfoResourceImpl implements SupplementUserInfoResourc
     }
 
     @Override
-    public ResBaseVo upLoadUserTx(FileUploadReqVo uploadFile, String userid) {
-        if(StringUtils.isEmpty(userid)){
+    public ResBaseVo upLoadUserTx(FileUploadReqVo uploadFile) {
+        if(StringUtils.isEmpty(uploadFile.getUserId())){
             return ResBaseVo.build(400, "userid有误");
         }
 
-        return supplementUserInfoService.upLoadUserTx(uploadFile, userid);
+        return supplementUserInfoService.upLoadUserTx(uploadFile, uploadFile.getUserId());
     }
 
 }

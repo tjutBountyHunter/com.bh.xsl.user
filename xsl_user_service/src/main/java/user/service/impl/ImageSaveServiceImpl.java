@@ -5,6 +5,7 @@ import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
+import pojo.FileUploadVo;
 import user.service.ImageSaveService;
 import util.FtpUtil;
 import util.IdUtil;
@@ -31,7 +32,7 @@ public class ImageSaveServiceImpl implements ImageSaveService {
     private String IMAGE_BASE_URL;
 
     @Override
-    public Map uploadPicture(FileUploadReqVo fileUploadReqVo) {
+    public Map uploadPicture(FileUploadVo fileUploadReqVo) {
         Map<String, String> resultMap = new HashMap<>();
 
         try {

@@ -7,10 +7,13 @@ import mapper.XslFileMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import pojo.FileUploadVo;
 import pojo.XslFile;
 import user.service.ImageSaveService;
 import util.ErrorUtil;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.Map;
 import java.util.UUID;
 
@@ -34,7 +37,12 @@ public class FileOperateResourceImpl implements FileOperateResource {
 		fileVo.setFileid(UUID.randomUUID().toString());
 
 		try {
-			Map map = imageSaveService.uploadPicture(fileUploadReqVo);
+			FileUploadVo fileUploadVo = new FileUploadVo();
+			BeanUtils.copyProperties(fileUploadReqVo, fileUploadVo);
+			InputStream is = new ByteArrayInputStream(fileUploadReqVo.getInputStream());
+			fileUploadVo.setInputStream(is);
+
+			Map map = imageSaveService.uploadPicture(fileUploadVo);
 			if ("1".equals(map.get("error"))) {
 				return (FileVo) ErrorUtil.buildErrorInfo(fileVo, 500, "图片上传失败");
 			}

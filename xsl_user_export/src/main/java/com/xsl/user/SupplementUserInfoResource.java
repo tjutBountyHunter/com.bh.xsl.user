@@ -31,6 +31,6 @@ public interface SupplementUserInfoResource {
      * 上传用户头像
      * @return
      */
-    ResBaseVo upLoadUserTx(FileUploadReqVo uploadFile, String userid);
+    ResBaseVo upLoadUserTx(FileUploadReqVo uploadFile);
 
 }

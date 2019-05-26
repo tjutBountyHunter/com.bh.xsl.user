@@ -1,6 +1,7 @@
 package user.service;
 
 import com.xsl.user.vo.FileUploadReqVo;
+import pojo.FileUploadVo;
 
 import java.util.Map;
 
@@ -16,5 +17,5 @@ public interface ImageSaveService {
      * @param fileUploadReqVo
      * @return
      */
-    Map uploadPicture(FileUploadReqVo fileUploadReqVo);
+    Map uploadPicture(FileUploadVo fileUploadReqVo);
 }

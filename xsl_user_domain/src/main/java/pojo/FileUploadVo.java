@@ -1,15 +1,14 @@
-package com.xsl.user.vo;
+package pojo;
 
 import java.io.InputStream;
 
-public class FileUploadReqVo extends ReqBaseVo{
+public class FileUploadVo{
 	private String name;
 	private String originalFilename;
 	private String contentType;
 	private long size;
 	private byte[] bytes;
-	private byte[] inputStream;
-	private String userId;
+	private InputStream inputStream;
 
 	public String getName() {
 		return name;
@@ -51,19 +50,11 @@ public class FileUploadReqVo extends ReqBaseVo{
 		this.bytes = bytes;
 	}
 
-	public byte[] getInputStream() {
+	public InputStream getInputStream() {
 		return inputStream;
 	}
 
-	public void setInputStream(byte[] inputStream) {
+	public void setInputStream(InputStream inputStream) {
 		this.inputStream = inputStream;
-	}
-
-	public String getUserId() {
-		return userId;
-	}
-
-	public void setUserId(String userId) {
-		this.userId = userId;
 	}
 }

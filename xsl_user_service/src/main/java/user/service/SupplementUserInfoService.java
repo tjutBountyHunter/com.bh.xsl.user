@@ -4,7 +4,7 @@ import com.xsl.user.vo.FileUploadReqVo;
 import com.xsl.user.vo.ResBaseVo;
 import com.xsl.user.vo.UserAccReqVo;
 import com.xsl.user.vo.UserReqVo;
-
+import pojo.FileUploadVo;
 
 public interface SupplementUserInfoService {
 
