@@ -11,7 +11,7 @@
     </bean>
 
     <bean id="jedjpushClient_Zd" class="cn.jpush.api.JPushClient">
-        <constructor-arg name="masterSecret" value="60c1a8db41cfd175450e7fa8"></constructor-arg>
+        <constructor-arg name="masterSecret" value="78fee324f156f47b60934842"></constructor-arg>
         <constructor-arg name="appKey" value="60c1a8db41cfd175450e7fa8"></constructor-arg>
     </bean>
 
