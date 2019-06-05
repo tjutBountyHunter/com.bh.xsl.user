@@ -4,6 +4,7 @@ package user.service.impl;
 import cn.jpush.api.JPushClient;
 import cn.jpush.api.common.resp.APIConnectionException;
 import cn.jpush.api.common.resp.APIRequestException;
+import cn.jpush.api.push.PushResult;
 import cn.jpush.api.push.model.Message;
 import cn.jpush.api.push.model.Options;
 import cn.jpush.api.push.model.Platform;
@@ -46,12 +47,12 @@ public class JpushServiceImpl implements JpushService {
 			PushPayload pushPayload = buildPushObject_all_registrationId_alertWithTitle(jPushVo.getRegistrationId(),jPushVo.getNotificationTitle(), jPushVo.getMsgTitle(), jPushVo.getMsgContent(), jPushVo.getExtrasparam());
 
 			if(JpushTypeEnum.XSL.getName().equals(source)){
-				jedjpushClient.sendPush(pushPayload);
+				PushResult pushResult = jedjpushClient.sendPush(pushPayload);
 				result = 1;
 			}
 
 			if(JpushTypeEnum.GXZD.getName().equals(source)){
-				jedjpushClient_Zd.sendPush(pushPayload);
+				PushResult pushResult = jedjpushClient_Zd.sendPush(pushPayload);
 				result = 1;
 			}
 
@@ -100,7 +101,7 @@ public class JpushServiceImpl implements JpushService {
 					  	.setAlert(notification_title)
 					  	.addPlatformNotification(AndroidNotification.newBuilder()
 					  	.setAlert(notification_title)
-					  	.setTitle(notification_title)
+					  	.setTitle(msg_title)
 						//此字段为透传字段，不会显示在通知栏。用户可以通过此字段来做一些定制需求，如特定的key传要指定跳转的页面（value）
 						.addExtra("androidNotification extras key", extrasparam).build()).addPlatformNotification(IosNotification.newBuilder()
 						//传一个IosAlert对象，指定apns title、title、subtitle等
@@ -144,7 +145,7 @@ public class JpushServiceImpl implements JpushService {
 				.setNotification(Notification.newBuilder()
 				//指定当前推送的android通知
 				.addPlatformNotification(AndroidNotification.newBuilder()
-				.setAlert(notification_title).setTitle(notification_title)
+				.setAlert(notification_title).setTitle(msg_title)
 				//此字段为透传字段，不会显示在通知栏。用户可以通过此字段来做一些定制需求，如特定的key传要指定跳转的页面（value）
 				.addExtra("androidNotification extras key", extrasparam)
 				.build())
